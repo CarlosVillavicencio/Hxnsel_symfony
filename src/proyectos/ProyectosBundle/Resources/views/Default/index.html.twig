@@ -1,0 +1,47 @@
+{% extends "plantillas/plantilla_adminV1.html.twig" %}
+{% block js %}
+{% endblock %}
+{% block css %}
+{% endblock %}
+{% block notificaciones %}
+    {#    {{ include('plantillas/notificaciones.html.twig') }}#}
+{% endblock %}
+{% block slider_bar %}
+    {{ include('plantillas/slider-bar.html.twig') }}
+{% endblock %}
+{% block contenido %}
+    {#Hello World!<br>
+    {{usuario}}<br>
+    <i class="fa fa-fw fa-chrome"></i>
+    <span class="glyphicon glyphicon-asterisk"></span>
+    <li class="ion-ionic"></li>
+    Optionally, you can add Slimscroll and FastClick plugins.
+    Both of these plugins are recommended to enhance the
+    user experience. Slimscroll is required when using the
+    fixed layout.<br>#}
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Recently Added Products</h3>
+
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                    </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    {{ include('ProyectosBundle:Default:tabla.html.twig') }}
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer clearfix">
+                    <a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Place New Order</a>
+                    <a href="javascript:void(0)" class="btn btn-sm btn-default btn-flat pull-right">View All Orders</a>
+                </div>
+                <!-- /.box-footer -->
+            </div>
+        </div>
+    </div>
+{% endblock %}

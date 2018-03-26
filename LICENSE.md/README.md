@@ -1,1 +1,0 @@
-# Hxnsel_symfony

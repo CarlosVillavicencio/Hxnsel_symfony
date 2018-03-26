@@ -1,0 +1,73 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/security.html
+security:
+    encoders:
+        LoginDevBundle\Entity\accesousuario:
+            algorithm: md5
+            encode_as_base64: false
+            iterations: 0
+        #Symfony\Component\Security\Core\User\User: plaintext
+    # http://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
+    providers:
+        #in_memory:
+        #    memory:
+        #        users:
+        #            admin:
+        #                password: 1234
+        #                roles: 'ROLE_ADMIN'
+        our_db_provider:
+            entity:
+                class: LoginDevBundle:accesousuario
+                property: username
+        database_users:
+            entity: {class: LoginDevBundle:accesousuario, property: username}
+
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        #admin:
+        #    anonymous: ~
+        #    pattern: ^/proyectos
+        #usuarios:
+        #    #pattern: ^/
+        #    anonymous: ~
+        #    provider: our_db_provider
+        #    form_login:
+        #        login_path: login
+        #        check_path: login
+        main:
+            anonymous: ~
+            pattern:    ^/
+            http_basic: ~
+            guard:
+                authenticators:
+                    - app.form_login_authenticator
+            #provider: our_db_provider
+            #form_login:
+            #    login_path: loginV1_dev
+            #    check_path: security_login_checkV1_dev
+            #    default_target_path: homepage
+            #    always_use_default_target_path: false
+            #    use_referer: true
+            #    #use_forward: false
+            #    failure_path: loginV1_dev
+            logout:
+                path: /logout
+                target: loginV1_dev
+    access_control:
+        # require ROLE_ADMIN for /admin*
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/dashboard, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        #- { path: ^/proyectos, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/, roles: ROLE_UC_CALIFICADOR }
+        - { path: ^/, roles: ROLE_ADMIN }
+        - { path: ^/, roles: ROLE_USER }
+            # activate different ways to authenticate
+
+            # http_basic: ~
+            # http://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+
+            # form_login: ~
+            # http://symfony.com/doc/current/cookbook/security/form_login_setup.html

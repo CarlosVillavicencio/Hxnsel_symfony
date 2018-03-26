@@ -1,0 +1,24 @@
+#mantenimientos:
+#    resource: "@MantenimientosBundle/Controller/"
+#    type:     annotation
+#    prefix:   /
+
+#usuarios:
+#    resource: "@UsuariosBundle/Controller/"
+#    type:     annotation
+#    prefix:   /
+
+#proyectos:
+#    resource: "@ProyectosBundle/Controller/"
+#    type:     annotation
+#    prefix:   /proyectos
+
+login:
+    resource: "@LoginBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+    prefix:   /inicio

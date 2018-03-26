@@ -1,0 +1,140 @@
+{% spaceless %}
+    {#input.tplv0.9
+
+0.9 Correccion de Select para seleccionado en id y array, si es array array o no.
+
+0.81 Cambio icoupload dentro del form
+
+0.8
+select se le añadio " or  ArrVal.ID in forInp.value" para que si ademas el valor es array, verificar si contiene y si es el caso seleccionarlo, esto se hace con la finalidad que si el campo es multiple
+
+0.7
+forInp.email -> si la cantidad de caracteres es mayor a cero y diferente a true colocar el valor, de alguna manera reconocia el true como valor 1 y lo colocaba.
+Id al button submit se agrego un array false si no quieres mostrar
+
+1
+#}
+
+
+    {%for KeyInp,forInp in FormImput%}
+        {%set icoupload = true %}
+
+{%if forInp.id is defined%}{%set FormValIni = forInp.id %}{%else%}{%set FormValIni = 'V'|InputId %}{%endif%}
+{%set FormImputattr = ''%}
+
+{%if forInp.attr is defined%}{%set FormImputattr = FormImputattr ~ ' ' ~ forInp.attr %}{%endif%}
+
+{%if forInp.requiere is defined and forInp.requiere == true %}{%set FormImputattr = FormImputattr ~ ' jreq'%}{%endif%}
+
+{%if forInp.email is defined %}
+    {% if forInp.email==false %}
+    {%else%}
+        {% if forInp.email|length > 0 and forInp.email!=true%}
+            {%set FormImputattr = FormImputattr ~ ' jreq-email =' ~ forInp.email %}
+        {% else %}
+            {%set FormImputattr = FormImputattr ~ ' jreq-email'%}
+        {% endif %}
+    {% endif%}
+{%endif%}
+
+
+{%if forInp.uploadmax is defined%}{%set FormImputattr = FormImputattr ~ ' jreq-megalimit=' ~ forInp.uploadmax ~ '' %}{%endif%}
+{%if forInp.readonly is defined%}{%set FormImputattr = FormImputattr ~ ' readonly'%}{%set icoupload = false %}{%endif%}
+{%if forInp.inputDisabled is defined and forInp.inputDisabled == true %}{%set FormImputattr = FormImputattr ~ ' disabled'%}{%endif%}
+{%if forInp.disabled is defined and forInp.disabled == true %}{%set FormImputattr = FormImputattr ~ ' disabled'%}{%set icoupload = false %}{%endif%}
+{%if forInp.multiple is defined and forInp.multiple == true %}{%set FormImputattr = FormImputattr ~ ' multiple'%}{%set icoupload = false %}{%endif%}
+
+{%if forInp.entero is defined and forInp.entero|length>0 %} {%set FormImputattr = FormImputattr ~ ' entero=' ~ forInp.entero %}{%endif%}
+{%if forInp.decimal is defined and forInp.decimal|length>0 %} {%set FormImputattr = FormImputattr ~ ' decimal=' ~ forInp.decimal %}{%endif%}
+{%if forInp.maxlength is defined and forInp.maxlength|length>0 %} {%set FormImputattr = FormImputattr ~ ' maxlength=' ~ forInp.maxlength %}{%endif%}
+{%if forInp.length is defined and forInp.length|length>0 %} {%set FormImputattr = FormImputattr ~ ' length=' ~ forInp.length %}{%endif%}
+{%if forInp.placeHolder is defined and forInp.placeHolder|length>0 %} {%set FormImputattr = FormImputattr ~ ' data-placeholder="' ~ forInp.placeHolder~'" placeholder="' ~ forInp.placeHolder~'"' %}{%endif%}
+
+{% if forInp.type is defined and forInp.type=='hidden'%}
+    <input{{FormImputattr|raw}} id="{{FormValIni}}" type="hidden" class="form-control {{forInp.inputClass|default('')}}"{%if forInp.name is defined%} name="{{forInp.name}}"{%endif%}{%if forInp.value is defined%} value="{{forInp.value}}"{%endif%}>
+{% else %}
+
+    <div{% if forInp.chosenAjax is defined %} chosenajax="{{forInp.chosenAjax}}"{% endif %} class="form-group{%if forInp.Cxs is not defined and forInp.Csm is not defined and forInp.Cmd is not defined and forInp.Clg is not defined %} col-sm-12{%else%}{%if forInp.Cxs is defined%} col-xs-{{forInp.Cxs}}{%endif%}{%if forInp.Csm is defined%} col-sm-{{forInp.Csm}}{%endif%}{%if forInp.Cmd is defined%} col-md-{{forInp.Cmd}}{%endif%}{%if forInp.Clg is defined%} col-lg-{{forInp.Clg}}{%endif%}{%endif%} {{forInp.formgroupClass|default('')}}">
+
+
+        {%if forInp.label is defined%}<label for="{{FormValIni}}">{% if forInp.label|length>0 %}{{forInp.label|raw}}:{% endif %}</label>{%endif%}
+
+        {%if forInp.type is defined and forInp.type=='button'%}		
+        {%if forInp.submit is not defined %}{% set forInp = forInp|merge({'submit': true}) %}{% endif %}
+        <button{{FormImputattr|raw}} id="{{FormValIni}}" class="btn btn-{{forInp.inputClass|default('primary')}} " type="{% if forInp.submit != false %}submit{%else%}button{% endif %}">{%if forInp.value is defined%}{{forInp.value|raw}}{%else%}Guardar{%endif%}</button>
+    {%else%}
+
+
+        {%if forInp.type is defined%}
+            {% if forInp.type=='text' %}
+                <input{{FormImputattr|raw}} id="{{FormValIni}}" type="text" class="form-control {{forInp.inputClass|default('')}}"{%if forInp.name is defined%} name="{{forInp.name}}"{%endif%}{%if forInp.value is defined%} value="{{forInp.value}}"{%endif%}>
+            {% elseif forInp.type=='password' %}
+                <input{{FormImputattr|raw}} id="{{FormValIni}}" type="password" class="form-control {{forInp.inputClass|default('')}}"{%if forInp.name is defined%} name="{{forInp.name}}"{%endif%}{%if forInp.value is defined%} value="{{forInp.value}}"{%endif%}>
+            {% elseif forInp.type=='select' %}
+                <select{{FormImputattr|raw}} id="{{FormValIni}}" class="form-control {{forInp.inputClass|default('')}}"{%if forInp.name is defined%} name="{{forInp.name}}"{%endif%}>
+                    <option></option>
+                    {%if forInp.seleccione is defined%} <option value="{{forInp.seleccione}}">Seleccione</option> {% endif %}
+                    {%if forInp.arrayKeyVal is defined%}{%for ArrKey,ArrVal in forInp.arrayKeyVal %} <option value="{{ArrKey}}"
+
+                            {%if ArrKey==forInp.value or  ArrKey in forInp.value%} selected{%endif%}
+
+                            {% if forInp.value is iterable %}
+                                {%if ArrKey in forInp.value%} selected{%endif%}
+                            {% else %}
+                                {%if ArrKey==forInp.value%} selected{%endif%}
+                            {% endif %}
+
+
+                            >{{ArrVal}}</option>{% endfor%}{%endif%}
+                            {%if forInp.arrayIdDesc is defined%}{%for ArrKey,ArrVal in forInp.arrayIdDesc %} <option value="{{ArrVal.ID}}"
+
+                                    {% if forInp.value is iterable %}
+                                        {%if ArrVal.ID in forInp.value%} selected{%endif%}
+                                    {% else %}
+                                        {%if ArrVal.ID==forInp.value%} selected{%endif%}
+                                    {% endif %}
+
+                                    >{{ArrVal.DESC}}</option>{% endfor%}{%endif%}
+                                    {%if forInp.arrayIdDescripcion is defined%}{%for ArrKey,ArrVal in forInp.arrayIdDescripcion %} <option value="{{ArrVal.ID}}"
+
+                                            {% if forInp.value is iterable %}
+                                                {%if ArrVal.ID in forInp.value%} selected{%endif%}
+                                            {% else %}
+                                                {%if ArrVal.ID==forInp.value%} selected{%endif%}
+                                            {% endif %}
+
+                                            >{{ArrVal.DESCRIPCION}}</option>{% endfor%}{%endif%}
+                                        </select>
+                                        {% elseif forInp.type=='textarea' %}
+                                            <textarea{{FormImputattr|raw}} id="{{FormValIni}}" class="form-control {{forInp.inputClass|default('')}}"{%if forInp.name is defined%} name="{{forInp.name}}"{%endif%}{%if forInp.fila is defined%} rows="{{forInp.fila}}"{%endif%}>{{forInp.value}}</textarea>
+                                            {% elseif forInp.type=='radio' or  forInp.type=='checkbox' %}
+                                                <div class="btn-group btn-group-justified">{%set c=0%}
+                                                    {%for ArrKey,ArrVal in forInp.array %}{%set c=c+1%}<div class="btn-group" role="group">
+                                                            <label class="btn btn-default" >
+                                                                <input{%if c==1%}{{FormImputattr|raw}}{% endif %} type="{{forInp.type}}" {%if forInp.name is defined%} name="{{forInp.name}}"{%endif%} value="{{ArrKey}}" {%if ArrKey==forInp.value%} checked{%endif%} {% if ArrKey in forInp.value %} checked{%endif%}{% if forInp.inputClass is defined%} class="{{forInp.inputClass}}"{% endif %}> {{ArrVal}} 
+                                                            </label>
+                                                        </div>{%endfor%}
+                                                    </div>
+                                                    {% elseif forInp.type=='file' %}
+                                                        <div class="input-group jupload">
+                                                            <span class="input-group-btn">
+                                                                <input{{FormImputattr|raw}} id="{{FormValIni}}" type="file" style="opacity: 0;width: 0px;height: 0px; position: absolute; top: 0; left: 0;" class="{{forInp.inputClass|default('')}}"{%if forInp.name is defined%} name="{{forInp.name}}"{%endif%}>
+                                                                <button class="btn {% if icoupload== true %}red {% endif %}up" type="button"><i class="fa {% if icoupload== true %}fa-cloud-upload{% else %}fa-lock{% endif %}"></i></button>
+                                                            </span>
+                                                            <input type="text" disabled class="form-control sms">
+                                                            {%if forInp.value|length>0 %}
+                                                                <span class="input-group-btn">
+                                                                    <a class="btn btn-warning {{forInp.inputClass|default('')}}" id="{{FormValIni}}" type="button" target="_blank" href="{{forInp.value}}"><i class="fa fa-cloud-download"></i></a>
+                                                                </span>
+                                                            {%endif%}
+                                                        </div>
+                                                        {%endif%}
+                                                            {%endif%}
+
+                                                                {%endif%}
+                                                                </div>
+
+                                                                {% endif %}
+                                                                    {%endfor%}
+                                                                        {%set FormImput=false%}{#Borrar Imputs#}
+                                                                        {% endspaceless %}

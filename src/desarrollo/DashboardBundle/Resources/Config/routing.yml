@@ -1,0 +1,4 @@
+dashboard_index:
+    path:     /index
+    defaults: { _controller: DashboardBundle:Index:index }
+    methods:  GET

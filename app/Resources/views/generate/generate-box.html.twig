@@ -1,0 +1,40 @@
+{#{% set GenerateBox=[
+    {'type':'text','label':'Apellido Paterno','value':CAMPOS.pstvapepat.value,'name':'pstvapepat','id':'txtAppPat','Cmd':'4','inputClass':'clsSaveData','attr':'xy=APEPAT' },                                               
+    {'type':'text','label':'Apellido Materno','value':CAMPOS.pstvapemat.value,'name':'pstvapemat','id':'txtAppMat','Cmd':'4','inputClass':'clsSaveData','attr':'xy=APEPAT' },                                               
+    {'type':'text','label':'Nombres','value':CAMPOS.pstvnomb.value,'name':'pstvnomb','id':'txtNom','Cmd':'4','inputClass':'clsSaveData','attr':'xy=NOMBRES'}
+]%}
+{% include 'generate:generate-box.html.twig' %}#}
+{% set style = style|default('')%}
+{% if style != 'default' and  style != 'primary' and style != 'info' and style != 'success' and style != 'info' and style != 'warning' and style != 'danger' %}
+    {% set style = 'default' %}
+{% endif %}
+<div class="portlet box box-{{style}}">
+    <div class="box-header with-border">
+        <h3 class="box-title"><i class="{{icono|default('')}}"></i> {{titulo}}</h3>
+        <div class="box-tools pull-right">
+            {% block right %}
+            {% endblock %}
+            {% if min is defined and min == true %}
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+            {% endif %}
+            {% if close is defined and close == true %}
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+                </button>
+            {% endif %}
+        </div>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        {% block cuerpo %}
+        {% endblock %}
+    </div>
+    <!-- /.box-body -->
+    {% block footer %}
+        <div class="box-footer clearfix">
+            <a href="#" class="btn btn-sm btn-info btn-flat pull-left">Enlace o boton de la izquierda</a>
+            <a href="#" class="btn btn-sm btn-default btn-flat pull-right">Enlace o boton de la derecha</a>
+        </div>
+    {% endblock %}
+    <!-- /.box-footer -->
+</div>
