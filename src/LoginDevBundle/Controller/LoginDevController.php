@@ -9,13 +9,15 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
 ///@brief Clase que contiene las rutas necesarias para el logueo del usuario
-class LoginDevController extends Controller {
+class LoginDevController extends Controller
+{
 
     ///@brief Ruta del login en el entorno dev
     /**
      * @Route("/loginV1_dev", name="loginV1_dev")
      */
-    public function loginV1_devAction(Request $request) {
+    public function loginV1_devAction(Request $request)
+    {
         $user = '';
         if ($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')) {
             $user = $this->getUser()->getUsername();
@@ -28,37 +30,44 @@ class LoginDevController extends Controller {
         $helper = $this->get('security.authentication_utils');
 
         return $this->render(
-                        'LoginDevBundle:Default:index.html.twig', array(
-                    'last_username' => $helper->getLastUsername(),
-                    'error' => $helper->getLastAuthenticationError(),
-                    'ambiente' => $this->container->get('kernel')->getEnvironment(),
-                        )
+            'LoginDevBundle:Default:index.html.twig', array(
+                'last_username' => $helper->getLastUsername(),
+                'error' => $helper->getLastAuthenticationError(),
+                'ambiente' => $this->container->get('kernel')->getEnvironment(),
+            )
         );
     }
 
     ///@brief Ruta para que el servicio verifique el estado de la sessión
+
     /**
      * @Route("/login_checkV1_dev", name="security_login_checkV1_dev")
      */
-    public function loginCheckAction() {
+    public function loginCheckAction()
+    {
         //will never be executed
         //return new Response('');
     }
 
     ///@brief Ruta para el cierre de sessión
+
     /**
      * @Route("/logout", name="logout")
      */
-    public function logoutAction(Request $request) {
+    public function logoutAction(Request $request)
+    {
         //return new Response('');
     }
 
     ///@brief Redirecciona a la ruta por defecto del sistema
     ///@note como esta es la raiz que se suele llamar al escribir la url principal y no tiene prefijo alguno redirecciona a la ruta por defecto
-     /**
+    /**
      * @Route("/", name="redirect_to_page_ini")
      */
-    public function RedirectToPageIniAction() {
+    public function RedirectToPageIniAction()
+    {
+        echo 'donde estoy?';
+        exit();
         return $this->redirectToRoute('_AppBundle_homepage');
     }
 

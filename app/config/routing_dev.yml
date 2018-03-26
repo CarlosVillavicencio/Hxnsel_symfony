@@ -27,9 +27,7 @@ app:
 
 dashboard:
     resource: "@DashboardBundle/Resources/config/routing.yml"
-    prefix:   /dashboard
-    host:     "{subdomain}.hxnselsymfony.com"
+    prefix:   /
+    host:     "{subdomain}.%domain%"
     requirements:
-        subdomain: dash
-#_main:
-#    resource: routing.yml
+        subdomain: "%subdomain.dash%"

@@ -61,7 +61,8 @@ class FormLoginAuthenticator extends AbstractFormLoginAuthenticator {
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey) {
         $url = $request->getSession()->get('_security.main.target_path');
         if (!$url) {
-            $url = $this->router->generate('_AppBundle_homepage');
+//            $url = $this->router->generate('_AppBundle_homepage');
+            $url = $request->getBaseUrl();
         }
         return new RedirectResponse($url);
     }
@@ -79,8 +80,9 @@ class FormLoginAuthenticator extends AbstractFormLoginAuthenticator {
     }
 
     ///@brief genera y redirige a laruta por defecto
-    protected function getDefaultSuccessRedirectUrl() {
-        return $this->router->generate('_AppBundle_homepage');
+    protected function getDefaultSuccessRedirectUrl(Request $request) {
+//        return $this->router->generate('_AppBundle_homepage');
+        return $request->getBaseUrl();
     }
 
     ///@brief Soporte recuerdame desactivado

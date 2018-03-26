@@ -3,7 +3,6 @@ imports:
     - { resource: config.yml }
     - { resource: "@LoginDevBundle/Resources/config/services.yml" }
     - { resource: "@ProyectosBundle/Resources/config/services.yml" }
-#    - { resource: "@DashboardBundle/Resources/config/services.yml" }
 #    - { resource: "@MantenimientosBundle/Resources/config/services.yml" }
 
 framework:
