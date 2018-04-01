@@ -4,7 +4,6 @@ parameters:
 #    parameter_name: value
     domain: hxnselsymfony.com
     subdomain.dash: dash
-    subdomain.dash: dash
 
 services:
 #    service_name:

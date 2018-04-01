@@ -34,6 +34,8 @@ class AppKernel extends Kernel
             $bundles[] = new LoginDevBundle\LoginDevBundle();
             $bundles[] = new proyectos\ProyectosBundle\ProyectosBundle();
             $bundles[] = new desarrollo\DashboardBundle\DashboardBundle();
+
+            $bundles[] = new FOS\UserBundle\FOSUserBundle();
         }
 
         return $bundles;

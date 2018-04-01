@@ -66,7 +66,19 @@ class LoginDevController extends Controller
      */
     public function RedirectToPageIniAction()
     {
-        echo 'donde estoy?';
+        $user = '';
+        if( $this->container->get( 'security.authorization_checker' )->isGranted( 'IS_AUTHENTICATED_FULLY' ) )
+        {
+            $user = $this->container->get('security.token_storage')->getToken()->getUser();
+            $id = $user->getId();
+            $username = $user->getUsername();
+            $password = $user->getPassword();
+        }
+        echo 'donde estoy?<br>';
+        echo "user $user<br>";
+        echo "id $id<br>";
+        echo "username $username<br>";
+        echo "password $password<br>";
         exit();
         return $this->redirectToRoute('_AppBundle_homepage');
     }
