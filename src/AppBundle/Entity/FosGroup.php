@@ -1,6 +1,6 @@
 <?php
 
-namespace LoginDevBundle\Entity;
+namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -38,7 +38,7 @@ class FosGroup
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="LoginDevBundle\Entity\FosUser", mappedBy="group")
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\FosUser", mappedBy="group")
      */
     private $user;
 

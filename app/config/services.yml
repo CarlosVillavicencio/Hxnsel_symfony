@@ -3,6 +3,7 @@
 parameters:
 #    parameter_name: value
     domain: hxnselsymfony.com
+    subdomain.portal: www
     subdomain.dash: dash
 
 services:

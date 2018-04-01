@@ -33,22 +33,29 @@ fos_user_group:
     resource: "@FOSUserBundle/Resources/config/routing/group.xml"
     prefix: /group
 
-proyectos:
+ProyectosBundle:
     resource: "@ProyectosBundle/Controller/"
     type:     annotation
     prefix:   /proyectos
 
-login_dev:
+LoginDevBundle:
     resource: "@LoginDevBundle/Controller/"
     type:     annotation
+    prefix:   /LoginDevBundle
+
+#app:
+#    resource: "@AppBundle/Controller/"
+#    type:     annotation
+#    prefix:   /inicio
+#
+AppBundle:
+    resource: "@AppBundle/Resources/config/routing.yml"
     prefix:   /
+    host:     "{subdomain}.%domain%"
+    requirements:
+        subdomain: "%subdomain.portal%"
 
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
-    prefix:   /inicio
-
-dashboard:
+DashboardBundle:
     resource: "@DashboardBundle/Resources/config/routing.yml"
     prefix:   /
     host:     "{subdomain}.%domain%"

@@ -1,6 +1,6 @@
 <?php
 
-namespace LoginDevBundle\Entity;
+namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -101,7 +101,7 @@ class FosUser
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="LoginDevBundle\Entity\FosGroup", inversedBy="user")
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\FosGroup", inversedBy="user")
      * @ORM\JoinTable(name="fos_user_user_group",
      *   joinColumns={
      *     @ORM\JoinColumn(name="user_id", referencedColumnName="id", nullable=true)

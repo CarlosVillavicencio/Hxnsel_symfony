@@ -13,9 +13,6 @@ class DefaultController extends Controller
 
     ///@brief Esta es la ruta principal
     ///@return Devuelve la página por defecto de symfony tras la instalación
-    /**
-     * @Route("/", name="_AppBundle_homepage")
-     */
     public function indexAction(Request $request)
     {
 //        echo $this->generateUrl('_AppBundle_homepage');
