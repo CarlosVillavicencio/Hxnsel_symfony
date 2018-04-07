@@ -31,6 +31,8 @@ class AppKernel extends Kernel
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
 
+            $bundles[] = new JMS\I18nRoutingBundle\JMSI18nRoutingBundle();
+            $bundles[] = new JMS\TranslationBundle\JMSTranslationBundle();
             $bundles[] = new AppBundle\AppBundle();
 //            $bundles[] = new LoginDevBundle\LoginDevBundle();
             $bundles[] = new proyectos\ProyectosBundle\ProyectosBundle();

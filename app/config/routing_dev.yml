@@ -30,17 +30,16 @@ ProyectosBundle:
 #
 AppBundle:
     resource: "@AppBundle/Resources/config/routing.yml"
-    prefix:   /{_locale}
+    prefix:   /
     host:     "{subdomain}.%domain%"
     requirements:
         subdomain: "%subdomain.portal%|%subdomain.dash%"
 
 DashboardBundle:
     resource: "@DashboardBundle/Resources/config/routing.yml"
-    prefix:   /{_locale}/dashboard
+    prefix:   /dashboard
     host:     "{subdomain}.%domain%"
     defaults:
         subdomain: "%subdomain.dash%"
     requirements:
-        _locale:  "%app.locales%"
         subdomain: "%subdomain.dash%"

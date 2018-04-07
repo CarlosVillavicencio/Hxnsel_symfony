@@ -10,6 +10,8 @@ class IndexController extends Controller
 {
     public function indexAction(Request $request)
     {
+//        dump($this->getParameter('app.locales'));
+//        exit();
         return $this->render('@Dashboard/Default/index.html.twig', array(
             'locale' => $this->get('translator')->getLocale(),
             'locales' => $this->getParameter('app.locales'),

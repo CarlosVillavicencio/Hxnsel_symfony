@@ -16,7 +16,7 @@ class DefaultController extends Controller
     public function indexAction(Request $request)
     {
 //        echo $this->generateUrl('_AppBundle_homepage');
-//        echo '<br>';
+//        echo $this->get('translator')->getLocale();
 //        echo $request->getBaseUrl();
 //        exit();
         // replace this example code with whatever you need
