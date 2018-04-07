@@ -2,9 +2,7 @@
 # http://symfony.com/doc/current/service_container.html
 parameters:
 #    parameter_name: value
-    domain: hxnselsymfony.com
-    subdomain.portal: www
-    subdomain.dash: dash
+
 
 services:
 #    service_name:
@@ -18,6 +16,6 @@ services:
         tags:
             - { name: twig.extension }
 #Servicio personalizado creado para el logueo
-    app.form_login_authenticator:
-        class: LoginDevBundle\Security\FormLoginAuthenticator
-        arguments: ["@router", "@security.password_encoder"]
+#    app.form_login_authenticator:
+#        class: LoginDevBundle\Security\FormLoginAuthenticator
+#        arguments: ["@router", "@security.password_encoder"]

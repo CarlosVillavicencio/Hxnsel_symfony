@@ -2,39 +2,83 @@
 
 namespace AppBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
-
 /**
  * Pais
- *
- * @ORM\Table(name="pais")
- * @ORM\Entity
  */
 class Pais
 {
     /**
      * @var integer
-     *
-     * @ORM\Column(name="id", type="integer", precision=0, scale=0, nullable=false, unique=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
 
     /**
      * @var string
-     *
-     * @ORM\Column(name="paivnombre", type="string", length=100, precision=0, scale=0, nullable=true, unique=false)
      */
     private $paivnombre;
 
     /**
      * @var string
-     *
-     * @ORM\Column(name="paiestado", type="string", length=1, precision=0, scale=0, nullable=true, unique=false)
      */
     private $paiestado;
 
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set paivnombre
+     *
+     * @param string $paivnombre
+     *
+     * @return Pais
+     */
+    public function setPaivnombre($paivnombre)
+    {
+        $this->paivnombre = $paivnombre;
+
+        return $this;
+    }
+
+    /**
+     * Get paivnombre
+     *
+     * @return string
+     */
+    public function getPaivnombre()
+    {
+        return $this->paivnombre;
+    }
+
+    /**
+     * Set paiestado
+     *
+     * @param string $paiestado
+     *
+     * @return Pais
+     */
+    public function setPaiestado($paiestado)
+    {
+        $this->paiestado = $paiestado;
+
+        return $this;
+    }
+
+    /**
+     * Get paiestado
+     *
+     * @return string
+     */
+    public function getPaiestado()
+    {
+        return $this->paiestado;
+    }
 }
 

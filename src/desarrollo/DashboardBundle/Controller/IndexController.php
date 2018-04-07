@@ -10,12 +10,26 @@ class IndexController extends Controller
 {
     public function indexAction(Request $request)
     {
-        $response = new Response('<html><head></head><body>sss</body></html>');
+        return $this->render('@Dashboard/Default/index.html.twig', array(
+            'locale' => $this->get('translator')->getLocale(),
+            'locales' => $this->getParameter('app.locales'),
+        ));
+        return $this->render('@Gym/security/login.html.twig', array(
+            'last_username' => $lastUsername,
+            'error' => $error,
+        ));
+        $translated = $this->get('translator')->trans('prueba');
+        $content = '<html><head></head><body>';
+        $content .= 'traduccion<br>';
+        $content .= $translated . ' <br>';
+        $locale = $request->getLocale();
+        $content .= 'locale ' . $locale . ' <br>';
+        $_locale = $this->get('translator')->getLocale();
+        $content .= '_locale ' . $_locale . ' <br>';
+        $url = $this->generateUrl('dashboard_index', array('_locale' => $locale));
+        $content .= 'url ' . $url . ' <br>';
+        $content .= '</body></html>';
+        $response = new Response($content);
         return new Response($response);
-        echo '<html><head></head><body>';
-        echo 'asas';
-        echo '</body></html>';
-        exit();
-        return '123';
     }
 }

@@ -1,0 +1,29 @@
+AppBundle\Entity\Pais:
+    type: entity
+    table: pais
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 'ID de Pais'
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        paivnombre:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+                comment: 'Nombre del pais'
+        paiestado:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                comment: 'Estado: (1): Activo,(0):Inactivo'
+    lifecycleCallbacks: {  }

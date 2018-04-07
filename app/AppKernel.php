@@ -32,7 +32,7 @@ class AppKernel extends Kernel
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
 
             $bundles[] = new AppBundle\AppBundle();
-            $bundles[] = new LoginDevBundle\LoginDevBundle();
+//            $bundles[] = new LoginDevBundle\LoginDevBundle();
             $bundles[] = new proyectos\ProyectosBundle\ProyectosBundle();
             $bundles[] = new desarrollo\DashboardBundle\DashboardBundle();
 

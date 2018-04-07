@@ -1,7 +1,7 @@
 imports:
     - { resource: security_dev.yml }
     - { resource: config.yml }
-    - { resource: "@LoginDevBundle/Resources/config/services.yml" }
+#    - { resource: "@LoginDevBundle/Resources/config/services.yml" }
     - { resource: "@ProyectosBundle/Resources/config/services.yml" }
 #    - { resource: "@MantenimientosBundle/Resources/config/services.yml" }
 fos_user:
@@ -14,8 +14,17 @@ fos_user:
         address: "noreply@yourcompany.com"
         sender_name: "No Reply"
 
+parameters:
+    locale: es
+    domain: hxnselsymfony.com
+    subdomain.portal: www
+    subdomain.dash: dash
+    app.locales: en|es
+
 framework:
-    translator: ~
+    translator: { fallbacks: ["%locale%"] }
+#    default_locale: es
+#    translator: ~
     router:
         resource: "%kernel.root_dir%/config/routing_dev.yml"
         strict_requirements: true

@@ -1,0 +1,11 @@
+<div class="user-info">
+    <div class="image">
+        <img src="{{ user_img }}" width="48" height="48" alt="User"/>
+    </div>
+    <div class="info-container">
+        <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ app.user.username }}</div>
+        <div class="email">{{ app.user.email }}</div>
+        {% embed "DashboardBundle:module:embed/sidebar_left_user_info_dropdown.html.twig" with {'dropdown':false} %}
+        {% endembed %}
+    </div>
+</div>

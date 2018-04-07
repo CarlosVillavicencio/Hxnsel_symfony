@@ -24,4 +24,3 @@ class Group extends BaseGroup
 
 
 }
-
