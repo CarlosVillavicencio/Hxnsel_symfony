@@ -29,17 +29,17 @@ security:
                 target: fos_user_security_login
             anonymous:    true
     access_control:
-        - { path: ^/inicio/, roles: ROLE_USER }
-        - { path: ^/group/, roles: ROLE_USER }
+        - { path: ^(/[a-z]+)?/inicio/, roles: ROLE_USER }
+        - { path: ^(/[a-z]+)?/group/, roles: ROLE_USER }
         # require ROLE_ADMIN for /admin*
-        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/admin/, role: ROLE_ADMIN }
+        - { path: ^(/[a-z]+)?/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+#        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^(/[a-z]+)?/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^(/[a-z]+)?/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^(/[a-z]+)?/admin/, role: ROLE_ADMIN }
 
 
-        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/dashboard, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^(/[a-z]+)?/dashboard, roles: ROLE_ADMIN }
         #- { path: ^/proyectos, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/, roles: ROLE_UC_CALIFICADOR }
         - { path: ^/, roles: ROLE_ADMIN }
