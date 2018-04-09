@@ -19,3 +19,7 @@ services:
 #    app.form_login_authenticator:
 #        class: LoginDevBundle\Security\FormLoginAuthenticator
 #        arguments: ["@router", "@security.password_encoder"]
+    app.form.registration:
+        class: AppBundle\Form\RegistrationType
+        tags:
+            - { name: form.type, alias: app_user_registration }

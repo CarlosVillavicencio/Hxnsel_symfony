@@ -1,1 +1,4 @@
-prueba: message test
+lenguaje: Language
+lenguajes:
+    es: Spanish
+    en: English

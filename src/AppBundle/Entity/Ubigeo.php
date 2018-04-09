@@ -110,4 +110,3 @@ class Ubigeo
         return $this->ubicestado;
     }
 }
-

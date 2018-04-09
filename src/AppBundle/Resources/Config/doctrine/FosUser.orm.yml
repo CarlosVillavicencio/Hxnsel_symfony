@@ -83,6 +83,20 @@ AppBundle\Entity\FosUser:
             length: null
             options:
                 fixed: false
+        firstName:
+            type: string
+            nullable: true
+            length: 180
+            options:
+                fixed: false
+            column: first_name
+        lastName:
+            type: string
+            nullable: true
+            length: 180
+            options:
+                fixed: false
+            column: last_name
     manyToMany:
         group:
             targetEntity: FosGroup

@@ -12,12 +12,49 @@
                 <li><a href="javascript:void(0);" class="js-search" data-close="true"><i
                                 class="material-icons">search</i></a></li>
                 <!-- #END# Call Search -->
+                <!-- Tasks -->
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                        <i class="material-icons">translate</i>
+                        {#<span class="label-count">9</span>#}
+                    </a>
+                    {% set _route = app.request.attributes.get('_route') %}
+                    {% set _route_params = app.request.attributes.get('_route_params') %}
+                    <ul class="dropdown-menu">
+                        <li class="header">{{ "lenguaje"|trans({},'messages',_route_params['_locale']) }}</li>
+                        <li class="body">
+                            <ul class="menu tasks">
+                                {% for k,v in twig_locales %}
+                                    {% set trans_languaje = 'lenguajes.'~v %}
+                                    <li>
+                                        {#<a href="javascript:void(0);">#}
+                                        <a href="{{ path(_route,{'_locale':v}) }}">
+                                            <h4>{{ trans_languaje|trans({},'messages',_route_params['_locale']) }}</h4>
+                                        </a>
+                                        {#<small>45%</small>#}
+                                        {#<div class="progress">#}
+                                        {#<div class="progress-bar bg-cyan" role="progressbar" aria-valuenow="85"#}
+                                        {#aria-valuemin="0" aria-valuemax="100" style="width: 45%">#}
+                                        {#</div>#}
+                                        {#</div>#}
+                                        {#</a>#}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        {#<li class="footer">#}
+                        {#<a href="javascript:void(0);">View All Tasks</a>#}
+                        {#</li>#}
+                    </ul>
+                </li>
+                <!-- #END# Tasks -->
                 {#<li class="pull-right">#}
                 {#<a href="javascript:void(0);" class="js-right-sidebar" data-close="true">#}
                 {#<i class="material-icons">more_vert</i></a>#}
                 {#</li>#}
                 <li class="pull-right">
-                    <a href="#" onclick="setTimeout(function () {$('div.user-helper-dropdown > i.dropdown-2').click();}, 125);return false;">
+                    <a href="#"
+                       onclick="setTimeout(function () {$('div.user-helper-dropdown > i.dropdown-2').click();}, 125);return false;">
                         <i class="material-icons">more_vert</i>
                     </a>
                     {% embed "DashboardBundle:module:embed/sidebar_left_user_info_dropdown.html.twig" with {'dropdown':true} %}

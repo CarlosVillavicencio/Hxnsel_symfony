@@ -17,7 +17,7 @@
         <!-- Bootstrap Core Css -->
         <link href="{{ asset('AdminBSBMaterialDesign/plugins/bootstrap/css/bootstrap.css') }}" rel="stylesheet">
         <!-- Waves Effect Css -->
-        {#<link href="{{ asset('AdminBSBMaterialDesign/plugins/node-waves/waves.css') }}" rel="stylesheet"/>#}
+        <link href="{{ asset('AdminBSBMaterialDesign/plugins/node-waves/waves.css') }}" rel="stylesheet"/>
         <!-- Animation Css -->
         <link href="{{ asset('AdminBSBMaterialDesign/plugins/animate-css/animate.css') }}" rel="stylesheet"/>
         <!-- Morris Chart Css-->
@@ -113,6 +113,11 @@
 </section>
 <section class="content">
     <div class="container-fluid">
+        {#{% block block_header %}#}
+        {#<div class="block-header">#}
+            {#<h2>DASHBOARD</h2>#}
+        {#</div>#}
+        {#{% endblock %}#}
         {% block body %}
         {% endblock %}
     </div>
@@ -146,7 +151,7 @@
 <script src="{{ asset('AdminBSBMaterialDesign/js/admin.js') }}"></script>
 {#<script src="{{ asset('AdminBSBMaterialDesign/js/pages/index.js') }}"></script>#}
 <!-- Demo Js -->
-{#<script src="{{ asset('AdminBSBMaterialDesign/js/demo.js') }}"></script>#}
+<script src="{{ asset('AdminBSBMaterialDesign/js/demo.js') }}"></script>
 <script type="text/javascript">
     $(document).ajaxStart(function () {
         $("body").addClass("portlet box load");

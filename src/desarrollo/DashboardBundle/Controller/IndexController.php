@@ -14,13 +14,13 @@ class IndexController extends Controller
 //        exit();
         return $this->render('@Dashboard/Default/index.html.twig', array(
             'locale' => $this->get('translator')->getLocale(),
-            'locales' => $this->getParameter('app.locales'),
+//            'locales' => '',
         ));
         return $this->render('@Gym/security/login.html.twig', array(
             'last_username' => $lastUsername,
             'error' => $error,
         ));
-        $translated = $this->get('translator')->trans('prueba');
+//        $translated = $this->get('translator')->trans('prueba');
         $content = '<html><head></head><body>';
         $content .= 'traduccion<br>';
         $content .= $translated . ' <br>';
