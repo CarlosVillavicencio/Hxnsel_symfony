@@ -36,6 +36,8 @@ AppBundle:
     resource: "@AppBundle/Resources/config/routing.yml"
     prefix:   /
     host:     "{subdomain}.%domain%"
+    defaults:
+            subdomain: "%subdomain.dash%"
     requirements:
         subdomain: "%subdomain.portal%|%subdomain.dash%"
 

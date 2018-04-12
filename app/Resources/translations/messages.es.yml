@@ -2,3 +2,9 @@ lenguaje: Lenguaje
 lenguajes:
     es: Español
     en: Ingles
+user_info_dropdown:
+    perfil: Perfil
+    cerrar_session: Cerrar sesión
+menu:
+    navegacion_principal: NAVEGACIÓN PRINCIPAL
+

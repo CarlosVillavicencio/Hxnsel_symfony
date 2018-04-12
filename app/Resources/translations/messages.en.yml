@@ -2,3 +2,8 @@ lenguaje: Language
 lenguajes:
     es: Spanish
     en: English
+user_info_dropdown:
+    perfil: Profile
+    cerrar_session: Sign Out
+menu:
+    navegacion_principal: MAIN NAVIGATION

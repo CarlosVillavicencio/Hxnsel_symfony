@@ -3,16 +3,7 @@
     {% embed "DashboardBundle:module:embed/block_header.html.twig" with {'header':'Dash'} %}
     {% endembed %}
     <div class="row clearfix">
-        {% set path = app.request.attributes.get('_route') %}
-        <p>path: {{ path }}</p>
-        {% set params = app.request.attributes.get('_route_params') %}
-        {#{% set params = params|merge({'_locale':'cambioLocale'}) %}#}
-        {#<p>params:{{ dump(params) }}</p>#}
-        {#<p>locale: {{ locale }}</p>#}
-        {#{% for k,v in locales|split('|') %}#}
-        {#{% for k,v in locales %}#}
-            {#<p>urlGenerada: {{ path('dashboard_index',{'_locale':v}) }}</p>#}
-        {#{% endfor %}#}
-        {#{{ dump(app.user) }}#}
+        TRADUCE EL DESLOGUEO DEL USUARIO!!!
+        {{ dump(app.user) }}
     </div>
 {% endblock %}

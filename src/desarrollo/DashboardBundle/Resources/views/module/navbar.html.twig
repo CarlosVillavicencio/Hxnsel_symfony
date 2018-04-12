@@ -4,7 +4,7 @@
             <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse"
                data-target="#navbar-collapse" aria-expanded="false"></a>
             <a href="javascript:void(0);" class="bars"></a>
-            <a class="navbar-brand" href="index.html">ADMINBSB - MATERIAL DESIGN</a>
+            <a class="navbar-brand" href="{{ path('AppBundle_homepage') }}">ADMINBSB - MATERIAL DESIGN</a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -18,10 +18,8 @@
                         <i class="material-icons">translate</i>
                         {#<span class="label-count">9</span>#}
                     </a>
-                    {% set _route = app.request.attributes.get('_route') %}
-                    {% set _route_params = app.request.attributes.get('_route_params') %}
                     <ul class="dropdown-menu">
-                        <li class="header">{{ "lenguaje"|trans({},'messages',_route_params['_locale']) }}</li>
+                        <li class="header">{{ "lenguaje"|trans() }}</li>
                         <li class="body">
                             <ul class="menu tasks">
                                 {% for k,v in twig_locales %}
@@ -29,7 +27,7 @@
                                     <li>
                                         {#<a href="javascript:void(0);">#}
                                         <a href="{{ path(_route,{'_locale':v}) }}">
-                                            <h4>{{ trans_languaje|trans({},'messages',_route_params['_locale']) }}</h4>
+                                            <h4>{{ trans_languaje|trans() }}</h4>
                                         </a>
                                         {#<small>45%</small>#}
                                         {#<div class="progress">#}
