@@ -1,0 +1,16 @@
+{% if app.request.getHttpHost() == (twig_subdomain_dash~'.'~twig_domain) %}
+    {% set twig = {
+    'extends':"@FOSUser/dash_layout.html.twig",
+    'include':"@FOSUser/Security/dash_login_content.html.twig"
+    } %}
+{% else %}
+    {% set twig = {
+    'extends':"@FOSUser/layout.html.twig",
+    'include':"@FOSUser/Security/login_content.html.twig"
+    } %}
+{% endif %}
+{% extends twig['extends'] %}
+
+{% block fos_user_content %}
+    {{ include(twig['include']) }}
+{% endblock fos_user_content %}

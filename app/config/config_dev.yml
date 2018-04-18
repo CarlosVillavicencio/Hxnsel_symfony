@@ -71,6 +71,9 @@ twig:
     strict_variables: "%kernel.debug%"
     globals:
         twig_locales: "%app.locales%"
+        twig_domain: "%domain%"
+        twig_subdomain_portal: "%subdomain.portal%"
+        twig_subdomain_dash: "%subdomain.dash%"
 
 doctrine:
     dbal:
