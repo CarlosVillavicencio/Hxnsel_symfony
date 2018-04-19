@@ -15,9 +15,26 @@ class DefaultController extends Controller
     ///@return Devuelve la página por defecto de symfony tras la instalación
     public function indexAction(Request $request)
     {
-        $locale = $request->getLocale();
-        $_locale = $this->get('translator')->getLocale();
-        return $this->redirectToRoute('dashboard_index', array('_locale' => $_locale));
+        $domain = $this->getParameter('domain');
+        $dash = $this->getParameter('subdomain.dash');
+        $portal = $this->getParameter('subdomain.portal');
+        $url = '';
+        if ($request->getHttpHost() == $dash . '.' . $domain) {
+            $url = $this->generateUrl('dashboard_index');
+        } elseif ($request->getHttpHost() == $portal . '.' . $domain) {
+            $url = '';
+        } else {
+            $url = '';
+        }
+        if ($url == '') {
+            echo 'falta definir la url para la redireccion!!<br>';
+            echo 'revisar AppBundle DefaultController';
+            exit();
+        }
+        return $this->redirect($url);
+//        $_locale = $this->get('translator')->getLocale();
+//        return $this->redirectToRoute('dashboard_index', array('_locale' => $_locale));
+
         // replace this example code with whatever you need
         return $this->render('default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir') . '/..') . DIRECTORY_SEPARATOR,

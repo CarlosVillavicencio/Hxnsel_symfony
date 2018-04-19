@@ -2,22 +2,50 @@
     <ul class="list">
         <li class="header">{{ "menu.navegacion_principal"|trans()|upper }}</li>
         <li class="active">
-            <a href="index.html">
+            <a href="{{ path('dashboard_index') }}">
                 <i class="material-icons">home</i>
-                <span>Home</span>
+                <span>{{ "menu.inicio"|trans }}</span>
             </a>
         </li>
         <li>
             <a href="javascript:void(0);" class="menu-toggle">
-                <i class="material-icons">perm_media</i>
-                <span>Medias</span>
+                <i class="material-icons">settings</i>
+                <span>{{ "menu.mantenimientos"|trans }}</span>
             </a>
             <ul class="ml-menu">
                 <li>
-                    <a href="pages/medias/image-gallery.html">Image Gallery</a>
+                    <a href="javascript:void(0);">
+                        <span>Menu Item</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="pages/medias/carousel.html">Carousel</a>
+                    <a href="{{ path('dashboard_grupos') }}">
+                        <span>{{ "menu.grupos"|trans }}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="menu-toggle">
+                        <span>{{ "menu.grupos"|trans }}</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span>Menu Item</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="menu-toggle">
+                                <span>Level - 3</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span>Level - 4</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </li>

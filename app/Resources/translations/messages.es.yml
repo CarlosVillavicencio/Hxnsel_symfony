@@ -11,6 +11,9 @@ user_info_dropdown:
     cerrar_session: Cerrar sesión
 menu:
     navegacion_principal: Navegación Principal
+    inicio: Inicio
+    mantenimientos: Mantenimientos
+    grupos: Grupos
 genericos:
     titulo_de_pagina: español titulo_de_pagina
     al_inicio: Ir a la página de inicio

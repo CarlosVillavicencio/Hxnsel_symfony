@@ -1,0 +1,8 @@
+{% extends 'DashboardBundle:module:layout.html.twig' %}
+{% block body %}
+    {% embed "DashboardBundle:module:embed/block_header.html.twig" with {'header':"menu.grupos"|trans } %}
+    {% endembed %}
+    <div class="row clearfix">
+        GruposController
+    </div>
+{% endblock %}

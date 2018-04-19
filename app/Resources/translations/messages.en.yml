@@ -11,6 +11,9 @@ user_info_dropdown:
     cerrar_session: Sign Out
 menu:
     navegacion_principal: Main Navigation
+    inicio: Home
+    mantenimientos: Maintenance
+    grupos: Groups
 genericos:
     titulo_de_pagina: ingles titulo_de_pagina
     al_inicio: Go to homepage

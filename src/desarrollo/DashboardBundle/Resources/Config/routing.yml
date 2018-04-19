@@ -1,4 +1,8 @@
 dashboard_index:
-    path:     /index
+    path:     /
     defaults: { _controller: DashboardBundle:Index:index }
+    methods:  GET
+dashboard_grupos:
+    path:     /grupos
+    defaults: { _controller: DashboardBundle:Grupos:index }
     methods:  GET
