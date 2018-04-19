@@ -1,3 +1,5 @@
+errores:
+    pagina_existe: Esta página no existe
 login:
     title: Inicia sesión
 lenguaje: Lenguaje
@@ -8,5 +10,7 @@ user_info_dropdown:
     perfil: Perfil
     cerrar_session: Cerrar sesión
 menu:
-    navegacion_principal: NAVEGACIÓN PRINCIPAL
-
+    navegacion_principal: Navegación Principal
+genericos:
+    titulo_de_pagina: español titulo_de_pagina
+    al_inicio: Ir a la página de inicio
