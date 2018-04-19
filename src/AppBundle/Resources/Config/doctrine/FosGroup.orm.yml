@@ -37,3 +37,4 @@ AppBundle\Entity\FosGroup:
             joinTable: null
             orderBy: null
     lifecycleCallbacks: {  }
+    repositoryClass: AppBundle\Repository\FosGroupRepository

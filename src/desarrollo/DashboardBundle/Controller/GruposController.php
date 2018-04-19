@@ -5,13 +5,17 @@ namespace desarrollo\DashboardBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
+use AppBundle\Entity\FosGroup;
 
 class GruposController extends Controller
 {
     public function indexAction(Request $request)
     {
+//        $em = $this->getDoctrine()->getManager();
+//        $data = $em->getRepository(FosGroup::class)->listar();
+        $data = $this->getDoctrine()->getRepository(FosGroup::class)->listar();
         return $this->render('@Dashboard/Grupos/index.html.twig', array(
-//            'locale' => $this->get('translator')->getLocale(),
+            'listado' => $data
         ));
     }
 }

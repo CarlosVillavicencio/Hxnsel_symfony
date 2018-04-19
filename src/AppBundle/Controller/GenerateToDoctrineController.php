@@ -26,6 +26,12 @@ class GenerateToDoctrineController extends Controller
         return $files;
     }
 
+    private function replaceSeparator($data)
+    {
+        $data = str_replace('/', '\\', $data);
+        return $data;
+    }
+
     private function getArrayRoute($array)
     {
         reset($array);
@@ -68,14 +74,16 @@ class GenerateToDoctrineController extends Controller
                         if (in_array($txtSearch, $filesRepo)) {
                             /**Editar el archivo yml agregando repositoryClass*/
                             $filename = $rutaBundle . $carpetaDoctrine . DIRECTORY_SEPARATOR . $v;
-                            $archivosEditados[] = $filename;
                             $yaml = Yaml::parse(file_get_contents($filename));
                             reset($yaml);
                             $key = key($yaml);
                             $filenameDoctrine = str_replace($extDoctrineToChange, '', str_replace($extDoctrine, $extRepo, $v));
-                            $data = str_replace($this->container->get('kernel')->getRootDir(), 'App', $rutaBundle . $carpetaRepo . DIRECTORY_SEPARATOR) . $filenameDoctrine;
-                            $data = str_replace('/', '\\', $data);
-                            $yaml[$key]["repositoryClass"] = $data;
+                            $getRootDir = str_replace('app', 'src' . DIRECTORY_SEPARATOR, $this->container->get('kernel')->getRootDir());
+                            $getRootDir = $this->replaceSeparator($getRootDir);
+                            $RutaSinTratar = $this->replaceSeparator($rutaBundle . $carpetaRepo . DIRECTORY_SEPARATOR . $filenameDoctrine);
+                            $rutaTratada = str_replace($getRootDir, '', $RutaSinTratar);
+                            $yaml[$key]["repositoryClass"] = $rutaTratada;
+                            $archivosEditados[] = array('rutaTratada' => $rutaTratada, 'archivo' => $filename);
 //                    $yaml[$key]["repositoryClassTest"] = $data;
                             $new_yaml = Yaml::dump($yaml, 5);
                             file_put_contents($filename, $new_yaml);

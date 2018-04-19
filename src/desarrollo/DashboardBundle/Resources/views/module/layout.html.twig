@@ -28,6 +28,10 @@
         <link href="{{ asset('AdminBSBMaterialDesign/css/style.css') }}" rel="stylesheet">
         <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
         <link href="{{ asset('AdminBSBMaterialDesign/css/themes/all-themes.css') }}" rel="stylesheet"/>
+        <!-- JQuery DataTable Css -->
+        <link href="{{ asset('AdminBSBMaterialDesign/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css') }}"
+              rel="stylesheet">
+
         <style type="text/css">
             .portlet.box.load:before {
                 background: transparent url('{{ asset('upload/img/portal/ajax_loader.gif') }}') 50% 50% no-repeat;
@@ -117,7 +121,7 @@
     <div class="container-fluid">
         {#{% block block_header %}#}
         {#<div class="block-header">#}
-            {#<h2>DASHBOARD</h2>#}
+        {#<h2>DASHBOARD</h2>#}
         {#</div>#}
         {#{% endblock %}#}
         {% block body %}
@@ -149,8 +153,20 @@
 {#<script src="{{ asset('AdminBSBMaterialDesign/plugins/flot-charts/jquery.flot.time.js') }}"></script>#}
 <!-- Sparkline Chart Plugin Js -->
 <script src="{{ asset('AdminBSBMaterialDesign/plugins/jquery-sparkline/jquery.sparkline.js') }}"></script>
+<!-- Jquery DataTable Plugin Js -->
+<script src="{{ asset('AdminBSBMaterialDesign/plugins/jquery-datatable/jquery.dataTables.js') }}"></script>
+<script src="{{ asset('AdminBSBMaterialDesign/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js') }}"></script>
+<script src="{{ asset('AdminBSBMaterialDesign/plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js') }}"></script>
+<script src="{{ asset('AdminBSBMaterialDesign/plugins/jquery-datatable/extensions/export/buttons.flash.min.js') }}"></script>
+<script src="{{ asset('AdminBSBMaterialDesign/plugins/jquery-datatable/extensions/export/jszip.min.js') }}"></script>
+<script src="{{ asset('AdminBSBMaterialDesign/plugins/jquery-datatable/extensions/export/pdfmake.min.js') }}"></script>
+<script src="{{ asset('AdminBSBMaterialDesign/plugins/jquery-datatable/extensions/export/vfs_fonts.js') }}"></script>
+<script src="{{ asset('AdminBSBMaterialDesign/plugins/jquery-datatable/extensions/export/buttons.html5.min.js') }}"></script>
+<script src="{{ asset('AdminBSBMaterialDesign/plugins/jquery-datatable/extensions/export/buttons.print.min.js') }}"></script>
 <!-- Custom Js -->
 <script src="{{ asset('AdminBSBMaterialDesign/js/admin.js') }}"></script>
+{#<script src="{{ asset('AdminBSBMaterialDesign/js/pages/tables/jquery-datatable.js') }}"></script>#}
+
 {#<script src="{{ asset('AdminBSBMaterialDesign/js/pages/index.js') }}"></script>#}
 <!-- Demo Js -->
 <script src="{{ asset('AdminBSBMaterialDesign/js/demo.js') }}"></script>
@@ -163,6 +179,44 @@
 //            setTimeout(function(){ $('html').getNiceScroll().resize(); }, 250);
         $("body").removeClass("portlet box load");
 //            $(".modal-content").removeClass("portlet box load");
+    });
+    var language = {
+        "sProcessing": "Procesando...",
+        "sLengthMenu": "Mostrar _MENU_ registros",
+        "sZeroRecords": "No se encontraron resultados",
+        "sEmptyTable": "Ningún dato disponible en esta tabla",
+        "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+        "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+        "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+        "sInfoPostFix": "",
+        "sSearch": "Buscar:",
+        "sUrl": "",
+        "sInfoThousands": ",",
+        "sLoadingRecords": "Cargando...",
+        "oPaginate": {
+            "sFirst": "Primero",
+            "sLast": "Último",
+            "sNext": "Siguiente",
+            "sPrevious": "Anterior"
+        },
+        "oAria": {
+            "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+            "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+        }
+    };
+    $('.js-basic-example').DataTable({
+        language: language,
+        responsive: true
+    });
+
+    //Exportable table
+    $('.js-exportable').DataTable({
+        language: language,
+        dom: 'Bfrtip',
+        responsive: true,
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
     });
 </script>
 {% block scripts %}

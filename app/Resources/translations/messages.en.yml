@@ -17,3 +17,22 @@ menu:
 genericos:
     titulo_de_pagina: ingles titulo_de_pagina
     al_inicio: Go to homepage
+datatable:
+    processing: Procesando...
+    search: replaceme
+    lengthMenu: replaceme
+    info: replaceme
+    infoEmpty: replaceme
+    infoFiltered: replaceme
+    infoPostFix: replaceme
+    loadingRecords: replaceme
+    zeroRecords: replaceme
+    emptyTable: replaceme
+    paginate:
+        first: assss
+        previous: assss
+        next: assss
+        last: assss
+    aria:
+        sortAscending: assss
+        sortDescending: assss
