@@ -18,4 +18,12 @@ class GruposController extends Controller
             'listado' => $data
         ));
     }
+
+    public function editAction(Request $request, $id)
+    {
+        $data = $this->getDoctrine()->getRepository(FosGroup::class)->listarById($id);
+        return $this->render('@Dashboard/Grupos/editar.html.twig', array(
+            'data' => $data
+        ));
+    }
 }

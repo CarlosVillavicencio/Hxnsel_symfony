@@ -1,5 +1,11 @@
 {% set _route = app.request.attributes.get('_route') %}
 {% set _route_params = app.request.attributes.get('_route_params') %}
+    {% set language_bootstrap_select = 'defaults-en_US.min' %}
+{% if _route_params['_locale'] == 'es' %}
+    {% set language_bootstrap_select = 'defaults-es_CL.min.js' %}
+{% elseif _route_params['_locale'] == 'en' %}
+    {% set language_bootstrap_select = 'defaults-en_US.min' %}
+{% endif %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,6 +30,9 @@
         <link href="{{ asset('AdminBSBMaterialDesign/plugins/animate-css/animate.css') }}" rel="stylesheet"/>
         <!-- Morris Chart Css-->
         {#<link href="{{ asset('AdminBSBMaterialDesign/plugins/morrisjs/morris.css') }}" rel="stylesheet"/>#}
+        <!-- Bootstrap Select Css -->
+        <link href="{{ asset('AdminBSBMaterialDesign/plugins/bootstrap-select/css/bootstrap-select.css') }}"
+              rel="stylesheet"/>
         <!-- Custom Css -->
         <link href="{{ asset('AdminBSBMaterialDesign/css/style.css') }}" rel="stylesheet">
         <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
@@ -80,7 +89,7 @@
                 </div>
             </div>
         </div>
-        <p>Espere por favor...</p>
+        <p>{{ "genericos.al_cargar_pagina"|trans }}</p>
     </div>
 </div>
 <!-- #END# Page Loader -->
@@ -133,7 +142,8 @@
 <!-- Bootstrap Core Js -->
 <script src="{{ asset('AdminBSBMaterialDesign/plugins/bootstrap/js/bootstrap.js') }}"></script>
 <!-- Select Plugin Js -->
-<script src="{{ asset('AdminBSBMaterialDesign/plugins/bootstrap-select/js/bootstrap-select.js') }}"></script>
+<script src="{{ asset('AdminBSBMaterialDesign/plugins/bootstrap-select/js/bootstrap-select.min.js') }}"></script>
+<script src="{{ asset('AdminBSBMaterialDesign/plugins/bootstrap-select/js/i18n/'~language_bootstrap_select) }}"></script>
 <!-- Slimscroll Plugin Js -->
 <script src="{{ asset('AdminBSBMaterialDesign/plugins/jquery-slimscroll/jquery.slimscroll.js') }}"></script>
 <!-- Waves Effect Plugin Js -->
@@ -170,55 +180,7 @@
 {#<script src="{{ asset('AdminBSBMaterialDesign/js/pages/index.js') }}"></script>#}
 <!-- Demo Js -->
 <script src="{{ asset('AdminBSBMaterialDesign/js/demo.js') }}"></script>
-<script type="text/javascript">
-    $(document).ajaxStart(function () {
-        $("body").addClass("portlet box load");
-//            $(".modal-content").addClass("portlet box load");
-    });
-    $(document).ajaxComplete(function () {
-//            setTimeout(function(){ $('html').getNiceScroll().resize(); }, 250);
-        $("body").removeClass("portlet box load");
-//            $(".modal-content").removeClass("portlet box load");
-    });
-    var language = {
-        "sProcessing": "Procesando...",
-        "sLengthMenu": "Mostrar _MENU_ registros",
-        "sZeroRecords": "No se encontraron resultados",
-        "sEmptyTable": "Ningún dato disponible en esta tabla",
-        "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
-        "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
-        "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
-        "sInfoPostFix": "",
-        "sSearch": "Buscar:",
-        "sUrl": "",
-        "sInfoThousands": ",",
-        "sLoadingRecords": "Cargando...",
-        "oPaginate": {
-            "sFirst": "Primero",
-            "sLast": "Último",
-            "sNext": "Siguiente",
-            "sPrevious": "Anterior"
-        },
-        "oAria": {
-            "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
-            "sSortDescending": ": Activar para ordenar la columna de manera descendente"
-        }
-    };
-    $('.js-basic-example').DataTable({
-        language: language,
-        responsive: true
-    });
-
-    //Exportable table
-    $('.js-exportable').DataTable({
-        language: language,
-        dom: 'Bfrtip',
-        responsive: true,
-        buttons: [
-            'copy', 'csv', 'excel', 'pdf', 'print'
-        ]
-    });
-</script>
+{{ include('@Dashboard/module/custom.html.twig') }}
 {% block scripts %}
 {% endblock %}
 </body>

@@ -1,0 +1,11 @@
+dashboard_grupos_view:
+    path:     /
+    defaults: { _controller: DashboardBundle:Grupos:index }
+    methods:  GET
+
+dashboard_grupos_edit:
+    path:     /{id}
+    defaults: { _controller: DashboardBundle:Grupos:edit }
+    methods:  GET
+    requirements:
+        id: '[0-9]$'

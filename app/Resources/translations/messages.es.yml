@@ -16,48 +16,27 @@ menu:
     grupos: Grupos
 genericos:
     titulo_de_pagina: español titulo_de_pagina
+    al_cargar_pagina: Espere por favor...
     al_inicio: Ir a la página de inicio
+    btn:
+        editar: Editar
+        eliminar: Eliminar
 datatable:
     processing: Procesando...
-    search: replaceme
-    lengthMenu: replaceme
-    info: replaceme
-    infoEmpty: replaceme
-    infoFiltered: replaceme
-    infoPostFix: replaceme
-    loadingRecords: replaceme
-    zeroRecords: replaceme
-    emptyTable: replaceme
+    search: Buscar:
+    lengthMenu: Mostrar _MENU_ registros
+    info: Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros
+    infoEmpty: Mostrando registros del 0 al 0 de un total de 0 registros
+    infoFiltered: (filtrado de un total de _MAX_ registros)
+    infoPostFix: ''
+    loadingRecords: Cargando...
+    zeroRecords: No se encontraron resultados
+    emptyTable: Ningún dato disponible en esta tabla
     paginate:
-        first: assss
-        previous: assss
-        next: assss
-        last: assss
+        first: Primero
+        previous: Anterior
+        next: Siguiente
+        last: Último
     aria:
-        sortAscending: assss
-        sortDescending: assss
-#REEMPLAZAR POR ESTOS TEXTOS LUEGO TRADUCIRLOS A INGLES
-#{
-#    "sProcessing":     "Procesando...",
-#    "sLengthMenu":     "Mostrar _MENU_ registros",
-#    "sZeroRecords":    "No se encontraron resultados",
-#    "sEmptyTable":     "Ningún dato disponible en esta tabla",
-#    "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
-#    "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
-#    "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
-#    "sInfoPostFix":    "",
-#    "sSearch":         "Buscar:",
-#    "sUrl":            "",
-#    "sInfoThousands":  ",",
-#    "sLoadingRecords": "Cargando...",
-#    "oPaginate": {
-#        "sFirst":    "Primero",
-#        "sLast":     "Último",
-#        "sNext":     "Siguiente",
-#        "sPrevious": "Anterior"
-#    },
-#    "oAria": {
-#        "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
-#        "sSortDescending": ": Activar para ordenar la columna de manera descendente"
-#    }
-#}
+        sortAscending: :&nbsp;Activar para ordenar la columna de manera ascendente
+        sortDescending: :&nbsp;Activar para ordenar la columna de manera descendente

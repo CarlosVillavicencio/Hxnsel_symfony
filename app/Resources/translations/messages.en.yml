@@ -16,23 +16,27 @@ menu:
     grupos: Groups
 genericos:
     titulo_de_pagina: ingles titulo_de_pagina
+    al_cargar_pagina: Please wait...
     al_inicio: Go to homepage
+    btn:
+        editar: Edit
+        eliminar: Delete
 datatable:
-    processing: Procesando...
-    search: replaceme
-    lengthMenu: replaceme
-    info: replaceme
-    infoEmpty: replaceme
-    infoFiltered: replaceme
-    infoPostFix: replaceme
-    loadingRecords: replaceme
-    zeroRecords: replaceme
-    emptyTable: replaceme
+    processing: Processing ...
+    search: Search:
+    lengthMenu: Show _MENU_ records
+    info: Showing records from _START_ to _END_ of a total of _TOTAL_ records
+    infoEmpty: Showing records from 0 to 0 of a total of 0 records
+    infoFiltered: (filtering a total of _MAX_ records)
+    infoPostFix: ''
+    loadingRecords: Loading...
+    zeroRecords: No results found
+    emptyTable: No data available in this table
     paginate:
-        first: assss
-        previous: assss
-        next: assss
-        last: assss
+        first: First
+        previous: Previous
+        next: Following
+        last: Latest
     aria:
-        sortAscending: assss
-        sortDescending: assss
+        sortAscending: :&nbsp;Activate to order the column ascending
+        sortDescending: :&nbsp;Activate to order the column in descending order

@@ -46,7 +46,7 @@ class GenerateToDoctrineController extends Controller
         return $ruta;
     }
 
-    public function indexAction()
+    public function indexAction($bundle)
     {
 //        echo 'AppBundle_generate_orm_to_doctrine';
 //        exit();
@@ -60,7 +60,7 @@ class GenerateToDoctrineController extends Controller
                 $extDoctrineToChange = '.php';
                 $carpetaDoctrine = $this->getArrayRoute($rutasDoctrine);
                 $carpetaRepo = $this->getArrayRoute($rutasRepo);
-                $rutaBundle = $this->container->get('kernel')->locateResource('@AppBundle');
+                $rutaBundle = $this->container->get('kernel')->locateResource('@' . $bundle);
                 $directoryDoctrine = $rutaBundle . $carpetaDoctrine;
                 $directoryRepo = $rutaBundle . $carpetaRepo;
                 $filesDoctrine = $this->recursive_read_dir($directoryDoctrine);

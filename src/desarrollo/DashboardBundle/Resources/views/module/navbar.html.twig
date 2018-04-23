@@ -26,7 +26,8 @@
                                     {% set trans_languaje = 'lenguajes.'~v %}
                                     <li>
                                         {#<a href="javascript:void(0);">#}
-                                        <a href="{{ path(_route,{'_locale':v}) }}">
+                                        {% set _route_params_temp = _route_params|merge({'_locale': v}) %}
+                                        <a href="{{ path(_route,_route_params_temp) }}">
                                             <h4>{{ trans_languaje|trans() }}</h4>
                                         </a>
                                         {#<small>45%</small>#}

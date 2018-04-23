@@ -8,11 +8,10 @@ class FosGroupRepository extends EntityRepository
 {
     public function listar()
     {
-        $array = array();
         $array = $this->getEntityManager()
             ->createQueryBuilder()
-            ->select('e')
-            ->from('AppBundle:FosGroup', 'e')
+            ->select('fg')
+            ->from('AppBundle:FosGroup', 'fg')
 //            ->leftJoin('ServicesEntitiesBundle:TotPublicationHasTotPublicationServices', 'b',
 //                'WITH', 'b.totPublication = a.totPublication')
 //            ->leftJoin('a.totSubCategory', 'c')
@@ -27,6 +26,19 @@ class FosGroupRepository extends EntityRepository
 //        $array = $array->groupBy('e.id')
             ->getQuery()
 //            ->getResult();
+            ->getResult(2);
+        return $array;
+    }
+
+    public function listarById($id)
+    {
+        $array = $this->getEntityManager()
+            ->createQueryBuilder()
+            ->select('fg')
+            ->from('AppBundle:FosGroup', 'fg')
+            ->where('fg.id = :id')
+            ->setParameter('id', $id)
+            ->getQuery()
             ->getResult(2);
         return $array;
     }
