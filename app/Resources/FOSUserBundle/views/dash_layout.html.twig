@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.getLocale() }}">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{ asset('Adminux/favicon.ico') }}">
+    <title>{{ "genericos.titulo_de_pagina"|trans }}</title>
+    <!-- Fontawesome icon CSS -->
+    <link rel="stylesheet" href="{{ asset('Adminux/vendor/font-awesome-4.7.0/css/font-awesome.min.css') }}"
+          type="text/css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ asset('Adminux/vendor/bootstrap4alpha/css/bootstrap.css') }}" type="text/css">
+
+    <!-- Adminux CSS -->
+    <link rel="stylesheet" href="{{ asset('Adminux/css/light_adminux.css') }}" type="text/css">
+</head>
+{#
+<div class="msg">{{ "login.title"|trans() }}</div>
+            {% block fos_user_content %}
+            {% endblock fos_user_content %}
+#}
+<body>
+<figure class="background"><img src="{{ asset('Adminux/img/login_bg.jpg') }}" alt="Adminux- sign in "></figure>
+<header class="navbar-fixed">
+    <nav class="navbar navbar-toggleable-md sign-in-header">
+        <div class="sidebar-left">
+            <a class="navbar-brand text-white" href="#"> <span class="fa fa-trophy"></span>
+                {{ "genericos.nombre_pagina"|trans }}
+            </a>
+        </div>
+        <div class="col"></div>
+        <div class="sidebar-right pull-right">
+            <ul class="navbar-nav  justify-content-end">
+                {#<li><a href="#" class="btn btn-link text-white">Need Help ?</a></li>#}
+                <li><a href="index.html" class="btn btn-primary">{{ "login.registrarse"|trans }}</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div class="wrapper-content-sign-in p-0">
+    <div class="col-md-8 offset-md-8 text-left side_signing_full">
+        {% block fos_user_content %}
+        {% endblock fos_user_content %}
+        <br>
+    </div>
+    <footer class="footer-content row  justify-content-between align-items-center">
+        <div class="col-sm-8">
+            {{ "genericos.copyright_web"|trans|raw }}
+        </div>
+        <div class="col-sm-8 text-right">
+            {#<a href="#" target="_blank" class="text-white">Privacy Policy</a> | <a href="#" target="_blank"#}
+                                                                                   {#class="text-white">Terms of use</a>#}
+        </div>
+    </footer>
+</div>
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="{{ asset('Adminux/js/jquery-2.1.1.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('Adminux/vendor/bootstrap4alpha/js/tether.min.js') }}"></script>
+<script src="{{ asset('Adminux/vendor/bootstrap4alpha/js/bootstrap.min.js') }}" type="text/javascript"></script>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="{{ asset('Adminux/js/ie10-viewport-bug-workaround.js') }}"></script>
+<script>
+    "use strict";
+    $('input[type="checkbox"]').on('change', function () {
+        $(this).parent().toggleClass("active");
+        $(this).closest(".media").toggleClass("active");
+    });
+</script>
+</body>
+</html>

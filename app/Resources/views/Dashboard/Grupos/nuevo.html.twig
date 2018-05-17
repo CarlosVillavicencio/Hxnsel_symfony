@@ -1,0 +1,66 @@
+{% extends 'Dashboard/module/layout.html.twig' %}
+{% block body %}
+    {% set breadcrumb = {
+    'dashboard_index':'menu.inicio',
+    'dashboard_grupos_view':'menu.grupos',
+    'dashboard_grupos_add':'genericos.btn.nuevo',
+    } %}
+    {% embed "Dashboard/module/embed/block_header.html.twig" with {'header':("menu.grupos"|trans),'breadcrumb':breadcrumb } %}
+    {% endembed %}
+    <div class="row">
+        <div class="col-sm-16 col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    {#<h6 class="card-title">Form control Bootstrap</h6>#}
+                    <h5 class="card-title">{{ "menu.grupos"|trans }}
+                        <small>{{ "genericos.btn.nuevo"|trans }}</small>
+                    </h5>
+                </div>
+                <form name="frm_grupos" action="{{ path('dashboard_grupos_new') }}" method="post">
+                    <fieldset>
+                        <div class="card-block">
+                            <div class="form-group">
+                                <label class="col-form-label">{{ "form.grupos.nombre"|trans }}:</label>
+                                <input type="text" class="form-control" id="name" name="name"
+                                       aria-describedby="nombreHelp" placeholder="{{ "form.grupos.nombre"|trans }}"
+                                       value="" required>
+                                <small id="nombreHelp" class="form-text text-muted">
+                                    {{ "form.grupos.nombre_span"|trans }}
+                                </small>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-form-label">{{ "form.grupos.roles"|trans }}:</label>
+                                <input type="text" class="form-control tagsinput" name="roles"
+                                       aria-describedby="rolesHelp" placeholder="{{ "form.grupos.roles_span"|trans }}"
+                                       value="" required>
+                                <small id="rolesHelp" class="form-text text-muted">
+                                    {{ "form.grupos.roles_span"|trans }}
+                                </small>
+                            </div>
+                        </div>
+                        {% embed "Dashboard/module/embed/buttons_form.html.twig" with {'cancel':'dashboard_grupos_view' } %}
+                        {% endembed %}
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('form[name="frm_grupos"]').validate({
+                submitHandler: function (form) {
+                    $(form).ajaxSubmit({
+                        success: function (response, status, xhr) {
+                            if (response.status) {
+                                toastr['success'](response.msg);
+                                window.location.href = "{{ path('dashboard_grupos_view') }}";
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+{% endblock %}

@@ -2,66 +2,41 @@
 # http://symfony.com/doc/current/security.html
 security:
     encoders:
-        LoginBundle\Entity\User:
-            algorithm: md5
-            encode_as_base64: false
-            iterations: 0
-        #Symfony\Component\Security\Core\User\User: plaintext
-    # http://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
+        FOS\UserBundle\Model\UserInterface: bcrypt
+    role_hierarchy:
+            ROLE_ADMIN:       ROLE_USER
+            ROLE_SUPER_ADMIN: ROLE_ADMIN
     providers:
-        #in_memory:
-        #    memory:
-        #        users:
-        #            admin:
-        #                password: 1234
-        #                roles: 'ROLE_ADMIN'
-        our_db_provider:
-            entity:
-                class: LoginBundle:User
-                property: username
+        fos_userbundle:
+            id: fos_user.user_provider.username
 
     firewalls:
-        # disables authentication for assets and the profiler, adapt it according to your needs
-        dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
-            security: false
-        #admin:
-        #    anonymous: ~
-        #    pattern: ^/proyectos
-        #usuarios:
-        #    #pattern: ^/
-        #    anonymous: ~
-        #    provider: our_db_provider
-        #    form_login:
-        #        login_path: login
-        #        check_path: login
         main:
-            anonymous: ~
             pattern:    ^/
-            http_basic: ~
-            provider: our_db_provider
             form_login:
-                login_path: loginV1
-                check_path: loginV1
-                default_target_path: _AppBundle_homepage
-                always_use_default_target_path: false
-                use_referer: true
-                #use_forward: false
-                use_forward: false
-                failure_path: loginV1
+                provider: fos_userbundle
+                csrf_token_generator: security.csrf.token_manager
+                require_previous_session: false
+                login_path: fos_user_security_login
+                check_path: fos_user_security_check
+                default_target_path: AppBundle_homepage
+#                default_target_path: "/%locale%"
             logout:
-                path: /logout
-                target: loginV1
+                path: fos_user_security_logout
+                target: fos_user_security_login
+            anonymous:    true
     access_control:
+        - { path: ^(/[a-z]+)?/inicio/, roles: ROLE_USER }
+        - { path: ^(/[a-z]+)?/group/, roles: ROLE_USER }
         # require ROLE_ADMIN for /admin*
-        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^(/[a-z]+)?/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+#        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^(/[a-z]+)?/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^(/[a-z]+)?/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^(/[a-z]+)?/admin/, role: ROLE_ADMIN }
+
+
+        - { path: ^(/[a-z]+)?/dashboard, roles: ROLE_ADMIN }
         #- { path: ^/proyectos, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/, roles: ROLE_UC_CALIFICADOR }
         - { path: ^/, roles: ROLE_ADMIN }
-        - { path: ^/, roles: ROLE_USER }
-            # activate different ways to authenticate
-
-            # http_basic: ~
-            # http://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
-
-            # form_login: ~
-            # http://symfony.com/doc/current/cookbook/security/form_login_setup.html

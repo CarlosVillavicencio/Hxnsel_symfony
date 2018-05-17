@@ -9,6 +9,9 @@ services:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
 
+    herramientas:
+        class: AppBundle\Controller\HerramientasService
+        arguments: ["@translator","@service_container","@router"]
 #Extensiones del twig(agregar funciones personalizadas)
     app.twig_extension:
         class: AppBundle\Twig\AppExtension

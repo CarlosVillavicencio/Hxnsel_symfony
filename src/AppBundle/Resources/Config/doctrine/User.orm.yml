@@ -31,6 +31,13 @@ AppBundle\Entity\User:
             options:
                 fixed: false
             column: last_name
+        themeDashboard:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+            column: theme_dashboard
     manyToMany:
         groups:
             targetEntity: Group

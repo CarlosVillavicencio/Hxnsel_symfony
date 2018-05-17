@@ -1,0 +1,189 @@
+{% set _route = app.request.attributes.get('_route') %}
+{% set _route_params = app.request.attributes.get('_route_params') %}
+    {% set language_bootstrap_select = 'defaults-en_US.min' %}
+{% if _route_params['_locale'] == 'es' %}
+    {% set language_bootstrap_select = 'defaults-es_CL.min.js' %}
+{% elseif _route_params['_locale'] == 'en' %}
+    {% set language_bootstrap_select = 'defaults-en_US.min' %}
+{% endif %}
+<!DOCTYPE html>
+<html lang="{{ app.request.getLocale() }}">
+<head>
+    {#<script src={{ asset('includes/js/jquery.min.js') }}></script>#}
+    {#<link rel="stylesheet" href={{ asset('includes/css/bootstrap.min.css') }}>#}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{ asset('Adminux/favicon.ico') }}">
+    <title>{{ "genericos.titulo_de_pagina"|trans }}</title>
+    <!-- Fontawesome icon CSS -->
+    <link rel="stylesheet" href="{{ asset('Adminux/vendor/font-awesome-4.7.0/css/font-awesome.min.css') }}"
+          type="text/css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ asset('Adminux/vendor/bootstrap4alpha/css/bootstrap.css') }}" type="text/css">
+    {% set themes = ['dark_blue_adminux','dark_brown_adminux','dark_green_adminux','dark_grey_adminux','dark_purple_adminux','dark_red_adminux','light_adminux'] %}
+    {% if app.user.themeDashboard in themes %}
+        <link rel="stylesheet" href="{{ asset('Adminux/css/'~app.user.themeDashboard~'.css') }}" type="text/css">
+    {% else %}
+        <link rel="stylesheet" href="{{ asset('Adminux/css/dark_blue_adminux.css') }}" type="text/css">
+    {% endif %}
+
+    <!--tagsinput CSS-->
+    <link href="{{ asset('js/tagsinput/tagsinput.css') }}" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="{{ asset('Adminux/vendor/datatables/css/dataTables.bootstrap4.css') }}" rel="stylesheet">
+    <link href="{{ asset('Adminux/vendor/datatables/css/responsive.dataTables.min.css') }}" rel="stylesheet">
+
+    <!-- toastr CSS -->
+    <link href="{{ asset('js/toastr/toastr.min.css') }}" rel="stylesheet" type="text/css">
+
+    <!-- ajax progress youtube CSS -->
+    <link href="{{ asset('js/ajax_progress_bar_youtube/ytLoad.jquery.css') }}" rel="stylesheet" type="text/css">
+
+    {{ include('Dashboard/custom_css.html.twig') }}
+    {% block stylesheets %}
+    {% endblock %}
+</head>
+<body>
+{#navbar#}
+{{ include('Dashboard/module/navbar.html.twig') }}
+{#navbar#}
+{#sidebar-left#}
+{{ include('Dashboard/module/sidebar-left.html.twig') }}
+{#sidebar-left#}
+<div class="wrapper-content">
+    <div class="container">
+        {#<div class="row  align-items-center justify-content-between">#}
+        {#<div class="col-11 col-sm-12 page-title">#}
+        {#<h3>Fixed Header</h3>#}
+        {#<p>Creatively crafted Dashboard for your needs</p>#}
+        {#</div>#}
+        {#<div class="col text-right ">#}
+        {#<div class="btn-group pull-right">#}
+        {#<button class="btn btn-outline-primary btn-round dropdown-toggle" data-toggle="dropdown"#}
+        {#aria-haspopup="true" aria-expanded="false">#}
+        {#<span class="text">Customise</span>#}
+        {#<i class="fa fa-cogs ml-2"></i>#}
+        {#</button>#}
+        {#<div class="dropdown-menu">#}
+        {#<a class="dropdown-item" href="index.html">Dark-blue Theme</a>#}
+        {#<a class="dropdown-item" href="dark_purple_theme.html">Dark Purple Theme</a>#}
+        {#<a class="dropdown-item" href="dark_red_theme.html">Dark Red Theme</a>#}
+        {#<a class="dropdown-item" href="dark_grey_theme.html">Dark Grey Theme</a>#}
+        {#<a class="dropdown-item" href="dark_green_theme.html">Dark Green Theme</a>#}
+        {#<a class="dropdown-item" href="dark_brown_theme.html">Dark Brown Theme</a>#}
+        {#<div class="dropdown-divider"></div>#}
+        {#<a class="dropdown-item" href="light_theme.html">Light theme</a>#}
+        {#<a class="dropdown-item" href="light_theme_rounded.html">Light Round theme</a>#}
+        {#</div>#}
+        {#</div>#}
+        {#</div>#}
+        {#</div>#}
+        {#<div class="row">#}
+        {#<div class="col-sm-16">#}
+        {#<div class="card">#}
+        {#<div class="card-header">#}
+        {#<h6 class="card-title">Fixed Header template page</h6>#}
+        {#</div>#}
+        {#<div class="card-block">This template is comes with fiexed header as default page layout.</div>#}
+        {#</div>#}
+        {#</div>#}
+        {#</div>#}
+        {% block body %}
+        {% endblock %}
+    </div>
+    <footer class="footer-content ">
+        <div class="container ">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-16 col-lg-8 col-xl-8">
+                    {{ "genericos.copyright_web"|trans|raw }}
+                </div>
+                {#<div class="col-md-16 col-lg-8 col-xl-8 text-right"><a href="#" target="_blank" class="">Privacy#}
+                {#Policy</a> | <a href="#" target="_blank" class="">Terms of use</a></div>#}
+            </div>
+        </div>
+    </footer>
+</div>
+{% block modal %}
+{% endblock %}
+{# el bloque que aparece cuando se va a buscar algo en el bloque de busqueda #}
+{#search-block#}
+{{ include('Dashboard/module/search-block.html.twig') }}
+{#search-block#}
+{#sidebar-right#}
+{{ include('Dashboard/module/sidebar-right.html.twig') }}
+{#sidebar-right#}
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+{#<script src="{{ asset('Adminux/js/jquery-2.1.1.min.js') }}" type="text/javascript"></script>#}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="{{ asset('Adminux/vendor/bootstrap4alpha/js/tether.min.js') }}"></script>
+<script src="{{ asset('Adminux/vendor/bootstrap4alpha/js/bootstrap.min.js') }}" type="text/javascript"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="{{ asset('Adminux/js/ie10-viewport-bug-workaround.js') }}"></script>  <!-- Circular chart progress js -->
+<script src="{{ asset('Adminux/vendor/cicular_progress/circle-progress.min.js') }}" type="text/javascript"></script>
+<!--sparklines js-->
+<script type="text/javascript" src="{{ asset('Adminux/vendor/sparklines/jquery.sparkline.min.js') }}"></script>
+<!-- custome template js -->
+<script src="{{ asset('Adminux/js/adminux.js') }}" type="text/javascript"></script>
+{#<!-- Select Plugin Js -->#}
+{#<script src="{{ asset('Adminux/plugins/bootstrap-select/js/bootstrap-select.min.js') }}"></script>#}
+{#<script src="{{ asset('Adminux/plugins/bootstrap-select/js/i18n/'~language_bootstrap_select) }}"></script>#}
+{#<!-- Chosen -->#}
+{#<link rel="stylesheet" href="{{ asset('js/chosen_v1.8.5/chosen.css') }}">#}
+{#<script src="{{ asset('js/chosen_v1.8.5/chosen.jquery.js') }}"></script>#}
+
+<!--sparklines js-->
+<script type="text/javascript" src="{{ asset('Adminux/vendor/sparklines/jquery.sparkline.min.js') }}"></script>
+
+<!--multiselct js-->
+<script type="text/javascript" src="{{ asset('Adminux/vendor/loumultiselect/js/jquery.multi-select.js') }}"></script>
+
+<!--bootstrap multiselct js-->
+<script type="text/javascript"
+        src="{{ asset('Adminux/vendor/bootstrap-multiselect-master/dist/js/bootstrap-multiselect.js') }}"></script>
+
+<!--tagsinput js-->
+{#<link href="{{ asset('js/tagsinput/tagsinput.css') }}" rel="stylesheet">#}
+<script type="text/javascript" src="{{ asset('js/tagsinput/tagsinput.js') }}"></script>
+
+{#<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>#}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+{#<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>#}
+{#<script src="{{ asset('js/tagsinput/dist/bootstrap-tagsinput.min.js') }}"></script>#}
+{#<script src="{{ asset('js/tagsinput/dist/bootstrap-tagsinput-angular.min.js') }}"></script>#}
+{#<script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/rainbow.min.js"></script>#}
+{#<script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/generic.js"></script>#}
+{#<script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/html.js"></script>#}
+{#<script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/javascript.js"></script>#}
+
+<!-- autocomplete CSS -->
+<link rel="stylesheet" href="{{ asset('Adminux/vendor/EasyAutocomplete-1.3.5/easy-autocomplete.css') }}" type="text/css">
+<!-- autocomplete js-->
+<script type="text/javascript" src="{{ asset('Adminux/vendor/EasyAutocomplete-1.3.5/jquery.easy-autocomplete.min.js') }}"></script>
+
+<!--validate js-->
+<script type="text/javascript" src="{{ asset('js/jquery-validation-1.17.0/lib/jquery.form.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery-validation-1.17.0/dist/jquery.validate.js') }}"></script>
+
+<!-- DataTables JavaScript -->
+<script src="{{ asset('Adminux/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('Adminux/vendor/datatables/js/dataTables.bootstrap4.js') }}"></script>
+<script src="{{ asset('Adminux/vendor/datatables/js/dataTables.responsive.min.js') }}"></script>
+
+<!-- toastr js -->
+<script type="text/javascript" src="{{ asset('js/toastr/toastr.min.js') }}"></script>
+
+<!-- ajax progress youtube js -->
+<script type="text/javascript" src="{{ asset('js/ajax_progress_bar_youtube/jquery.transit.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/ajax_progress_bar_youtube/ytLoad.jquery.js') }}"></script>
+
+{{ include('Dashboard/custom_js.html.twig') }}
+{% block scripts %}
+{% endblock %}
+</body>
+</html>

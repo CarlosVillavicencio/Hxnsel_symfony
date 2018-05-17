@@ -1,0 +1,28 @@
+{% extends 'Dashboard/module/layout.html.twig' %}
+{% block body %}
+    {% embed "Dashboard/module/embed/block_header.html.twig" with {'header':("menu.index.header"|trans),'body':("menu.index.parrafo"|trans)} %}
+    {% endembed %}
+    {#<div class="row clearfix">#}
+    {#{{ locale }}#}
+    <br>
+    {#TRADUCE EL DESLOGUEO DEL USUARIO!!!#}
+    {#{% if app.request.get('_route') != app.request.headers.get('referer') %}#}
+    {#<input type="hidden" name="_target_path" value="{{ app.request.headers.get('referer') }}" />#}
+    {#{{ app.request.headers.get('referer') }}#}
+    {#{% endif %}#}
+    {#{{ dump(data) }}#}
+    {#{{ dump(app.user) }}#}
+    {% set path = app.request.attributes.get('_route') %}
+    <p>path: {{ path }}</p>
+    {% set params = app.request.attributes.get('_route_params') %}
+    {#{% set params = params|merge({'_locale':'cambioLocale'}) %}#}
+    {#<p>params:{{ dump(params) }}</p>#}
+    <p>params:{{ path(path) }}</p>
+    {#<p>locale: {{ locale }}</p>#}
+    {#{% for k,v in locales|split('|') %}#}
+    {#{% for k,v in locales %}#}
+    {#<p>urlGenerada: {{ path('dashboard_index',{'_locale':v}) }}</p>#}
+    {#{% endfor %}#}
+    {#{{ dump(app.user) }}#}
+    {#</div>#}
+{% endblock %}

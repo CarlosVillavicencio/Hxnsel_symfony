@@ -1,0 +1,23 @@
+<div class="row align-items-center justify-content-between">
+    {% if header|default('') != '' %}
+        <div class="col-11 col-sm-12 page-title pt-3 pb-3">
+            <h3 class="mb-0">{{ header|default('') }}</h3>
+            {% if body|default('') != '' %}
+                <p>{{ body|default('') }}</p>
+            {% endif %}
+        </div>
+    {% endif %}
+    {% if breadcrumb|default('') is iterable %}
+        <div class="col-sm-16">
+            <ol class="breadcrumb pl-0">
+                {% for k,v in breadcrumb %}
+                    {% if v == breadcrumb|last %}
+                        <li class="breadcrumb-item active">{{ v|trans }}</li>
+                    {% else %}
+                        <li class="breadcrumb-item"><a href="{{ path(k) }}">{{ v|trans }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ol>
+        </div>
+    {% endif %}
+</div>

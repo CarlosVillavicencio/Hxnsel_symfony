@@ -2,6 +2,7 @@ errores:
     pagina_existe: Esta página no existe
 login:
     title: Inicia sesión
+    registrarse: Registrarse
 lenguaje: Lenguaje
 lenguajes:
     es: Español
@@ -13,19 +14,47 @@ menu:
     navegacion_principal: Navegación Principal
     inicio: Inicio
     mantenimientos: Mantenimientos
+    index:
+        header: Dashboard
+        parrafo: Tablero creativo para sus necesidades
     grupos: Grupos
 genericos:
+    nombre_pagina: AdminGym
     titulo_de_pagina: español titulo_de_pagina
     al_cargar_pagina: Espere por favor...
     al_inicio: Ir a la página de inicio
+    copyright_web: Copyright &copy; AdminGym | Diseñado por <a href="https://github.com/CarlosVillavicencio" target="_blank">Carlos Villavicencio Vásquez</a>
+    consultas:
+        reg_creado: Registro creado.
+        reg_modificado: Registro modificado.
+        reg_eliminado: Registro eliminado.
+        ocurrio_un_error: Ocurrió un error, por favor contacte con el administrador del sistema
+        no_se_encontro: No se pudo encontrar el registro
+    titles:
+        eliminar: Eliminar registro
     btn:
+        cancelar: Cancelar
+        grabar: Salvar
+        nuevo: Nuevo
+        listado: Listado
         editar: Editar
         eliminar: Eliminar
+        seleccione: Seleccione
+jqueryvalidation_org:
+    required: Este campo es requerido.
+    remote: Por favor arregla este campo.
+    email: Por favor, introduce una dirección de correo electrónico válida.
+    url: Por favor introduzca un URL válido.
+    date: Por favor introduzca una fecha valida.
+    dateISO: Por favor ingrese una fecha válida (ISO).
+    number: Por favor ingrese un número valido.
+    digits: Por favor ingrese solo dígitos.
+    equalTo: Por favor, introduzca el mismo valor de nuevo.
 datatable:
     processing: Procesando...
     search: Buscar:
     lengthMenu: Mostrar _MENU_ registros
-    info: Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros
+    info: Mostrando registros del _START_ al _END_ <br class='hidden-sm-up'> de un total de _TOTAL_ registros
     infoEmpty: Mostrando registros del 0 al 0 de un total de 0 registros
     infoFiltered: (filtrado de un total de _MAX_ registros)
     infoPostFix: ''
@@ -40,3 +69,13 @@ datatable:
     aria:
         sortAscending: :&nbsp;Activar para ordenar la columna de manera ascendente
         sortDescending: :&nbsp;Activar para ordenar la columna de manera descendente
+form:
+    grupos:
+        nombre: Nombre
+        nombre_span: Ingrese el nombre del grupo
+        roles: Roles
+        roles_span: Ingrese los roles que crea conveniente con el prefijo ROLE_
+list:
+    grupos:
+        nombre: Nombre
+        roles: Nº Roles

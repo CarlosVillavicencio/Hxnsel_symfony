@@ -1,0 +1,12 @@
+<div class="card-footer text-muted text-right">
+    {% if cancel|default('') != '' %}
+        <a href="{{ path(cancel) }}" class="btn btn-secondary btn-sm">
+            <i class="fa fa-reply"></i>
+            <span class="text">{{ "genericos.btn.cancelar"|trans }}</span>
+        </a>
+    {% endif %}
+    <button type="submit" class="btn btn-primary btn-sm">
+        <i class="fa fa-save"></i>
+        <span class="text">{{ "genericos.btn.grabar"|trans }}</span>
+    </button>
+</div>

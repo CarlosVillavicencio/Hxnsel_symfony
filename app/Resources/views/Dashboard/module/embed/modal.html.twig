@@ -1,0 +1,32 @@
+<div class="modal dark_bg fade" id="{{ idmodal|default('mymodal') }}" tabindex="-1" role="dialog"
+     aria-labelledby="{{ idmodal|default('mymodal') }}Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="{{ idmodal|default('mymodal') }}Label">{{ title|default('Modal') }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form name="{{ name_frm|default('frm_modal') }}" action="{{ action_frm|default('') }}" method="{{ method_frm|default('post') }}">
+                <fieldset>
+                    <div class="modal-body">
+                        {% block body %}
+                        {% endblock %}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            {{ "genericos.btn.cancelar"|trans }}
+                        </button>
+                        <button type="submit"
+                                class="btn btn-{{ ((class_btn_aceptar|default('')=='')?"primary":class_btn_aceptar) }}">
+                            {{ ((txt_btn_aceptar|default('')=='')?"genericos.btn.grabar":txt_btn_aceptar)|trans }}
+                        </button>
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+{#<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2"> Large Modal </button>#}

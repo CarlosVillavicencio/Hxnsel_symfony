@@ -1,9 +1,7 @@
 imports:
     - { resource: security_dev.yml }
     - { resource: config.yml }
-#    - { resource: "@LoginDevBundle/Resources/config/services.yml" }
-    - { resource: "@ProyectosBundle/Resources/config/services.yml" }
-#    - { resource: "@MantenimientosBundle/Resources/config/services.yml" }
+#    - { resource: "@ProyectosBundle/Resources/config/services.yml" }
 fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
@@ -16,13 +14,6 @@ fos_user:
     registration:
         form:
             type: AppBundle\Form\RegistrationType
-
-parameters:
-    locale: en
-    domain: hxnselsymfony.com
-    subdomain.portal: www
-    subdomain.dash: dash
-    app.locales: [en, es]
 
 jms_i18n_routing:
     default_locale: "%locale%"
@@ -62,18 +53,13 @@ monolog:
         #    type:   chromephp
         #    level:  info
 
+# Swiftmailer Configuration
 #swiftmailer:
-#    delivery_address: me@example.com
-
-# Twig Configuration
-twig:
-    debug:            "%kernel.debug%"
-    strict_variables: "%kernel.debug%"
-    globals:
-        twig_locales: "%app.locales%"
-        twig_domain: "%domain%"
-        twig_subdomain_portal: "%subdomain.portal%"
-        twig_subdomain_dash: "%subdomain.dash%"
+#    transport: "%mailer_transport%"
+#    host:      "%mailer_host%"
+#    username:  "%mailer_user%"
+#    password:  "%mailer_password%"
+#    spool:     { type: memory }
 
 doctrine:
     dbal:

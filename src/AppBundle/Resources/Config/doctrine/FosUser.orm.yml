@@ -97,6 +97,13 @@ AppBundle\Entity\FosUser:
             options:
                 fixed: false
             column: last_name
+        themeDashboard:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+            column: theme_dashboard
     manyToMany:
         group:
             targetEntity: FosGroup
@@ -106,13 +113,8 @@ AppBundle\Entity\FosUser:
             inversedBy: user
             joinTable:
                 name: fos_user_user_group
-                joinColumns:
-                    -
-                        name: user_id
-                        referencedColumnName: id
-                inverseJoinColumns:
-                    -
-                        name: group_id
-                        referencedColumnName: id
+                joinColumns: [{ name: user_id, referencedColumnName: id }]
+                inverseJoinColumns: [{ name: group_id, referencedColumnName: id }]
             orderBy: null
     lifecycleCallbacks: {  }
+    repositoryClass: AppBundle\Repository\FosUserRepository

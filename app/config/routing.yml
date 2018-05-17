@@ -1,24 +1,58 @@
-#mantenimientos:
-#    resource: "@MantenimientosBundle/Controller/"
-#    type:     annotation
-#    prefix:   /
+#fos_user:
+#    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
-#usuarios:
-#    resource: "@UsuariosBundle/Controller/"
-#    type:     annotation
-#    prefix:   /
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 
-#proyectos:
-#    resource: "@ProyectosBundle/Controller/"
-#    type:     annotation
-#    prefix:   /proyectos
+fos_user_profile:
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix: /profile
 
-login:
-    resource: "@LoginBundle/Controller/"
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+    host:     "{subdomain}.%domain%"
+    defaults:
+        subdomain: "%subdomain.dash%"
+    requirements:
+        subdomain: "%subdomain.dash%"
+
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting
+
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /profile
+
+fos_user_group:
+    resource: "@FOSUserBundle/Resources/config/routing/group.xml"
+    prefix: /group
+
+ProyectosBundle:
+    resource: "@ProyectosBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /proyectos
 
 #app:
 #    resource: "@AppBundle/Controller/"
 #    type:     annotation
 #    prefix:   /inicio
+#
+AppBundle:
+    resource: "@AppBundle/Resources/config/routing.yml"
+    prefix:   /
+#    host:     "{subdomain}.%domain%"
+#    defaults:
+#            subdomain: "%subdomain.dash%"
+#    requirements:
+#        subdomain: "%subdomain.portal%|%subdomain.dash%"
+
+DashboardBundle:
+    resource: "@DashboardBundle/Resources/config/routing.yml"
+    prefix:   /dashboard
+    host:     "{subdomain}.%domain%"
+    defaults:
+        subdomain: "%subdomain.dash%"
+    requirements:
+        subdomain: "%subdomain.dash%"

@@ -2,6 +2,7 @@ errores:
     pagina_existe: This page doesn't exist
 login:
     title: Log in
+    registrarse: Register
 lenguaje: Language
 lenguajes:
     es: Spanish
@@ -13,19 +14,47 @@ menu:
     navegacion_principal: Main Navigation
     inicio: Home
     mantenimientos: Maintenance
+    index:
+        header: Dashboard
+        parrafo: Creatively crafted Dashboard for your needs
     grupos: Groups
 genericos:
+    nombre_pagina: AdminGym
     titulo_de_pagina: ingles titulo_de_pagina
     al_cargar_pagina: Please wait...
     al_inicio: Go to homepage
+    copyright_web: Copyright &copy; AdminGym | Designed by <a href="https://github.com/CarlosVillavicencio" target="_blank">Carlos Villavicencio Vásquez</a>
+    consultas:
+        reg_creado: Record created.
+        reg_modificado: Modified registry.
+        reg_eliminado: Record deleted.
+        ocurrio_un_error: An error occurred, please contact the system administrator
+        no_se_encontro: Could not find the record
+    titles:
+        eliminar: Delete Record
     btn:
+        cancelar: Cancel
+        grabar: Save
+        nuevo: New
+        listado: List
         editar: Edit
         eliminar: Delete
+        seleccione: Select
+jqueryvalidation_org:
+    required: This field is required.
+    remote: Please fix this field.
+    email: Please enter a valid email address.
+    url: Please enter a valid URL.
+    date: Please enter a valid date.
+    dateISO: Please enter a valid date (ISO).
+    number: Please enter a valid number.
+    digits: Please enter only digits.
+    equalTo: Please enter the same value again.
 datatable:
     processing: Processing ...
     search: Search:
     lengthMenu: Show _MENU_ records
-    info: Showing records from _START_ to _END_ of a total of _TOTAL_ records
+    info: Showing records from _START_ to _END_ <br class='hidden-sm-up'> of a total of _TOTAL_ records
     infoEmpty: Showing records from 0 to 0 of a total of 0 records
     infoFiltered: (filtering a total of _MAX_ records)
     infoPostFix: ''
@@ -40,3 +69,13 @@ datatable:
     aria:
         sortAscending: :&nbsp;Activate to order the column ascending
         sortDescending: :&nbsp;Activate to order the column in descending order
+form:
+    grupos:
+        nombre: Name
+        nombre_span: Enter the group name
+        roles: Roles
+        roles_span: Enter the roles you think appropriate with the prefix ROLE_
+list:
+    grupos:
+        nombre: Name
+        roles: Nº Roles

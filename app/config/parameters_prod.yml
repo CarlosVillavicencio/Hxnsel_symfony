@@ -5,7 +5,7 @@ parameters:
     database_driver_PROD:   pdo_mysql
     database_host_PROD:     localhost
     database_port_PROD:     3306
-    database_name_PROD:     sys_hxnsel
+    database_name_PROD:     bbddprod_symfony
     database_user_PROD:     root
     database_password_PROD: null
     # You should uncomment this if you want use pdo_sqlite

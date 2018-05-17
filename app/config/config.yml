@@ -11,6 +11,10 @@ imports:
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en
+    domain: hxnselsymfony.com
+    subdomain.portal: www
+    subdomain.dash: dash
+    app.locales: [en, es]
 
 framework:
     #esi:             ~
@@ -38,11 +42,15 @@ framework:
     php_errors:
         log: true
 
-
 # Twig Configuration
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        twig_locales: "%app.locales%"
+        twig_domain: "%domain%"
+        twig_subdomain_portal: "%subdomain.portal%"
+        twig_subdomain_dash: "%subdomain.dash%"
 
 # Doctrine Configuration
 #doctrine:

@@ -21,8 +21,18 @@ class AppKernel extends Kernel
         ];
 
         if (in_array($this->getEnvironment(), ['prod'], true)) {
-            $bundles[] = new LoginBundle\LoginBundle();
-//            $bundles[] = new proyectos\ProyectosBundle\ProyectosBundle();
+//            $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
+            $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
+            $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
+            $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
+
+            $bundles[] = new JMS\I18nRoutingBundle\JMSI18nRoutingBundle();
+            $bundles[] = new JMS\TranslationBundle\JMSTranslationBundle();
+            $bundles[] = new AppBundle\AppBundle();
+            $bundles[] = new proyectos\ProyectosBundle\ProyectosBundle();
+            $bundles[] = new desarrollo\DashboardBundle\DashboardBundle();
+
+            $bundles[] = new FOS\UserBundle\FOSUserBundle();
         }
 //        if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
         if (in_array($this->getEnvironment(), ['dev'], true)) {
@@ -34,7 +44,6 @@ class AppKernel extends Kernel
             $bundles[] = new JMS\I18nRoutingBundle\JMSI18nRoutingBundle();
             $bundles[] = new JMS\TranslationBundle\JMSTranslationBundle();
             $bundles[] = new AppBundle\AppBundle();
-//            $bundles[] = new LoginDevBundle\LoginDevBundle();
             $bundles[] = new proyectos\ProyectosBundle\ProyectosBundle();
             $bundles[] = new desarrollo\DashboardBundle\DashboardBundle();
 

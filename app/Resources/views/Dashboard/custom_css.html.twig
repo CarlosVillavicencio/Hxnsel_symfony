@@ -1,0 +1,86 @@
+<style type="text/css">
+    {#.portlet.box.load:before {#}
+    {#background: transparent url('{{ asset('upload/img/portal/ajax_loader.gif') }}') 50% 50% no-repeat;#}
+    {#}#}
+    .ajax_loader:before {
+        background: transparent url('{{ asset('upload/img/portal/ajax_loader.gif') }}') 50% 50% no-repeat;
+        content: "";
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1020;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        filter: alpha(opacity=50);
+        -moz-opacity: 0.5;
+        -khtml-opacity: 0.5;
+        opacity: 0.5;
+    }
+
+    .ajax_loader:after {
+        content: "";
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1010;
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    .padding_0 {
+        padding: 0;
+    }
+
+    .form-control:disabled, .form-control[readonly] {
+        background-color: #eceeef;
+        opacity: 1;
+        color: #565656;
+    }
+
+    /*typeaheadCSS*/
+    .tt-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        float: left;
+        min-width: 160px;
+        padding: 5px 0;
+        margin: 2px 0 0;
+        list-style: none;
+        font-size: 14px;
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+        background-clip: padding-box;
+        cursor: pointer;
+    }
+
+    .tt-suggestion {
+        display: block;
+        padding: 3px 20px;
+        clear: both;
+        font-weight: normal;
+        line-height: 1.428571429;
+        color: #333333;
+        white-space: nowrap;
+    }
+
+    .tt-suggestion:hover,
+    .tt-suggestion:focus {
+        color: #ffffff;
+        text-decoration: none;
+        outline: 0;
+        background-color: #428bca;
+    }
+
+    /*typeaheadCSS*/
+</style>
