@@ -2,245 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7dea7c9d-1c80-45e4-852c-3ea9e23f00c3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/additional-methods.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/additional-methods.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/jquery.validate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/jquery.validate.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_ar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_ar.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_az.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_az.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_bg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_bg.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_bn_BD.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_bn_BD.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_ca.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_cs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_cs.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_da.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_da.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_de.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_el.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_el.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_es.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_es_AR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_es_AR.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_es_PE.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_es_PE.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_et.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_et.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_eu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_eu.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_fa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_fa.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_fi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_fi.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_fr.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_ge.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_ge.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_gl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_gl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_he.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_he.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_hr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_hr.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_hu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_hu.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_hy_AM.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_hy_AM.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_id.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_id.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_is.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_is.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_it.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_it.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_ja.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_ja.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_ka.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_ka.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_kk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_kk.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_ko.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_ko.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_lt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_lt.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_lv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_lv.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_mk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_mk.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_my.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_my.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_nl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_nl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_no.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_no.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_pl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_pl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_pt_BR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_pt_BR.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_pt_PT.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_pt_PT.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_ro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_ro.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_ru.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_sd.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_sd.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_si.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_si.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_sk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_sk.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_sl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_sl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_sr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_sr.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_sr_lat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_sr_lat.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_sv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_sv.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_th.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_th.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_tj.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_tj.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_tr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_tr.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_uk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_uk.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_ur.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_ur.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_vi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_vi.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_zh.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_zh.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_zh_TW.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/messages_zh_TW.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/methods_de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/methods_de.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/methods_es_CL.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/methods_es_CL.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/methods_fi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/methods_fi.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/methods_nl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/methods_nl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/methods_pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-validation/dist/localization/methods_pt.min.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/.editorconfig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/.gitattributes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/.github/ISSUE_TEMPLATE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/.github/PULL_REQUEST_TEMPLATE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/.jscsrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/.jshintignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/.jshintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/LICENSE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/changelog.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/ajaxSubmit-integration-demo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/bootstrap/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/captcha/captcha.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/captcha/fonts/Anorexia.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/captcha/image_req.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/captcha/images/button.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/captcha/images/image.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/captcha/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/captcha/newsession.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/captcha/process.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/captcha/rand.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/captcha/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/cinema/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/cinema/plan_9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/cinema/refer_madness.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/cinema/saucer_men.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/css/cmxform.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/css/cmxformTemplate.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/css/core.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/css/reset.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/css/screen.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/custom-messages-data-demo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/custom-methods-demo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/dynamic-totals.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/errorcontainer-demo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/errors-within-labels.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/file_input.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/images/bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/images/checked.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/images/cmxform-divider.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/images/cmxform-fieldset.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/images/loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/images/unchecked.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/jquerymobile.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/login/images/bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/login/images/header1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/login/images/page.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/login/images/required_star.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/login/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/login/screen.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/images/backRequiredGray.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/images/back_green-fade.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/images/back_nav_blue.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/images/blank.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/images/button-submit.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/images/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/images/help.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/images/left-nav-callout-long.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/images/login-sprite.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/images/logo_marketo.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/images/sf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/images/step1-24.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/images/step2-24.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/images/step3-24.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/images/tab-sprite.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/images/tab_green.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/images/time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/images/toggle.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/images/warning.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/jquery.maskedinput.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/mktSignup.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/step2.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/marketo/stylesheet.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/milk/bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/milk/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/milk/left_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/milk/milk.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/milk/milk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/milk/right_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/multipart/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/multipart/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/radio-checkbox-select-demo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/requirejs/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/requirejs/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/semantic-ui/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/site-demos.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/themerollered.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/tinymce/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/tinymce/themes/simple/editor_template.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/tinymce/themes/simple/img/icons.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/tinymce/themes/simple/langs/en.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/tinymce/themes/simple/skins/default/ui.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/tinymce/tiny_mce.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/demo/tinymce4/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/test/.jshintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/test/additional/creditcard.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/test/additional/netmask.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/test/aria.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/test/error-placement.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/test/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/test/messages.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/test/methods.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/test/rules.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/jquery-validation/test/test.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/Gruntfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/bootstrap-tagsinput.jquery.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/dist/bootstrap-tagsinput-angular.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/dist/bootstrap-tagsinput-angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/dist/bootstrap-tagsinput-angular.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/dist/bootstrap-tagsinput.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/dist/bootstrap-tagsinput.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/dist/bootstrap-tagsinput.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/dist/bootstrap-tagsinput.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/dist/bootstrap-tagsinput.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/dist/bootstrap-tagsinput.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/examples/assets/app.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/examples/assets/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/examples/assets/app_bs2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/examples/assets/app_bs3.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/examples/assets/cities.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/examples/assets/citynames.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/examples/bootstrap-2.3.2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/examples/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/karma.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/src/bootstrap-tagsinput-angular.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/src/bootstrap-tagsinput.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/src/bootstrap-tagsinput.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/test/bootstrap-tagsinput-angular.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/test/bootstrap-tagsinput/events.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/test/bootstrap-tagsinput/input_with_object_items.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/test/bootstrap-tagsinput/input_with_string_items.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/test/bootstrap-tagsinput/reproduced_bugs.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/test/bootstrap-tagsinput/select_with_object_items.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/test/bootstrap-tagsinput/select_with_string_items.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/test/helpers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/test/index.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/Dashboard/custom_js.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Dashboard/custom_js.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/Dashboard/module/layout.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Dashboard/module/layout.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/Config/routing.yml" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/Config/routing.yml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -261,11 +64,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="57" column="19" lean-forward="false" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+            <state relative-caret-position="204">
+              <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing_dev.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="691">
+              <caret line="63" column="58" lean-forward="false" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/Config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.en.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/translations/routes.en.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="48" lean-forward="false" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.es.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/translations/routes.es.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="49" lean-forward="false" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -274,19 +117,21 @@
       <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/module/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="172" column="90" lean-forward="false" selection-start-line="172" selection-start-column="90" selection-end-line="172" selection-end-column="90" />
+            <state relative-caret-position="645">
+              <caret line="152" column="0" lean-forward="false" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GruposController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Controller/GruposController.php">
+      <file leaf-file-name="custom_js.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/custom_js.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="793">
-              <caret line="151" column="1" lean-forward="false" selection-start-line="151" selection-start-column="1" selection-end-line="151" selection-end-column="1" />
-              <folding />
+            <state relative-caret-position="386">
+              <caret line="101" column="11" lean-forward="false" selection-start-line="101" selection-start-column="11" selection-end-line="101" selection-end-column="11" />
+              <folding>
+                <marker date="1526606818256" expanded="true" signature="6496:6509" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -303,9 +148,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>placeholder=&quot;Role</find>
-      <find>dashboard_grupos_save</find>
-      <find>toast</find>
       <find>dashboard_grupos_update</find>
       <find>WebScript</find>
       <find>parameter</find>
@@ -333,6 +175,9 @@
       <find>adminux.js</find>
       <find>jquery-validation-1.17.0</find>
       <find>valida</find>
+      <find>ocurrio_un_error</find>
+      <find>fos_</find>
+      <find>tags</find>
     </findStrings>
     <replaceStrings>
       <replace>Accesousuario</replace>
@@ -364,17 +209,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/dash_login_content.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/dash_layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/views/Grupos/index.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/module/sidebar-left.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/module/sidebar-right.html.twig" />
-        <option value="$PROJECT_DIR$/app/config/routing_dev.yml" />
-        <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/module/navbar.html.twig" />
-        <option value="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/views/module/custom.html.twig" />
-        <option value="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/views/Default/index.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/module/sidebar-left.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/module/search-block.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Repository/FosUserRepository.php" />
         <option value="$PROJECT_DIR$/app/config/security_dev.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/Config/doctrine/User.orm.yml" />
@@ -407,13 +241,24 @@
         <option value="$USER_HOME$/Downloads/Compressed/bootstrap-tagsinput-latest/examples/assets/app_bs3.js" />
         <option value="$PROJECT_DIR$/web/upload/file.json" />
         <option value="$PROJECT_DIR$/web/js/tagsinput/examples/assets/cities.json" />
-        <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/custom_js.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/custom_css.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/Grupos/editar.html.twig" />
         <option value="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Controller/UsuariosController.php" />
         <option value="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Controller/GruposController.php" />
         <option value="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/Config/routing/usuarios.yml" />
         <option value="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/Config/routing/grupos.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/Config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/Config/routing.es.yml" />
+        <option value="$PROJECT_DIR$/app/config/routing_dev.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/Config/routing.en.yml" />
+        <option value="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/Config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/translations/routes.es.yml" />
+        <option value="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/translations/routes.en.yml" />
+        <option value="$PROJECT_DIR$/web/js/tagsinput/tagsinput.js" />
+        <option value="$PROJECT_DIR$/web/js/tagsinput/tagsinput.css" />
+        <option value="$PROJECT_DIR$/web/js/tagsinput/github.css" />
+        <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/custom_css.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/Grupos/editar.html.twig" />
+        <option value="$PROJECT_DIR$/web/js/typeahead/typeahead.js" />
+        <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/custom_js.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/module/layout.html.twig" />
       </list>
     </option>
@@ -463,7 +308,92 @@
             <path>
               <item name="Hxnsel_symfony" type="b2602c69:ProjectViewProjectNode" />
               <item name="Hxnsel_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Hxnsel_symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hxnsel_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Hxnsel_symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hxnsel_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Hxnsel_symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hxnsel_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="FOSUserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Hxnsel_symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hxnsel_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="translations" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Hxnsel_symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hxnsel_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Hxnsel_symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hxnsel_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Dashboard" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Hxnsel_symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hxnsel_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Dashboard" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Grupos" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Hxnsel_symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hxnsel_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Dashboard" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Hxnsel_symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hxnsel_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Hxnsel_symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hxnsel_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Hxnsel_symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hxnsel_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Hxnsel_symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hxnsel_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Config" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Hxnsel_symfony" type="b2602c69:ProjectViewProjectNode" />
@@ -516,6 +446,26 @@
             <path>
               <item name="Hxnsel_symfony" type="b2602c69:ProjectViewProjectNode" />
               <item name="Hxnsel_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="desarrollo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="DashboardBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="translations" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Hxnsel_symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hxnsel_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="var" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Hxnsel_symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hxnsel_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="var" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="cache" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Hxnsel_symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hxnsel_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -529,7 +479,14 @@
               <item name="Hxnsel_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="jquery-validation" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="tagsinput" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Hxnsel_symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hxnsel_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="typeahead" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -552,19 +509,19 @@
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Hxnsel_symfony\src\AppBundle\Resources\Config" />
+      <recent name="C:\xampp\htdocs\tot_old\src\desarrollo\DashboardBundle\Resources\Config\routing" />
+      <recent name="C:\xampp\htdocs\tot_old\src\desarrollo\DashboardBundle\Controller" />
+      <recent name="C:\xampp\htdocs\tot_old\app\Resources\views\Dashboard\Grupos" />
+      <recent name="C:\xampp\htdocs\tot_old\app\Resources\views\Dashboard" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\tot_old\app\Resources\views\Dashboard" />
       <recent name="C:\xampp\htdocs\tot_old\web\upload\img\Adminux" />
       <recent name="C:\xampp\htdocs\tot_old\web\upload\img" />
       <recent name="C:\xampp\htdocs\Hxnsel_symfony\src\AppBundle\Resources\views" />
       <recent name="C:\xampp\htdocs\Hxnsel_symfony\web\upload\img\portal" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\tot_old\src\desarrollo\DashboardBundle\Resources\Config\routing" />
-      <recent name="C:\xampp\htdocs\tot_old\src\desarrollo\DashboardBundle\Controller" />
-      <recent name="C:\xampp\htdocs\tot_old\app\Resources\views\Dashboard\Grupos" />
-      <recent name="C:\xampp\htdocs\tot_old\app\Resources\views\Dashboard" />
-      <recent name="C:\xampp\htdocs\tot_old\web\js\toastr" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -603,7 +560,7 @@
       <workItem from="1525914428535" duration="623000" />
       <workItem from="1525987437948" duration="80250000" />
       <workItem from="1526358432765" duration="34817000" />
-      <workItem from="1526576815654" duration="4437000" />
+      <workItem from="1526576815654" duration="11181000" />
     </task>
     <task id="LOCAL-00001" summary="FOSUserBundle Login">
       <created>1522547798613</created>
@@ -724,11 +681,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526599222102</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="cambio carpeta jquery-validation">
+      <created>1526599406490</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1526599406490</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="378994000" />
+    <option name="totallyTimeSpent" value="385738000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
@@ -782,155 +746,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/web.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5503">
-          <caret line="675" column="23" lean-forward="false" selection-start-line="675" selection-start-column="23" selection-end-line="675" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Translation/TranslatorInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="793">
-          <caret line="69" column="37" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="69" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="793">
-          <caret line="57" column="37" lean-forward="false" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_prod.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters_prod.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="61" lean-forward="false" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
-          <folding>
-            <element signature="e#57#86#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/logs/prod.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Translation/DataCollectorTranslator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="49" column="4" lean-forward="false" selection-start-line="49" selection-start-column="4" selection-end-line="55" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Twig/AppExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="63" column="5" lean-forward="false" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/Config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="55" lean-forward="false" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/español titulo_de_pagina.url" />
-    <entry file="file://$USER_HOME$/Desktop/Adminux/pages/modal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="448" column="8" lean-forward="false" selection-start-line="448" selection-start-column="8" selection-end-line="457" selection-end-column="15" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#6;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#7;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/HerramientasService.php" />
     <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/module/embed/modal.html.twig">
       <provider selected="true" editor-type-id="text-editor">
@@ -958,10 +773,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+          <folding>
+            <element signature="e#2345#2390#0#Twig" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/tagsinput/tagsinput.js" />
     <entry file="file://$USER_HOME$/Desktop/Adminux/pages/autocomplete.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -984,6 +801,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="453">
           <caret line="34" column="68" lean-forward="false" selection-start-line="34" selection-start-column="68" selection-end-line="34" selection-end-column="68" />
+          <folding>
+            <element signature="e#12#45#0#Twig" expanded="false" />
+            <element signature="e#196#241#0#Twig" expanded="false" />
+            <element signature="e#3757#3795#0#Twig" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -991,6 +813,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" column="47" lean-forward="false" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -998,14 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="832">
           <caret line="80" column="23" lean-forward="false" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.es.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="747">
-          <caret line="76" column="79" lean-forward="false" selection-start-line="76" selection-start-column="79" selection-end-line="80" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -1059,57 +874,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/custom_css.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="41" column="5" lean-forward="false" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/custom_js.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="94" column="34" lean-forward="false" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
-          <folding>
-            <element signature="e#1263#2351#0#HTML" expanded="false" />
-            <element signature="e#4554#23381#0#HTML" expanded="false" />
-            <element signature="e#23776#25011#0#HTML" expanded="false" />
-            <element signature="e#25061#27838#0#HTML" expanded="false" />
-            <marker date="1526491874173" expanded="true" signature="25738:25751" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/Grupos/editar.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="23" column="70" lean-forward="false" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
-          <folding>
-            <element signature="e#12#45#0#Twig" expanded="false" />
-            <element signature="e#248#293#0#Twig" expanded="false" />
-            <element signature="e#2467#2512#0#Twig" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Controller/UsuariosController.php" />
     <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/Config/routing/usuarios.yml" />
-    <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/Config/routing/grupos.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="25" lean-forward="false" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="57" column="19" lean-forward="false" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/jquery-validation-1.17.0/lib/jquery.form.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1134,10 +900,228 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="57" column="19" lean-forward="false" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="37" lean-forward="false" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/translations/FOSUserBundle.en.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/translations/routes.en.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/translations/routes.es.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/translations/messages.en.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.es.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/translations/messages.es.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/Config/routing.es.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="45" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/Config/routing.en.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/Config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/translations/messages.es.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="691">
+          <caret line="63" column="58" lean-forward="false" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/Config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/Config/routing/grupos.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="25" lean-forward="false" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/translations/routes.es.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="49" lean-forward="false" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/translations/routes.en.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="48" lean-forward="false" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/tagsinput/dist/bootstrap-tagsinput.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/tagsinput/bootstrap-tagsinput.jquery.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/tagsinput/tagsinput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="51" lean-forward="false" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/tagsinput/tagsinput.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="861">
+          <caret line="59" column="1" lean-forward="false" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/tagsinput/github.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="861">
+          <caret line="87" column="1" lean-forward="false" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/custom_css.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="827">
+          <caret line="82" column="5" lean-forward="false" selection-start-line="44" selection-start-column="11" selection-end-line="82" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/Grupos/editar.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="33" column="64" lean-forward="false" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/typeahead/typeahead.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="22" lean-forward="true" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/custom_js.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="101" column="11" lean-forward="false" selection-start-line="101" selection-start-column="11" selection-end-line="101" selection-end-column="11" />
+          <folding>
+            <marker date="1526606818256" expanded="true" signature="6496:6509" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/module/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="172" column="90" lean-forward="false" selection-start-line="172" selection-start-column="90" selection-end-line="172" selection-end-column="90" />
+        <state relative-caret-position="645">
+          <caret line="152" column="0" lean-forward="false" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
           <folding />
         </state>
       </provider>

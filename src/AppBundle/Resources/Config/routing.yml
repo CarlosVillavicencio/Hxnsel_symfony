@@ -6,6 +6,4 @@ AppBundle_homepage:
 AppBundle_generate_orm_to_doctrine:
     path:     /generate-files-to-doctrine/{bundle}
     defaults: { _controller: AppBundle:GenerateToDoctrine:index, bundle: AppBundle }
-#    requirements:
-#        code: '^[a-zA-Z0-9]{1,20}$'
     methods:  [GET,POST]
