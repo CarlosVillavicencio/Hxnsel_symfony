@@ -1,29 +1,8 @@
-# Desc: /generate-files-to-doctrine/{bundle}
-AppBundle_generate_orm_to_doctrine: '/generate-files-to-doctrine/{bundle}'
-
-# Desc: /
-AppBundle_homepage: /
-
 # Desc: /dashboard/grupos/add
 dashboard_grupos_add: /dashboard/grupos/add   # FIXME
 
-# Desc: /dashboard/grupos/delete/{id}
-dashboard_grupos_delete: '/dashboard/grupos/delete/{id}'   # FIXME
-
 # Desc: /dashboard/grupos/edit/{id}
-dashboard_grupos_edit: '/dashboard/grupos/edit/{id}'   # FIXME
-
-# Desc: /dashboard/grupos/new
-dashboard_grupos_new: /dashboard/grupos/new   # FIXME
-
-# Desc: /dashboard/grupos/update/{id}
-dashboard_grupos_update: '/dashboard/grupos/update/{id}'   # FIXME
+dashboard_grupos_edit: '/dashboard/group/edit/{id}'   # FIXME
 
 # Desc: /dashboard/grupos/
-dashboard_grupos_view: /dashboard/grupos/inglish/   # FIXME
-
-# Desc: /dashboard/grupos/view/{id}
-dashboard_grupos_view_one: '/dashboard/grupos/view/{id}'   # FIXME
-
-# Desc: /dashboard/
-dashboard_index: /dashboard/en/
+dashboard_grupos_view: /dashboard/grupos/   # FIXME
