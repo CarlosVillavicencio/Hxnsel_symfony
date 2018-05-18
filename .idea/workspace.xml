@@ -2,48 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7dea7c9d-1c80-45e4-852c-3ea9e23f00c3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/bootstrap-tagsinput.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/dist/bootstrap-tagsinput-angular.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/dist/bootstrap-tagsinput-angular.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/dist/bootstrap-tagsinput-angular.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/dist/bootstrap-tagsinput.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/dist/bootstrap-tagsinput.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/dist/bootstrap-tagsinput.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/dist/bootstrap-tagsinput.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/dist/bootstrap-tagsinput.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/dist/bootstrap-tagsinput.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/examples/assets/app.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/examples/assets/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/examples/assets/app_bs2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/examples/assets/app_bs3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/examples/assets/cities.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/examples/assets/citynames.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/examples/bootstrap-2.3.2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/examples/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/karma.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/src/bootstrap-tagsinput-angular.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/src/bootstrap-tagsinput.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/src/bootstrap-tagsinput.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/test/bootstrap-tagsinput-angular.tests.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/test/bootstrap-tagsinput/events.tests.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/test/bootstrap-tagsinput/input_with_object_items.tests.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/test/bootstrap-tagsinput/input_with_string_items.tests.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/test/bootstrap-tagsinput/reproduced_bugs.tests.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/test/bootstrap-tagsinput/select_with_object_items.tests.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/test/bootstrap-tagsinput/select_with_string_items.tests.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/test/helpers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/tagsinput/test/index.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/translations/routes.en.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/translations/routes.es.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/tagsinput/tagsinput.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/tagsinput/tagsinput.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/typeahead/typeahead.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/Dashboard/custom_js.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Dashboard/custom_js.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/Dashboard/module/layout.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Dashboard/module/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/Config/routing.yml" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/Config/routing.yml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -94,7 +58,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.en.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="routes.en.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/translations/routes.en.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
@@ -114,7 +78,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/module/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="645">
@@ -176,8 +140,8 @@
       <find>jquery-validation-1.17.0</find>
       <find>valida</find>
       <find>ocurrio_un_error</find>
-      <find>fos_</find>
       <find>tags</find>
+      <find>fos_</find>
     </findStrings>
     <replaceStrings>
       <replace>Accesousuario</replace>
@@ -560,7 +524,7 @@
       <workItem from="1525914428535" duration="623000" />
       <workItem from="1525987437948" duration="80250000" />
       <workItem from="1526358432765" duration="34817000" />
-      <workItem from="1526576815654" duration="11181000" />
+      <workItem from="1526576815654" duration="11275000" />
     </task>
     <task id="LOCAL-00001" summary="FOSUserBundle Login">
       <created>1522547798613</created>
@@ -688,11 +652,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526599406490</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="cambio carpeta jquery-validation">
+      <created>1526606864436</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1526606864436</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="385738000" />
+    <option name="totallyTimeSpent" value="385832000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1012,14 +983,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/Config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/Config/routing/grupos.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
@@ -1032,14 +995,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="49" lean-forward="false" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/translations/routes.en.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="48" lean-forward="false" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -1122,6 +1077,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
           <caret line="152" column="0" lean-forward="false" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/Config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/translations/routes.en.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="48" lean-forward="false" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
           <folding />
         </state>
       </provider>
