@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7dea7c9d-1c80-45e4-852c-3ea9e23f00c3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/translations/routes.en.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/translations/routes.es.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/tagsinput/tagsinput.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/tagsinput/tagsinput.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/typeahead/typeahead.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/parameters.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,11 +55,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.en.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="routes.en.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/translations/routes.en.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
               <caret line="22" column="48" lean-forward="false" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -173,7 +180,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/AppBundle/Repository/FosUserRepository.php" />
         <option value="$PROJECT_DIR$/app/config/security_dev.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/Config/doctrine/User.orm.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
@@ -224,6 +230,7 @@
         <option value="$PROJECT_DIR$/web/js/typeahead/typeahead.js" />
         <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/custom_js.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/module/layout.html.twig" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -524,7 +531,7 @@
       <workItem from="1525914428535" duration="623000" />
       <workItem from="1525987437948" duration="80250000" />
       <workItem from="1526358432765" duration="34817000" />
-      <workItem from="1526576815654" duration="11275000" />
+      <workItem from="1526576815654" duration="11442000" />
     </task>
     <task id="LOCAL-00001" summary="FOSUserBundle Login">
       <created>1522547798613</created>
@@ -659,11 +666,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526606864436</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="corregido tagsinput y agredada carpeta translations para las rutas en DashboardBundle">
+      <created>1526606994558</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1526606994558</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="385832000" />
+    <option name="totallyTimeSpent" value="385999000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
@@ -708,7 +722,8 @@
     <MESSAGE value="habilitado prod" />
     <MESSAGE value="correccion config.yml, config_dev.yml y config_prod.yml" />
     <MESSAGE value="cambio carpeta jquery-validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambio carpeta jquery-validation" />
+    <MESSAGE value="corregido tagsinput y agredada carpeta translations para las rutas en DashboardBundle" />
+    <option name="LAST_COMMIT_MESSAGE" value="corregido tagsinput y agredada carpeta translations para las rutas en DashboardBundle" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -717,14 +732,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/HerramientasService.php" />
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/module/embed/modal.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="115" lean-forward="false" selection-start-line="21" selection-start-column="115" selection-end-line="21" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/FosGroupRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1093,6 +1100,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="48" lean-forward="false" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>

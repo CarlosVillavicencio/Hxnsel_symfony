@@ -1,0 +1,13 @@
+# This file is auto-generated during the composer install
+#parameters:
+#    database_driver_DEV: pdo_mysql
+#    database_host_DEV: localhost
+#    database_port_DEV: 3306
+#    database_name_DEV: sys_hxnsel
+#    database_user_DEV: root
+#    database_password_DEV: null
+#    mailer_transport: smtp
+#    mailer_host: 127.0.0.1
+#    mailer_user: null
+#    mailer_password: null
+#    secret: ThisTokenIsNotSoSecretChangeIt
