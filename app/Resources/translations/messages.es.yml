@@ -18,6 +18,7 @@ menu:
         header: Dashboard
         parrafo: Tablero creativo para sus necesidades
     grupos: Grupos
+    usuarios: Usuarios
 genericos:
     nombre_pagina: AdminGym
     titulo_de_pagina: español titulo_de_pagina
@@ -70,12 +71,25 @@ datatable:
         sortAscending: :&nbsp;Activar para ordenar la columna de manera ascendente
         sortDescending: :&nbsp;Activar para ordenar la columna de manera descendente
 form:
+    switch:
+        on: ON
+        off: OFF
     grupos:
         nombre: Nombre
         nombre_span: Ingrese el nombre del grupo
         roles: Roles
         roles_span: Ingrese los roles que crea conveniente con el prefijo ROLE_
+    usuarios:
+        nombre: Nombre
+        apellido: Apellido
 list:
     grupos:
         nombre: Nombre
         roles: Nº Roles
+    usuarios:
+        usuario: Usuario
+        nombre: Nombre
+        apellido: Apellido
+        correo: Correo
+        estado: Estado
+        ultimo_acceso: Último acceso

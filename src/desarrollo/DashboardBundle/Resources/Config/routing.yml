@@ -6,3 +6,7 @@ dashboard_index:
 dashboard_grupos:
     resource: "@DashboardBundle/Resources/Config/routing/grupos.yml"
     prefix:   /grupos
+
+dashboard_usuarios:
+    resource: "@DashboardBundle/Resources/Config/routing/usuarios.yml"
+    prefix:   /usuarios

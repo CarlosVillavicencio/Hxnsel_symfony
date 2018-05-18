@@ -1,41 +1,41 @@
 #Vistas
-dashboard_grupos_view:
+dashboard_usuarios_view:
     path:     /
     defaults: { _controller: DashboardBundle:Usuarios:index }
     methods:  GET
 
-dashboard_grupos_add:
+dashboard_usuarios_add:
     path:     /add
     defaults: { _controller: DashboardBundle:Usuarios:add }
     methods:  GET
 
-dashboard_grupos_edit:
+dashboard_usuarios_edit:
     path:     /edit/{id}
     defaults: { _controller: DashboardBundle:Usuarios:edit }
     methods:  GET
     requirements:
         id: '[0-9]{1,9}$'
 #Consultas
-dashboard_grupos_view_one:
+dashboard_usuarios_view_one:
     path:     /view/{id}
     defaults: { _controller: DashboardBundle:Usuarios:viewOne }
     methods:  POST
     requirements:
         id: '[0-9]{1,9}$'
 
-dashboard_grupos_new:
+dashboard_usuarios_new:
     path:     /new
     defaults: { _controller: DashboardBundle:Usuarios:new }
     methods:  POST
 
-dashboard_grupos_update:
+dashboard_usuarios_update:
     path:     /update/{id}
     defaults: { _controller: DashboardBundle:Usuarios:update }
     methods:  POST
     requirements:
         id: '[0-9]{1,9}$'
 
-dashboard_grupos_delete:
+dashboard_usuarios_delete:
     path:     /delete/{id}
     defaults: { _controller: DashboardBundle:Usuarios:delete }
     methods:  DELETE

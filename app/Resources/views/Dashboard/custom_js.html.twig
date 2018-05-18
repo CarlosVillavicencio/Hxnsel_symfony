@@ -125,6 +125,7 @@
             }
         };
         $.extend(true, $.fn.dataTable.defaults, {
+            pageLength: 10,
             language: language,
             responsive: true,
             lengthChange: false,
@@ -178,7 +179,16 @@
                 });#}
             }
         });
-        $('.datatable').DataTable();
+        $(".datatable").map(function () {
+            var numpag = $(this).attr("data-numpag");
+            if (numpag != '' && numpag != undefined && ($.isNumeric(numpag))) {
+                $(this).DataTable({
+                    pageLength: parseInt(numpag)
+                });
+            } else {
+                $(this).DataTable();
+            }
+        });
     });
 
     function substringMatcher(strs) {

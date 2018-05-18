@@ -10,40 +10,28 @@ class UsuariosController extends Controller
 {
     public function indexAction(Request $request)
     {
-        $data = $this->getDoctrine()->getRepository(FosGroup::class)->listar();
-        return $this->render(':Dashboard/Grupos:index.html.twig', array(
+        $data = $this->getDoctrine()->getRepository(FosUser::class)->listar();
+//        dump($data);
+//        exit();
+        return $this->render(':Dashboard/Usuarios:index.html.twig', array(
             'listado' => $data
         ));
     }
 
     public function addAction(Request $request)
     {
-        return $this->render(':Dashboard/Grupos:nuevo.html.twig');
+        return $this->render(':Dashboard/Usuarios:nuevo.html.twig');
     }
 
     public function editAction(Request $request, $id)
     {
         $tools = $this->get('herramientas');
-        $data = $this->getDoctrine()->getRepository(FosGroup::class)->listar();
-        $roles = array();
-        $array_temp = array("red", "green");
-        foreach ($data as $k => $v) {
-            $roles_temp = array();
-            if (is_array($v['roles'])) {
-                $roles_temp = $v['roles'];
-            } else {
-                $roles_temp = unserialize($v['roles']);
-            }
-            $roles = array_unique (array_merge ($roles, $roles_temp));
-        }
-        $roles = implode(',', $roles);
-        $data = $this->getDoctrine()->getRepository(FosGroup::class)->listarById($id);
+        $data = $this->getDoctrine()->getRepository(FosUser::class)->listarById($id);
         if (!is_array($data['roles'])) {
             $data['roles'] = unserialize($data['roles']);
         }
-        return $this->render(':Dashboard/Grupos:editar.html.twig', array(
+        return $this->render(':Dashboard/Usuarios:editar.html.twig', array(
             'id' => $id,
-            'roles' => $roles,
             'data' => $data
         ));
     }
@@ -54,7 +42,7 @@ class UsuariosController extends Controller
         if (!$request->isXmlHttpRequest()) {
             return $tools->redirectToHome();
         }
-        $data = $this->getDoctrine()->getRepository(FosGroup::class)->listarById($id);
+        $data = $this->getDoctrine()->getRepository(FosUser::class)->listarById($id);
         if (!is_array($data['roles'])) {
             $data['roles'] = unserialize($data['roles']);
         }
@@ -73,7 +61,7 @@ class UsuariosController extends Controller
         }
         try {
             $em = $this->getDoctrine()->getManager();
-            $grupo = new FosGroup();
+            $grupo = new FosUser();
             $name = $request->request->get('name');
             $roles = strtoupper($request->request->get('roles'));
             $roles = explode(',', $roles);
@@ -100,7 +88,7 @@ class UsuariosController extends Controller
         }
         try {
             $em = $this->getDoctrine()->getManager();
-            $grupo = $em->getRepository(FosGroup::class)->find($id);
+            $grupo = $em->getRepository(FosUser::class)->find($id);
             $array = array(
                 'status' => true,
                 'msg' => $tools->trans('genericos.consultas.reg_modificado')
@@ -131,7 +119,7 @@ class UsuariosController extends Controller
         }
         try {
             $em = $this->getDoctrine()->getManager();
-            $grupo = $em->getRepository(FosGroup::class)->find($id);
+            $grupo = $em->getRepository(FosUser::class)->find($id);
             $array = array(
                 'id' => $id,
                 'status' => true,

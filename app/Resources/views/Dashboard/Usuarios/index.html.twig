@@ -1,0 +1,148 @@
+{% extends 'Dashboard/module/layout.html.twig' %}
+{% block body %}
+    {% set breadcrumb = {
+    'dashboard_index':'menu.inicio',
+    'dashboard_usuarios_view':'menu.usuarios',
+    } %}
+    {% embed "Dashboard/module/embed/block_header.html.twig" with {'header':("menu.usuarios"|trans),'breadcrumb':breadcrumb } %}
+    {% endembed %}
+    <div class="row">
+        <div class="col-sm-16">
+            <div class="card full-screen-container">
+                <div class="card-header align-items-start justify-content-between flex">
+                    <h5 class="card-title pull-left">
+                        {{ "menu.usuarios"|trans }}
+                        <small>{{ "genericos.btn.listado"|trans }}</small>
+                    </h5>
+                    <ul class="nav nav-pills card-header-pills pull-right">
+                        <li class="nav-item">
+                            <a href="{{ path('dashboard_usuarios_add') }}"
+                               class="btn btn-sm btn-outline-primary btn-round">
+                                <i class="fa fa-file"></i>
+                                <span class="text">{{ "genericos.btn.nuevo"|trans }}</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-sm btn-link btn-round fullscreen-btn"><i
+                                        class="fa fa-arrows-alt"></i></button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-block table-responsive">
+                    <table class="table table-bordered table-striped table-hover datatable">
+                        <thead>
+                        <tr>
+                            <th>{{ "list.usuarios.usuario"|trans }}</th>
+                            <th>{{ "list.usuarios.nombre"|trans }}</th>
+                            <th>{{ "list.usuarios.apellido"|trans }}</th>
+                            <th>{{ "list.usuarios.correo"|trans }}</th>
+                            <th>{{ "list.usuarios.estado"|trans }}</th>
+                            <th>{{ "list.usuarios.ultimo_acceso"|trans }}</th>
+                            <th class="xs-hidden"></th>
+                            <th class="xs-hidden"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for k,v in listado %}
+                            <tr id="{{ v.id }}">
+                                <td>{{ v.username }}</td>
+                                <td>{{ v.firstName }}</td>
+                                <td>{{ v.lastName }}</td>
+                                <td>{{ v.email }}</td>
+                                <td>
+                                    <div class="can-toggle can-toggle--size-small">
+                                        <input id="toggle_{{ v.id }}" type="checkbox" {{ ((v.enabled)?'checked':'') }} disabled>
+                                        <label for="toggle_{{ v.id }}">
+                                            <div class="can-toggle__switch" data-checked="{{ "form.switch.on"|trans }}"
+                                                 data-unchecked="{{ "form.switch.off"|trans }}"></div>
+                                            {#<div class="can-toggle__label-text">.can-toggle.can-toggle--size-small</div>#}
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>{{ v.lastLogin|date("d/m/Y g:ia") }}</td>
+                                <td>
+                                    <a href="{{ path('dashboard_usuarios_edit',{'id':v.id}) }}"
+                                       class="btn btn-outline-primary btn-sm waves-effect">
+                                        <i class="fa fa-edit"></i>
+                                        <span>{{ "genericos.btn.editar"|trans }}</span>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#" onclick="carga_data_modal({{ v.id }})"
+                                       class="btn btn-outline-danger btn-sm">
+                                        <i class="fa fa-times"></i>
+                                        <span>{{ "genericos.btn.eliminar"|trans }}</span>
+                                    </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block modal %}
+    {% set arrayToModal = {
+    'idmodal':'modalEliminar',
+    'name_frm':'frm_eliminar',
+    'action_frm':'',
+    'method_frm':'delete',
+    'title':("genericos.titles.eliminar"|trans),
+    'txt_btn_aceptar':'genericos.btn.eliminar',
+    'class_btn_aceptar':'danger',
+    } %}
+    {% embed "Dashboard/module/embed/modal.html.twig" with arrayToModal %}
+        {% block body %}
+            <div class="form-group">
+                <label class="form-control-label">{{ "form.usuarios.nombre"|trans }}:</label>
+                <input type="text" class="form-control" name="name" readonly>
+            </div>
+        {% endblock %}
+    {% endembed %}
+{% endblock %}
+{% block scripts %}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('form[name="frm_eliminar"]').validate({
+                submitHandler: function (form) {
+                    $(form).ajaxSubmit({
+                        success: function (response, status, xhr) {
+                            if (response.status) {
+                                toastr['info'](response.msg);
+                                $('#modalEliminar').modal('hide');
+                                $('.datatable').DataTable().destroy();
+                                $('tr[id="' + response.id + '"]').remove();
+                                $('.datatable').DataTable();
+                            }
+                        }
+                    });
+                }
+            });
+        });
+
+        function carga_data_modal(id) {
+            var urlajax = "{{ path('dashboard_usuarios_view_one',{'id':'0'}) }}";
+            urlajax = urlajax.replace('0', id);
+            var urlform = "{{ path('dashboard_usuarios_delete',{'id':'0'}) }}";
+            urlform = urlform.replace('0', id);
+            $.ajax({
+                type: 'POST',
+                url: urlajax,
+//                data: params,
+                beforeSend: function (data) {
+                },
+                success: function (data) {
+                    $('input[name="name"]').val(data.data.name);
+                    $('form[name="frm_eliminar"]').attr('action', urlform);
+                    $('#modalEliminar').modal('show');
+                },
+                error: function (data) {
+                },
+                complete: function (data) {
+                }
+            });
+        }
+    </script>
+{% endblock %}

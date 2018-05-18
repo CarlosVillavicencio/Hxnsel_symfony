@@ -1,0 +1,80 @@
+{% extends 'Dashboard/module/layout.html.twig' %}
+{% block body %}
+    {% set breadcrumb = {
+    'dashboard_index':'menu.inicio',
+    'dashboard_usuarios_view':'menu.usuarios',
+    'dashboard_usuarios_edit':'genericos.btn.editar',
+    } %}
+    {% embed "Dashboard/module/embed/block_header.html.twig" with {'header':("menu.usuarios"|trans),'breadcrumb':breadcrumb } %}
+    {% endembed %}
+    <div class="row">
+        <div class="col-sm-16 col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">{{ "menu.usuarios"|trans }}
+                        <small>{{ "genericos.btn.editar"|trans }}</small>
+                    </h5>
+                </div>
+                <form name="frm_editar" action="{{ path('dashboard_usuarios_update',{'id':id}) }}" method="post">
+                    <fieldset>
+                        <div class="card-block">
+                            <div class="row">
+                                <div class="col-md-16">
+
+                                    <div class="form-group row">
+                                        <div class="col-lg-8">
+                                            <label class="col-form-label">{{ "form.usuarios.nombre"|trans }}:</label>
+                                            <input type="text" class="form-control" name="firstName"
+                                                   placeholder="{{ "form.usuarios.nombre"|trans }}"
+                                                   value="{{ data.firstName }}" required>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <label class="col-form-label">{{ "form.usuarios.apellido"|trans }}:</label>
+                                            <input type="text" class="form-control" name="lastName"
+                                                   placeholder="{{ "form.usuarios.apellido"|trans }}"
+                                                   value="{{ data.lastName }}" required>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        {% embed "Dashboard/module/embed/buttons_form.html.twig" with {'cancel':'dashboard_usuarios_view' } %}
+                        {% endembed %}
+                    </fieldset>
+                </form>
+                {{ dump(data) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('form[name="frm_editar"]').validate({
+                submitHandler: function (form) {
+                    $(form).ajaxSubmit({
+                        success: function (response, status, xhr) {
+                            if (response.status) {
+                                toastr['success'](response.msg);
+                                window.location.href = "{{ path('dashboard_usuarios_view') }}";
+                            }
+                        }
+                    });
+                },
+//                messages: {
+//                    nombres: {
+//                        required: " ",
+//                        equalTo: "Please enter the same password as above"
+//                    },
+//                    email: {
+//                        required: " ",
+//                        email: "Please enter a valid email address, example: you@yourdomain.com",
+//                        remote: jQuery.validator.format("{0} is already taken, please enter a different address.")
+//                    }
+//                },
+//                debug: true
+            });
+        });
+    </script>
+{% endblock %}

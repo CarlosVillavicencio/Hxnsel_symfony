@@ -42,16 +42,4 @@ class FosGroupRepository extends EntityRepository
             ->getResult(2);
         return $array[0];
     }
-    public function edit($id)
-    {
-        $array = $this->getEntityManager()
-            ->createQueryBuilder()
-            ->select('fg')
-            ->from('AppBundle:FosGroup', 'fg')
-            ->where('fg.id = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getResult(2);
-        return $array[0];
-    }
 }

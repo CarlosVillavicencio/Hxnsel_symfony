@@ -16,7 +16,7 @@
                         <small>{{ "genericos.btn.editar"|trans }}</small>
                     </h5>
                 </div>
-                <form name="frm_grupos" action="{{ path('dashboard_grupos_update',{'id':id}) }}" method="post">
+                <form name="frm_editar" action="{{ path('dashboard_grupos_update',{'id':id}) }}" method="post">
                     <fieldset>
                         <div class="card-block">
                             <div class="form-group">
@@ -50,7 +50,7 @@
 {% block scripts %}
     <script type="text/javascript">
         $(document).ready(function () {
-            $('form[name="frm_grupos"]').validate({
+            $('form[name="frm_editar"]').validate({
                 submitHandler: function (form) {
                     $(form).ajaxSubmit({
                         success: function (response, status, xhr) {

@@ -18,6 +18,7 @@ menu:
         header: Dashboard
         parrafo: Creatively crafted Dashboard for your needs
     grupos: Groups
+    usuarios: Users
 genericos:
     nombre_pagina: AdminGym
     titulo_de_pagina: ingles titulo_de_pagina
@@ -70,12 +71,25 @@ datatable:
         sortAscending: :&nbsp;Activate to order the column ascending
         sortDescending: :&nbsp;Activate to order the column in descending order
 form:
+    switch:
+        on: ON
+        off: OFF
     grupos:
         nombre: Name
         nombre_span: Enter the group name
         roles: Roles
         roles_span: Enter the roles you think appropriate with the prefix ROLE_
+    usuarios:
+        nombre: Name
+        apellido: Last Name
 list:
     grupos:
         nombre: Name
         roles: Nº Roles
+    usuarios:
+        usuario: Username
+        nombre: First Name
+        apellido: Last Name
+        correo: Email
+        estado: State
+        ultimo_acceso: Last Login
