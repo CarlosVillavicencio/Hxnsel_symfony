@@ -82,6 +82,14 @@ form:
     usuarios:
         nombre: Name
         apellido: Last Name
+        usuario: Username
+        tema_dashboard: Dashboard theme
+        correo: Email
+        confirmar_correo: Confirm email
+        contrasena: Password
+        confirmar_contrasena: Confirm Password
+        habilidato: Enabled
+        grupos_trabajo: Work groups
 list:
     grupos:
         nombre: Name

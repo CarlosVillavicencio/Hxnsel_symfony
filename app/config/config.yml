@@ -15,6 +15,7 @@ parameters:
     subdomain.portal: www
     subdomain.dash: dash
     app.locales: [en, es]
+    themes_dash_adminux: ['dark_blue_adminux','dark_brown_adminux','dark_green_adminux','dark_grey_adminux','dark_purple_adminux','dark_red_adminux','light_adminux']
 
 framework:
     #esi:             ~
@@ -51,6 +52,7 @@ twig:
         twig_domain: "%domain%"
         twig_subdomain_portal: "%subdomain.portal%"
         twig_subdomain_dash: "%subdomain.dash%"
+        twig_themes_dash_adminux: "%themes_dash_adminux%"
 
 # Doctrine Configuration
 #doctrine:

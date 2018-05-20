@@ -25,8 +25,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('Adminux/vendor/bootstrap4alpha/css/bootstrap.css') }}" type="text/css">
-    {% set themes = ['dark_blue_adminux','dark_brown_adminux','dark_green_adminux','dark_grey_adminux','dark_purple_adminux','dark_red_adminux','light_adminux'] %}
-    {% if app.user.themeDashboard in themes %}
+    {% if app.user.themeDashboard in twig_themes_dash_adminux %}
         <link rel="stylesheet" href="{{ asset('Adminux/css/'~app.user.themeDashboard~'.css') }}" type="text/css">
     {% else %}
         <link rel="stylesheet" href="{{ asset('Adminux/css/dark_blue_adminux.css') }}" type="text/css">
@@ -161,6 +160,15 @@
 <script src="{{ asset('Adminux/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
 <script src="{{ asset('Adminux/vendor/datatables/js/dataTables.bootstrap4.js') }}"></script>
 <script src="{{ asset('Adminux/vendor/datatables/js/dataTables.responsive.min.js') }}"></script>
+
+<!-- multielect CSS -->
+<link rel="stylesheet" href="{{ asset('Adminux/vendor/loumultiselect/css/multi-select.css') }}" type="text/css">
+<!-- Bootstrap multielect CSS -->
+<link rel="stylesheet" href="{{ asset('Adminux/vendor/bootstrap-multiselect-master/dist/css/bootstrap-multiselect.css') }}" type="text/css">
+<!--multiselct js-->
+<script type="text/javascript" src="{{ asset('Adminux/vendor/loumultiselect/js/jquery.multi-select.js') }}"></script>
+<!--bootstrap multiselct js-->
+<script type="text/javascript" src="{{ asset('Adminux/vendor/bootstrap-multiselect-master/dist/js/bootstrap-multiselect.js') }}"></script>
 
 <!-- toastr js -->
 <script type="text/javascript" src="{{ asset('js/toastr/toastr.min.js') }}"></script>

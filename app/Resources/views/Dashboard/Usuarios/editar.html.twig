@@ -20,7 +20,28 @@
                         <div class="card-block">
                             <div class="row">
                                 <div class="col-md-16">
-
+                                    <div class="form-group row">
+                                        <div class="col-lg-8">
+                                            <label class="col-form-label">{{ "form.usuarios.usuario"|trans }}:</label>
+                                            <input type="text" class="form-control" name="username"
+                                                   placeholder="{{ "form.usuarios.usuario"|trans }}"
+                                                   value="{{ data.username }}" required>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <label class="col-form-label">{{ "form.usuarios.tema_dashboard"|trans }}
+                                                :</label>
+                                            <select class="form-control" name="themeDashboard">
+                                                <option value="">{{ "genericos.btn.seleccione"|trans }}</option>
+                                                {% for k,v in twig_themes_dash_adminux %}
+                                                    {% if v == data.themeDashboard %}
+                                                        <option value="{{ v }}" selected>{{ v }}</option>
+                                                    {% else %}
+                                                        <option value="{{ v }}">{{ v }}</option>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                    </div>
                                     <div class="form-group row">
                                         <div class="col-lg-8">
                                             <label class="col-form-label">{{ "form.usuarios.nombre"|trans }}:</label>
@@ -35,7 +56,67 @@
                                                    value="{{ data.lastName }}" required>
                                         </div>
                                     </div>
-
+                                    <div class="form-group row">
+                                        <div class="col-lg-8">
+                                            <label class="col-form-label">{{ "form.usuarios.correo"|trans }}:</label>
+                                            <input type="text" class="form-control" id="email" name="email"
+                                                   placeholder="{{ "form.usuarios.correo"|trans }}"
+                                                   value="{{ data.email }}" required>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <label class="col-form-label">{{ "form.usuarios.confirmar_correo"|trans }}
+                                                :</label>
+                                            <input type="text" class="form-control" id="confirm_email"
+                                                   name="confirm_email"
+                                                   placeholder="{{ "form.usuarios.confirmar_correo"|trans }}"
+                                                   value="{{ data.email }}" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-lg-8">
+                                            <label class="col-form-label">{{ "form.usuarios.contrasena"|trans }}
+                                                :</label>
+                                            <input type="password" class="form-control" id="password" name="password"
+                                                   placeholder="{{ "form.usuarios.contrasena"|trans }}"
+                                                   value="">
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <label class="col-form-label">{{ "form.usuarios.confirmar_contrasena"|trans }}
+                                                :</label>
+                                            <input type="password" class="form-control" id="confirm_password"
+                                                   name="confirm_password"
+                                                   placeholder="{{ "form.usuarios.confirmar_contrasena"|trans }}"
+                                                   value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-lg-8">
+                                            <label class="col-form-label">{{ "form.usuarios.grupos_trabajo"|trans }}
+                                                :</label>
+                                            <select multiple="multiple" name="user_group[]"
+                                                    class="form-control multiselect" required>
+                                                {% for k,v in grupos %}
+                                                    {% if v.user_id == id %}
+                                                        <option value='{{ v.group_id }}' selected>{{ v.name }}</option>
+                                                    {% else %}
+                                                        <option value='{{ v.group_id }}'>{{ v.name }}</option>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="can-toggle">
+                                                <input id="toggle_{{ data.id }}" type="checkbox"
+                                                       name="enabled" {{ ((data.enabled)?'checked':'') }} value="true">
+                                                <label for="toggle_{{ data.id }}">
+                                                    <div class="can-toggle__switch"
+                                                         data-checked="{{ "form.switch.on"|trans }}"
+                                                         data-unchecked="{{ "form.switch.off"|trans }}"></div>
+                                                    <div class="can-toggle__label-text">{{ "form.usuarios.habilidato"|trans }}</div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -43,25 +124,36 @@
                         {% endembed %}
                     </fieldset>
                 </form>
-                {{ dump(data) }}
             </div>
         </div>
     </div>
 {% endblock %}
-{% block scripts %}
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('form[name="frm_editar"]').validate({
-                submitHandler: function (form) {
-                    $(form).ajaxSubmit({
-                        success: function (response, status, xhr) {
-                            if (response.status) {
-                                toastr['success'](response.msg);
-                                window.location.href = "{{ path('dashboard_usuarios_view') }}";
+    {% block scripts %}
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('form[name="frm_editar"]').validate({
+                    submitHandler: function (form) {
+//                    var array = $('form[name="frm_editar"]').serializeArray();
+//                    console.log(array);
+                        $(form).ajaxSubmit({
+                            success: function (response, status, xhr) {
+                                if (response.status) {
+                                    toastr['success'](response.msg);
+                                    window.location.href = "{{ path('dashboard_usuarios_view') }}";
+                                }
                             }
-                        }
-                    });
-                },
+                        });
+                    },
+                    rules: {
+                        confirm_password: {
+                            equalTo: "#password"
+                        },
+                        email: "required",
+                        confirm_email: {
+                            equalTo: "#email",
+                            required: true
+                        },
+                    }
 //                messages: {
 //                    nombres: {
 //                        required: " ",
@@ -74,7 +166,7 @@
 //                    }
 //                },
 //                debug: true
+                });
             });
-        });
-    </script>
-{% endblock %}
+        </script>
+    {% endblock %}
