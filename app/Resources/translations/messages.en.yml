@@ -31,6 +31,8 @@ genericos:
         reg_eliminado: Record deleted.
         ocurrio_un_error: An error occurred, please contact the system administrator
         no_se_encontro: Could not find the record
+        usuario_ya_existe: User already exists
+        grupo_ya_existe: The group already exists
     titles:
         eliminar: Delete Record
     btn:

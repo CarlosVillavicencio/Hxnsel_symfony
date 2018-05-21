@@ -5,11 +5,17 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/translations/messages.en.yml" afterPath="$PROJECT_DIR$/app/Resources/translations/messages.en.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/translations/messages.es.yml" afterPath="$PROJECT_DIR$/app/Resources/translations/messages.es.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/Dashboard/Grupos/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Dashboard/Grupos/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/Dashboard/Grupos/nuevo.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Dashboard/Grupos/nuevo.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/Dashboard/Usuarios/editar.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Dashboard/Usuarios/editar.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/Dashboard/Usuarios/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Dashboard/Usuarios/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/Dashboard/Usuarios/nuevo.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Dashboard/Usuarios/nuevo.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/Dashboard/custom_js.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Dashboard/custom_js.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/Dashboard/module/layout.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Dashboard/module/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security_dev.yml" afterPath="$PROJECT_DIR$/app/config/security_dev.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Repository/FosGroupRepository.php" afterPath="$PROJECT_DIR$/src/AppBundle/Repository/FosGroupRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Repository/FosUserRepository.php" afterPath="$PROJECT_DIR$/src/AppBundle/Repository/FosUserRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Controller/GruposController.php" afterPath="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Controller/GruposController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Controller/UsuariosController.php" afterPath="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Controller/UsuariosController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,83 +30,18 @@
       <file leaf-file-name="messages.en.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.en.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="623">
-              <caret line="91" column="35" lean-forward="false" selection-start-line="91" selection-start-column="35" selection-end-line="91" selection-end-column="35" />
+            <state relative-caret-position="322">
+              <caret line="34" column="23" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messages.es.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="messages.es.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.es.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="623">
-              <caret line="91" column="25" lean-forward="false" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="usuarios.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/Config/routing/usuarios.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FosUserRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/FosUserRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="51" column="25" lean-forward="false" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
-              <folding>
-                <element signature="e#286#305#0#PHP" expanded="true" />
-                <element signature="e#1104#1124#0#PHP" expanded="true" />
-                <element signature="e#1623#1643#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsuariosController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Controller/UsuariosController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="109" column="24" lean-forward="true" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
-              <folding>
-                <element signature="e#57#81#0#PHP" expanded="true" />
-                <element signature="e#267#562#0#PHP" expanded="false" />
-                <element signature="e#468#505#0#PHP" expanded="true" />
-                <element signature="e#568#692#0#PHP" expanded="false" />
-                <element signature="e#647#684#1#PHP" expanded="true" />
-                <element signature="e#1120#1158#0#PHP" expanded="true" />
-                <element signature="e#1276#1813#0#PHP" expanded="false" />
-                <element signature="e#1819#2779#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editar.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/Usuarios/editar.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="93" column="116" lean-forward="false" selection-start-line="93" selection-start-column="116" selection-end-line="93" selection-end-column="116" />
-              <folding>
-                <element signature="e#12#45#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/module/layout.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
-              <caret line="179" column="40" lean-forward="false" selection-start-line="179" selection-start-column="40" selection-end-line="179" selection-end-column="40" />
+            <state relative-caret-position="424">
+              <caret line="84" column="16" lean-forward="false" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -118,15 +59,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>example_typeahead</find>
-      <find>citynames</find>
-      <find>bs-example</find>
-      <find>adminux.js</find>
-      <find>jquery-validation-1.17.0</find>
-      <find>valida</find>
-      <find>ocurrio_un_error</find>
-      <find>tags</find>
-      <find>fos_</find>
       <find>default_locale</find>
       <find>be_simple_i18n_routing</find>
       <find>dashboard_grupos</find>
@@ -148,6 +80,15 @@
       <find>multiselect</find>
       <find>Multiselect list</find>
       <find>listarById</find>
+      <find>addGroup(</find>
+      <find>obtenerGruposYUsuarios</find>
+      <find>getR</find>
+      <find>frm_editar</find>
+      <find>data</find>
+      <find>gro</find>
+      <find>edit</find>
+      <find>dashboard_usuarios_view_one</find>
+      <find>no_se_encontro</find>
     </findStrings>
     <replaceStrings>
       <replace>Accesousuario</replace>
@@ -164,6 +105,7 @@
       <replace>dashboard_usuarios</replace>
       <replace>Dashboard/Usuarios</replace>
       <replace>FosUser</replace>
+      <replace>frm_nuevo</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\Hxnsel_symfony\app</dir>
@@ -174,6 +116,7 @@
       <dir>C:\xampp\htdocs\tot_old</dir>
       <dir>C:\xampp\htdocs\tot_old\src</dir>
       <dir>C:\xampp\htdocs\Hxnsel_symfony</dir>
+      <dir>C:\xampp\htdocs\Hxnsel_symfony\app\Resources\views\Dashboard\Usuarios</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -182,12 +125,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/module/embed/buttons_form.html.twig" />
-        <option value="$PROJECT_DIR$/web/js/ajax_progress_bar_youtube/ytLoad.jquery.css" />
         <option value="$PROJECT_DIR$/web/js/ajax_progress_bar_youtube/jquery.transit.js" />
         <option value="$PROJECT_DIR$/web/js/ajax_progress_bar_youtube/asasasa.js" />
         <option value="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Translation/DataCollectorTranslator.php" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/var/logs/prod.log" />
@@ -199,12 +139,10 @@
         <option value="$USER_HOME$/AppData/Local/Temp/español titulo_de_pagina.url" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/HerramientasService.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/module/embed/modal.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/Grupos/index.html.twig" />
         <option value="$USER_HOME$/Desktop/Adminux/pages/autocomplete.html" />
         <option value="$USER_HOME$/Downloads/Compressed/bootstrap-tagsinput-latest/examples/assets/app_bs3.js" />
         <option value="$PROJECT_DIR$/web/upload/file.json" />
         <option value="$PROJECT_DIR$/web/js/tagsinput/examples/assets/cities.json" />
-        <option value="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Controller/GruposController.php" />
         <option value="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/Config/routing/grupos.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/Config/routing.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/Config/routing.es.yml" />
@@ -221,18 +159,23 @@
         <option value="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/Config/routing/usuarios.yml" />
         <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/module/sidebar-left.html.twig" />
         <option value="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/Config/routing.yml" />
-        <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/Usuarios/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Repository/FosGroupRepository.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/Grupos/editar.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/Grupos/nuevo.html.twig" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/module/layout.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/custom_js.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Repository/FosGroupRepository.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Repository/FosUserRepository.php" />
-        <option value="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Controller/UsuariosController.php" />
-        <option value="$PROJECT_DIR$/app/Resources/translations/messages.en.yml" />
-        <option value="$PROJECT_DIR$/app/Resources/translations/messages.es.yml" />
+        <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/custom_js.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/security_dev.yml" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/Usuarios/editar.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/Usuarios/nuevo.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/translations/messages.es.yml" />
+        <option value="$PROJECT_DIR$/app/Resources/translations/messages.en.yml" />
+        <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/Grupos/nuevo.html.twig" />
+        <option value="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Controller/GruposController.php" />
+        <option value="$PROJECT_DIR$/src/desarrollo/DashboardBundle/Controller/UsuariosController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/Usuarios/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/Dashboard/Grupos/index.html.twig" />
       </list>
     </option>
   </component>
@@ -345,6 +288,13 @@
               <item name="Hxnsel_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Hxnsel_symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hxnsel_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Hxnsel_symfony" type="b2602c69:ProjectViewProjectNode" />
@@ -549,7 +499,7 @@
       <workItem from="1525914428535" duration="623000" />
       <workItem from="1525987437948" duration="80250000" />
       <workItem from="1526358432765" duration="34817000" />
-      <workItem from="1526576815654" duration="48447000" />
+      <workItem from="1526576815654" duration="80810000" />
     </task>
     <task id="LOCAL-00001" summary="FOSUserBundle Login">
       <created>1522547798613</created>
@@ -719,11 +669,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526678505349</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="crud usuarios(edit grupos)">
+      <created>1526799308125</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1526799308125</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="423004000" />
+    <option name="totallyTimeSpent" value="455367000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
@@ -772,87 +729,17 @@
     <MESSAGE value="gitignore cambiado" />
     <MESSAGE value="cambio en routes.es.yml y routes.en.yml" />
     <MESSAGE value="crud usuarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="crud usuarios" />
+    <MESSAGE value="crud usuarios(edit)" />
+    <MESSAGE value="crud usuarios(edit grupos)" />
+    <option name="LAST_COMMIT_MESSAGE" value="crud usuarios(edit grupos)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/translations/FOSUserBundle.en.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/translations/routes.en.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/translations/routes.es.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/translations/messages.en.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/translations/messages.es.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/Config/routing.es.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="45" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/Config/routing.en.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/Config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/translations/messages.es.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/tagsinput/dist/bootstrap-tagsinput.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -957,14 +844,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/Grupos/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="34" column="68" lean-forward="false" selection-start-line="34" selection-start-column="68" selection-end-line="34" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/module/sidebar-left.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -972,14 +851,6 @@
           <folding>
             <element signature="e#1629#1652#0#Twig" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="63" column="57" lean-forward="false" selection-start-line="63" selection-start-column="57" selection-end-line="63" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1025,56 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/FosGroupRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="5" lean-forward="false" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/Grupos/editar.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="18" column="38" lean-forward="false" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/Grupos/nuevo.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="51" column="35" lean-forward="false" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
-          <folding>
-            <element signature="e#12#45#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/Usuarios/nuevo.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/Config/routing/usuarios.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/Usuarios/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="43" lean-forward="false" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config_prod.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1087,30 +908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Model/UserInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1247">
-          <caret line="110" column="20" lean-forward="false" selection-start-line="110" selection-start-column="20" selection-end-line="110" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/FosUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="450" column="16" lean-forward="false" selection-start-line="450" selection-start-column="13" selection-end-line="450" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Controller/GruposController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="117" column="12" lean-forward="false" selection-start-line="117" selection-start-column="12" selection-end-line="118" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1131,24 +928,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="50" lean-forward="false" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/custom_js.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="191" column="40" lean-forward="false" selection-start-line="191" selection-start-column="40" selection-end-line="191" selection-end-column="40" />
-          <folding>
-            <marker date="1526792158360" expanded="true" signature="6524:6537" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/module/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="725">
@@ -1157,38 +936,205 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/FosUserRepository.php">
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/QueryBuilder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="51" column="25" lean-forward="false" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
-          <folding>
-            <element signature="e#286#305#0#PHP" expanded="true" />
-            <element signature="e#1104#1124#0#PHP" expanded="true" />
-            <element signature="e#1623#1643#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.en.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="91" column="35" lean-forward="false" selection-start-line="91" selection-start-column="35" selection-end-line="91" selection-end-column="35" />
+        <state relative-caret-position="306">
+          <caret line="1010" column="58" lean-forward="false" selection-start-line="1010" selection-start-column="44" selection-end-line="1010" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.es.yml">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/HerramientasService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="91" column="25" lean-forward="false" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
+        <state relative-caret-position="436">
+          <caret line="57" column="32" lean-forward="false" selection-start-line="54" selection-start-column="8" selection-end-line="57" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/Config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="63" column="57" lean-forward="false" selection-start-line="63" selection-start-column="57" selection-end-line="63" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Intranet/src/desarrollo/CI01VariosBundle/Controller/AgendaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="79" column="16" lean-forward="false" selection-start-line="79" selection-start-column="16" selection-end-line="83" selection-end-column="17" />
+          <folding>
+            <marker date="1524331502000" expanded="true" signature="16967:17407" ph="SELECT CIGRU... CIGRUPOS" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa14480.24191/Hxnsel_symfony/src/proyectos/ProyectosBundle/Model/Common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="34" column="26" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="43" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Group.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/FosUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="351" column="24" lean-forward="false" selection-start-line="351" selection-start-column="20" selection-end-line="351" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/FosGroupRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="827">
+          <caret line="73" column="22" lean-forward="false" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
+          <folding>
+            <element signature="e#40#74#0#PHP" expanded="true" />
+            <marker date="1526879420055" expanded="true" signature="1516:1744" ph="SELECT fg.id... fos_group" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/custom_js.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="742">
+          <caret line="189" column="34" lean-forward="false" selection-start-line="189" selection-start-column="34" selection-end-line="189" selection-end-column="34" />
+          <folding>
+            <marker date="1526924556043" expanded="true" signature="6547:6560" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="49" lean-forward="false" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/FosGroup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1026">
+          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/Usuarios/editar.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="93" column="116" lean-forward="false" selection-start-line="93" selection-start-column="116" selection-end-line="93" selection-end-column="116" />
+        <state relative-caret-position="102">
+          <caret line="6" column="8" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="157" selection-end-column="14" />
+          <folding>
+            <element signature="e#12#45#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security_dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Model/UserInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="193" column="42" lean-forward="false" selection-start-line="193" selection-start-column="42" selection-end-line="193" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.en.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="34" column="23" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/Grupos/nuevo.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="33" column="64" lean-forward="false" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="64" />
+          <folding>
+            <element signature="e#12#45#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/Grupos/editar.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="32" column="94" lean-forward="false" selection-start-line="32" selection-start-column="94" selection-end-line="33" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Controller/GruposController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="137" column="17" lean-forward="false" selection-start-line="137" selection-start-column="17" selection-end-line="137" selection-end-column="17" />
+          <folding>
+            <element signature="e#241#494#0#PHP" expanded="false" />
+            <element signature="e#500#1142#0#PHP" expanded="false" />
+            <element signature="e#1051#1086#0#PHP" expanded="true" />
+            <element signature="e#1148#2092#0#PHP" expanded="false" />
+            <element signature="e#2098#2636#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/Usuarios/nuevo.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="17" column="72" lean-forward="false" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
+          <folding>
+            <element signature="e#12#45#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/Grupos/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="54" column="77" lean-forward="true" selection-start-line="54" selection-start-column="77" selection-end-line="54" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Dashboard/Usuarios/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="72" column="67" lean-forward="false" selection-start-line="72" selection-start-column="67" selection-end-line="72" selection-end-column="67" />
           <folding>
             <element signature="e#12#45#0#Twig" expanded="true" />
           </folding>
@@ -1197,18 +1143,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Controller/UsuariosController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="109" column="24" lean-forward="true" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
+        <state relative-caret-position="674">
+          <caret line="199" column="32" lean-forward="false" selection-start-line="199" selection-start-column="32" selection-end-line="199" selection-end-column="32" />
           <folding>
             <element signature="e#57#81#0#PHP" expanded="true" />
-            <element signature="e#267#562#0#PHP" expanded="false" />
-            <element signature="e#468#505#0#PHP" expanded="true" />
-            <element signature="e#568#692#0#PHP" expanded="false" />
-            <element signature="e#647#684#1#PHP" expanded="true" />
-            <element signature="e#1120#1158#0#PHP" expanded="true" />
-            <element signature="e#1276#1813#0#PHP" expanded="false" />
-            <element signature="e#1819#2779#0#PHP" expanded="false" />
+            <element signature="e#298#552#0#PHP" expanded="false" />
+            <element signature="e#458#495#0#PHP" expanded="true" />
+            <element signature="e#558#833#0#PHP" expanded="false" />
+            <element signature="e#738#775#0#PHP" expanded="true" />
+            <element signature="e#839#1417#0#PHP" expanded="false" />
+            <element signature="e#1267#1305#0#PHP" expanded="true" />
+            <element signature="e#1423#1960#0#PHP" expanded="false" />
+            <element signature="e#1966#4643#0#PHP" expanded="false" />
+            <element signature="e#4649#7726#0#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/FosUserRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding>
+            <element signature="e#286#305#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/desarrollo/DashboardBundle/Resources/Config/routing/usuarios.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.es.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="84" column="16" lean-forward="false" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>

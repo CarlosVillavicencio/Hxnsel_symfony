@@ -2,43 +2,117 @@
 {% block body %}
     {% set breadcrumb = {
     'dashboard_index':'menu.inicio',
-    'dashboard_grupos_view':'menu.grupos',
-    'dashboard_grupos_add':'genericos.btn.nuevo',
+    'dashboard_usuarios_view':'menu.usuarios',
+    'dashboard_usuarios_new':'genericos.btn.nuevo',
     } %}
-    {% embed "Dashboard/module/embed/block_header.html.twig" with {'header':("menu.grupos"|trans),'breadcrumb':breadcrumb } %}
+    {% embed "Dashboard/module/embed/block_header.html.twig" with {'header':("menu.usuarios"|trans),'breadcrumb':breadcrumb } %}
     {% endembed %}
     <div class="row">
-        <div class="col-sm-16 col-md-8">
+        <div class="col-sm-16 col-md-12">
             <div class="card">
                 <div class="card-header">
-                    {#<h6 class="card-title">Form control Bootstrap</h6>#}
-                    <h5 class="card-title">{{ "menu.grupos"|trans }}
+                    <h5 class="card-title">{{ "menu.usuarios"|trans }}
                         <small>{{ "genericos.btn.nuevo"|trans }}</small>
                     </h5>
                 </div>
-                <form name="frm_nuevo" action="{{ path('dashboard_grupos_new') }}" method="post">
+                <form name="frm_nuevo" action="{{ path('dashboard_usuarios_new') }}" method="post">
                     <fieldset>
                         <div class="card-block">
-                            <div class="form-group">
-                                <label class="col-form-label">{{ "form.grupos.nombre"|trans }}:</label>
-                                <input type="text" class="form-control" id="name" name="name"
-                                       aria-describedby="nombreHelp" placeholder="{{ "form.grupos.nombre"|trans }}"
-                                       value="" required>
-                                <small id="nombreHelp" class="form-text text-muted">
-                                    {{ "form.grupos.nombre_span"|trans }}
-                                </small>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-form-label">{{ "form.grupos.roles"|trans }}:</label>
-                                <input type="text" class="form-control tagsinput" name="roles"
-                                       aria-describedby="rolesHelp" placeholder="{{ "form.grupos.roles_span"|trans }}"
-                                       value="" required>
-                                <small id="rolesHelp" class="form-text text-muted">
-                                    {{ "form.grupos.roles_span"|trans }}
-                                </small>
+                            <div class="row">
+                                <div class="col-md-16">
+                                    <div class="form-group row">
+                                        <div class="col-lg-8">
+                                            <label class="col-form-label">{{ "form.usuarios.usuario"|trans }}:</label>
+                                            <input type="text" class="form-control" name="username"
+                                                   placeholder="{{ "form.usuarios.usuario"|trans }}"
+                                                   value="" required>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <label class="col-form-label">{{ "form.usuarios.tema_dashboard"|trans }}
+                                                :</label>
+                                            <select class="form-control" name="themeDashboard" required>
+                                                <option value="">{{ "genericos.btn.seleccione"|trans }}</option>
+                                                {% for k,v in twig_themes_dash_adminux %}
+                                                    <option value="{{ v }}">{{ v }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-lg-8">
+                                            <label class="col-form-label">{{ "form.usuarios.nombre"|trans }}:</label>
+                                            <input type="text" class="form-control" name="firstName"
+                                                   placeholder="{{ "form.usuarios.nombre"|trans }}"
+                                                   value="" required>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <label class="col-form-label">{{ "form.usuarios.apellido"|trans }}:</label>
+                                            <input type="text" class="form-control" name="lastName"
+                                                   placeholder="{{ "form.usuarios.apellido"|trans }}"
+                                                   value="" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-lg-8">
+                                            <label class="col-form-label">{{ "form.usuarios.correo"|trans }}:</label>
+                                            <input type="text" class="form-control" id="email" name="email"
+                                                   placeholder="{{ "form.usuarios.correo"|trans }}"
+                                                   value="" required>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <label class="col-form-label">{{ "form.usuarios.confirmar_correo"|trans }}
+                                                :</label>
+                                            <input type="text" class="form-control" id="confirm_email"
+                                                   name="confirm_email"
+                                                   placeholder="{{ "form.usuarios.confirmar_correo"|trans }}"
+                                                   value="" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-lg-8">
+                                            <label class="col-form-label">{{ "form.usuarios.contrasena"|trans }}
+                                                :</label>
+                                            <input type="password" class="form-control" id="password" name="password"
+                                                   placeholder="{{ "form.usuarios.contrasena"|trans }}"
+                                                   value="" required>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <label class="col-form-label">{{ "form.usuarios.confirmar_contrasena"|trans }}
+                                                :</label>
+                                            <input type="password" class="form-control" id="confirm_password"
+                                                   name="confirm_password"
+                                                   placeholder="{{ "form.usuarios.confirmar_contrasena"|trans }}"
+                                                   value="" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-lg-8">
+                                            <label class="col-form-label">{{ "form.usuarios.grupos_trabajo"|trans }}
+                                                :</label>
+                                            <select multiple="multiple" name="user_group[]"
+                                                    class="form-control multiselect" required>
+                                                {% for k,v in grupos %}
+                                                    <option value='{{ v.group_id }}'>{{ v.name }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="can-toggle">
+                                                <input id="toggle_nuevo" type="checkbox"
+                                                       name="enabled" checked value="true">
+                                                <label for="toggle_nuevo">
+                                                    <div class="can-toggle__switch"
+                                                         data-checked="{{ "form.switch.on"|trans }}"
+                                                         data-unchecked="{{ "form.switch.off"|trans }}"></div>
+                                                    <div class="can-toggle__label-text">{{ "form.usuarios.habilidato"|trans }}</div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        {% embed "Dashboard/module/embed/buttons_form.html.twig" with {'cancel':'dashboard_grupos_view' } %}
+                        {% embed "Dashboard/module/embed/buttons_form.html.twig" with {'cancel':'dashboard_usuarios_view' } %}
                         {% endembed %}
                     </fieldset>
                 </form>
@@ -55,10 +129,20 @@
                         success: function (response, status, xhr) {
                             if (response.status) {
                                 toastr['success'](response.msg);
-                                window.location.href = "{{ path('dashboard_grupos_view') }}";
+                                window.location.href = "{{ path('dashboard_usuarios_view') }}";
                             }
                         }
                     });
+                },
+                rules: {
+                    confirm_password: {
+                        equalTo: "#password"
+                    },
+                    email: "required",
+                    confirm_email: {
+                        equalTo: "#email",
+                        required: true
+                    },
                 }
             });
         });

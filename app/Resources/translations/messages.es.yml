@@ -31,6 +31,8 @@ genericos:
         reg_eliminado: Registro eliminado.
         ocurrio_un_error: Ocurrió un error, por favor contacte con el administrador del sistema
         no_se_encontro: No se pudo encontrar el registro
+        usuario_ya_existe: El usuario ya existe
+        grupo_ya_existe: El grupo ya existe
     titles:
         eliminar: Eliminar registro
     btn:

@@ -68,11 +68,11 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <a href="#" onclick="carga_data_modal({{ v.id }})"
+                                    <button type="button" onclick="carga_data_modal({{ v.id }})"
                                        class="btn btn-outline-danger btn-sm">
                                         <i class="fa fa-times"></i>
                                         <span>{{ "genericos.btn.eliminar"|trans }}</span>
-                                    </a>
+                                    </button>
                                 </td>
                             </tr>
                         {% endfor %}
@@ -96,8 +96,8 @@
     {% embed "Dashboard/module/embed/modal.html.twig" with arrayToModal %}
         {% block body %}
             <div class="form-group">
-                <label class="form-control-label">{{ "form.usuarios.nombre"|trans }}:</label>
-                <input type="text" class="form-control" name="name" readonly>
+                <label class="form-control-label">{{ "form.usuarios.usuario"|trans }}:</label>
+                <input type="text" class="form-control" name="username" readonly>
             </div>
         {% endblock %}
     {% endembed %}
@@ -134,7 +134,8 @@
                 beforeSend: function (data) {
                 },
                 success: function (data) {
-                    $('input[name="name"]').val(data.data.name);
+                    console.log(data);
+                    $('input[name="username"]').val(data.data.username);
                     $('form[name="frm_eliminar"]').attr('action', urlform);
                     $('#modalEliminar').modal('show');
                 },

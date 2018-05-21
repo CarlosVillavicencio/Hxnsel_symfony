@@ -3,6 +3,7 @@
 namespace desarrollo\DashboardBundle\Controller;
 
 use AppBundle\AppBundle;
+use AppBundle\Entity\FosGroup;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use AppBundle\Entity\FosUser;
@@ -12,8 +13,6 @@ class UsuariosController extends Controller
     public function indexAction(Request $request)
     {
         $data = $this->getDoctrine()->getRepository(FosUser::class)->listar();
-//        dump($data);
-//        exit();
         return $this->render(':Dashboard/Usuarios:index.html.twig', array(
             'listado' => $data
         ));
@@ -21,7 +20,10 @@ class UsuariosController extends Controller
 
     public function addAction(Request $request)
     {
-        return $this->render(':Dashboard/Usuarios:nuevo.html.twig');
+        $grupos = $this->getDoctrine()->getRepository(FosGroup::class)->getGruposByUserId(0, false);
+        return $this->render(':Dashboard/Usuarios:nuevo.html.twig', array(
+            'grupos' => $grupos
+        ));
     }
 
     public function editAction(Request $request, $id)
@@ -31,7 +33,7 @@ class UsuariosController extends Controller
         if (!is_array($data['roles'])) {
             $data['roles'] = unserialize($data['roles']);
         }
-        $grupos = $this->getDoctrine()->getRepository(FosUser::class)->obtenerGruposYUsuarios();
+        $grupos = $this->getDoctrine()->getRepository(FosGroup::class)->getGruposByUserId($id, false);
         return $this->render(':Dashboard/Usuarios:editar.html.twig', array(
             'id' => $id,
             'data' => $data,
@@ -64,19 +66,48 @@ class UsuariosController extends Controller
         }
         try {
             $em = $this->getDoctrine()->getManager();
-            $grupo = new FosUser();
-            $name = $request->request->get('name');
-            $roles = strtoupper($request->request->get('roles'));
-            $roles = explode(',', $roles);
-            $roles = serialize($roles);
-            $grupo->setName($name);
-            $grupo->setRoles($roles);
-            $em->persist($grupo);
-            $em->flush();
             $array = array(
                 'status' => true,
                 'msg' => $tools->trans('genericos.consultas.reg_creado')
             );
+            $data = $request->request->all();
+            $usuario = $em->getRepository(FosUser::class)->findOneBy(array('username' => $data['username']));
+            if ($usuario) {
+                $array['status'] = false;
+                $array['msg'] = $tools->trans('genericos.consultas.usuario_ya_existe');
+                return $tools->toastDanger($array['msg']);
+            }
+            $userManager = $this->get('fos_user.user_manager');
+            $usuario = $userManager->createUser();
+            $usuario->setUsername($data['username']);
+            $usuario->setUsernameCanonical($data['username']);
+            $usuario->setEmail($data['email']);
+            $usuario->setEmailCanonical($data['email']);
+            $usuario->setPlainPassword($data['password']);
+            $userManager->updateUser($usuario);
+            $id = $usuario->getId();
+            $usuario = $em->getRepository(FosUser::class)->find($id);
+            $grupos = $this->getDoctrine()->getRepository(FosGroup::class)->getGruposByUserId($id, true);
+            $grupos_temp = array();
+            foreach ($grupos as $k => $v) {
+                $grupos_temp[] = $v['group_id'];
+            }
+            $user_group = $request->request->get('user_group');
+            $grupos_eliminar = array_diff($grupos_temp, $user_group);
+            $grupos_insertar = array_diff($user_group, $grupos_temp);
+            foreach ($grupos_eliminar as $k => $v) {
+                $group = $this->getDoctrine()->getRepository(FosGroup::class)->find(intval($v));
+                $usuario->removeGroup($group);
+            }
+            foreach ($grupos_insertar as $k => $v) {
+                $group = $this->getDoctrine()->getRepository(FosGroup::class)->find(intval($v));
+                $usuario->addGroup($group);
+            }
+            $usuario->setThemeDashboard($data['themeDashboard']);
+            $usuario->setFirstName($data['firstName']);
+            $usuario->setLastName($data['lastName']);
+            $usuario->setEnabled($request->request->get('enabled', false));
+            $em->flush();
             return $tools->jsonResponse($array);
         } catch (\Exception $exc) {
             return $tools->toastDanger($tools->try_catch_show_error($exc));
@@ -85,8 +116,6 @@ class UsuariosController extends Controller
 
     public function updateAction(Request $request, $id)
     {
-//        canonical de fosuserbundle se consigue de la siguiente forma
-//        dump(mb_convert_case($request->request->get('email'), MB_CASE_LOWER, "UTF-8"));
         $tools = $this->get('herramientas');
         if (!$request->isXmlHttpRequest()) {
             return $tools->redirectToHome();
@@ -105,9 +134,14 @@ class UsuariosController extends Controller
                 return $tools->toastDanger($array['msg']);
             }
             $data = $request->request->all();
-            dump($data);
-            exit();
-//            user_group
+            $usuario_check = $em->getRepository(FosUser::class)->findOneBy(array('username' => $data['username']));
+            if ($usuario_check) {
+                if ($usuario_check->getId() != $id) {
+                    $array['status'] = false;
+                    $array['msg'] = $tools->trans('genericos.consultas.usuario_ya_existe');
+                    return $tools->toastDanger($array['msg']);
+                }
+            }
             $usuario->setUsername($data['username']);
             $usuario->setUsernameCanonical($data['username']);
             $usuario->setEmail($data['email']);
@@ -117,6 +151,22 @@ class UsuariosController extends Controller
             }
             $userManager->updateUser($usuario);
             $usuario = $em->getRepository(FosUser::class)->find($id);
+            $grupos = $this->getDoctrine()->getRepository(FosGroup::class)->getGruposByUserId($id, true);
+            $grupos_temp = array();
+            foreach ($grupos as $k => $v) {
+                $grupos_temp[] = $v['group_id'];
+            }
+            $user_group = $request->request->get('user_group');
+            $grupos_eliminar = array_diff($grupos_temp, $user_group);
+            $grupos_insertar = array_diff($user_group, $grupos_temp);
+            foreach ($grupos_eliminar as $k => $v) {
+                $group = $this->getDoctrine()->getRepository(FosGroup::class)->find(intval($v));
+                $usuario->removeGroup($group);
+            }
+            foreach ($grupos_insertar as $k => $v) {
+                $group = $this->getDoctrine()->getRepository(FosGroup::class)->find(intval($v));
+                $usuario->addGroup($group);
+            }
             $usuario->setThemeDashboard($data['themeDashboard']);
             $usuario->setFirstName($data['firstName']);
             $usuario->setLastName($data['lastName']);
@@ -136,18 +186,18 @@ class UsuariosController extends Controller
         }
         try {
             $em = $this->getDoctrine()->getManager();
-            $grupo = $em->getRepository(FosUser::class)->find($id);
+            $usuario = $em->getRepository(FosUser::class)->find($id);
             $array = array(
                 'id' => $id,
                 'status' => true,
                 'msg' => $tools->trans('genericos.consultas.reg_eliminado')
             );
-            if (!$grupo) {
+            if (!$usuario) {
                 $array['status'] = false;
                 $array['msg'] = $tools->trans('genericos.consultas.no_se_encontro');
                 return $tools->toastDanger($array['msg']);
             }
-            $em->remove($grupo);
+            $em->remove($usuario);
             $em->flush();
             return $tools->jsonResponse($array);
         } catch (\Exception $exc) {

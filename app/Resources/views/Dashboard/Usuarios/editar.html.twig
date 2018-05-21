@@ -128,45 +128,31 @@
         </div>
     </div>
 {% endblock %}
-    {% block scripts %}
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $('form[name="frm_editar"]').validate({
-                    submitHandler: function (form) {
-//                    var array = $('form[name="frm_editar"]').serializeArray();
-//                    console.log(array);
-                        $(form).ajaxSubmit({
-                            success: function (response, status, xhr) {
-                                if (response.status) {
-                                    toastr['success'](response.msg);
-                                    window.location.href = "{{ path('dashboard_usuarios_view') }}";
-                                }
+{% block scripts %}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('form[name="frm_editar"]').validate({
+                submitHandler: function (form) {
+                    $(form).ajaxSubmit({
+                        success: function (response, status, xhr) {
+                            if (response.status) {
+                                toastr['success'](response.msg);
+                                window.location.href = "{{ path('dashboard_usuarios_view') }}";
                             }
-                        });
+                        }
+                    });
+                },
+                rules: {
+                    confirm_password: {
+                        equalTo: "#password"
                     },
-                    rules: {
-                        confirm_password: {
-                            equalTo: "#password"
-                        },
-                        email: "required",
-                        confirm_email: {
-                            equalTo: "#email",
-                            required: true
-                        },
-                    }
-//                messages: {
-//                    nombres: {
-//                        required: " ",
-//                        equalTo: "Please enter the same password as above"
-//                    },
-//                    email: {
-//                        required: " ",
-//                        email: "Please enter a valid email address, example: you@yourdomain.com",
-//                        remote: jQuery.validator.format("{0} is already taken, please enter a different address.")
-//                    }
-//                },
-//                debug: true
-                });
+                    email: "required",
+                    confirm_email: {
+                        equalTo: "#email",
+                        required: true
+                    },
+                }
             });
-        </script>
-    {% endblock %}
+        });
+    </script>
+{% endblock %}

@@ -3,6 +3,7 @@
 namespace AppBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Query\Expr;
 
 class FosGroupRepository extends EntityRepository
 {
@@ -41,5 +42,35 @@ class FosGroupRepository extends EntityRepository
             ->getQuery()
             ->getResult(2);
         return $array[0];
+    }
+
+    public function getGruposByUserId($user_id, $solo_este_usuario = false)
+    {
+        $qry = "SELECT
+            fg.id group_id,
+            fg.name,
+            fuug.user_id
+            FROM fos_group fg
+            LEFT JOIN fos_user_user_group fuug
+            ON fuug.group_id = fg.id
+            AND fuug.user_id = %d";
+        if ($solo_este_usuario) {
+            $qry .= "
+            WHERE fuug.user_id = %d
+            GROUP BY fg.id
+            ORDER BY fg.id";
+            $sql = sprintf($qry, $user_id, $user_id);
+        } else {
+            $qry .= "
+            GROUP BY fg.id
+            ORDER BY fg.id";
+            $sql = sprintf($qry, $user_id);
+        }
+        $em = $this->getEntityManager();
+        $db = $em->getConnection();
+        $stmt = $db->prepare($sql);
+        $stmt->execute(array());
+        $array = $stmt->fetchAll();
+        return $array;
     }
 }

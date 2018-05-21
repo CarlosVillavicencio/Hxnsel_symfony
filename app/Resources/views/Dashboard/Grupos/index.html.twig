@@ -51,11 +51,11 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <a href="#" onclick="carga_data_modal({{ v.id }})"
+                                    <button type="button" onclick="carga_data_modal({{ v.id }})"
                                        class="btn btn-outline-danger btn-sm">
                                         <i class="fa fa-times"></i>
                                         <span>{{ "genericos.btn.eliminar"|trans }}</span>
-                                    </a>
+                                    </button>
                                 </td>
                             </tr>
                         {% endfor %}

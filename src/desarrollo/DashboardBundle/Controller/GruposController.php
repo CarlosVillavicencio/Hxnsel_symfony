@@ -18,15 +18,8 @@ class GruposController extends Controller
 
     public function addAction(Request $request)
     {
-        return $this->render(':Dashboard/Grupos:nuevo.html.twig');
-    }
-
-    public function editAction(Request $request, $id)
-    {
-        $tools = $this->get('herramientas');
         $data = $this->getDoctrine()->getRepository(FosGroup::class)->listar();
         $roles = array();
-        $array_temp = array("red", "green");
         foreach ($data as $k => $v) {
             $roles_temp = array();
             if (is_array($v['roles'])) {
@@ -34,7 +27,27 @@ class GruposController extends Controller
             } else {
                 $roles_temp = unserialize($v['roles']);
             }
-            $roles = array_unique (array_merge ($roles, $roles_temp));
+            $roles = array_unique(array_merge($roles, $roles_temp));
+        }
+        $roles = implode(',', $roles);
+        return $this->render(':Dashboard/Grupos:nuevo.html.twig', array(
+            'roles' => $roles
+        ));
+    }
+
+    public function editAction(Request $request, $id)
+    {
+        $tools = $this->get('herramientas');
+        $data = $this->getDoctrine()->getRepository(FosGroup::class)->listar();
+        $roles = array();
+        foreach ($data as $k => $v) {
+            $roles_temp = array();
+            if (is_array($v['roles'])) {
+                $roles_temp = $v['roles'];
+            } else {
+                $roles_temp = unserialize($v['roles']);
+            }
+            $roles = array_unique(array_merge($roles, $roles_temp));
         }
         $roles = implode(',', $roles);
         $data = $this->getDoctrine()->getRepository(FosGroup::class)->listarById($id);
@@ -73,11 +86,16 @@ class GruposController extends Controller
         }
         try {
             $em = $this->getDoctrine()->getManager();
+            $grupo = $em->getRepository(FosGroup::class)->findOneBy(array('name' => $request->request->get('name')));
+            if ($grupo) {
+                $array['status'] = false;
+                $array['msg'] = $tools->trans('genericos.consultas.grupo_ya_existe');
+                return $tools->toastDanger($array['msg']);
+            }
             $grupo = new FosGroup();
             $name = $request->request->get('name');
             $roles = strtoupper($request->request->get('roles'));
             $roles = explode(',', $roles);
-            $roles = serialize($roles);
             $grupo->setName($name);
             $grupo->setRoles($roles);
             $em->persist($grupo);
@@ -111,9 +129,16 @@ class GruposController extends Controller
                 return $tools->toastDanger($array['msg']);
             }
             $name = $request->request->get('name');
+            $grupo_check = $em->getRepository(FosGroup::class)->findOneBy(array('name' => $name));
+            if ($grupo_check) {
+                if ($grupo_check->getId() != $id) {
+                    $array['status'] = false;
+                    $array['msg'] = $tools->trans('genericos.consultas.grupo_ya_existe');
+                    return $tools->toastDanger($array['msg']);
+                }
+            }
             $roles = strtoupper($request->request->get('roles'));
             $roles = explode(',', $roles);
-            $roles = serialize($roles);
             $grupo->setName($name);
             $grupo->setRoles($roles);
             $em->flush();
