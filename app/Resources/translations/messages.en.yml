@@ -10,6 +10,7 @@ lenguajes:
 user_info_dropdown:
     perfil: Profile
     cerrar_session: Sign Out
+    ajustes: Settings
 menu:
     navegacion_principal: Main Navigation
     inicio: Home

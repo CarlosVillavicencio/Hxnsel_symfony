@@ -8,19 +8,20 @@
                          alt="Generic user image">
                 </span>
                 <span class="media-body">
-                    <span class="mt-0 mb-1">Maxartkiller</span>
-                    <span>New Jersey, UK.</span>
+                    <span class="mt-0 mb-1">{{ app.user.firstName }}</span>
+                    <span>{{ app.user.lastName }}</span>
                 </span>
             </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="customerprofile.html">Profile</a>
-                <a class="dropdown-item" href="inbox.html">Mailbox</a>
-                <a class="dropdown-item" href="#">Application</a>
-                <a class="dropdown-item" href="#">Analytics Report</a>
-                <a class="dropdown-item" href="#">Preferances</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Setting</a>
-            </div>
+            {#<div class="dropdown-menu">#}
+            {#<a class="dropdown-item" href="customerprofile.html">Profile</a>#}
+            {#<a class="dropdown-item" href="inbox.html">Mailbox</a>#}
+            {#<a class="dropdown-item" href="#">Application</a>#}
+            {#<a class="dropdown-item" href="#">Analytics Report</a>#}
+            {#<a class="dropdown-item" href="#">Preferances</a>#}
+            {#<div class="dropdown-divider"></div>#}
+            {#<a class="dropdown-item" href="#">Setting</a>#}
+            {#</div>#}
+            {{ include('Dashboard/module/dropdown-menu.html.twig') }}
         </div>
     </div>
     <br>
@@ -36,13 +37,20 @@
                 <i class="fa fa-group left-icon"></i>{{ "menu.usuarios"|trans }}
             </a>
         </li>
-        <li class="nav-item "><a href="javascript:void(0)" class="menudropdown nav-link">Dashboard<i
-                        class="fa fa-angle-down "></i></a>
+        <li class="nav-item "><a href="javascript:void(0)" class="menudropdown nav-link">
+                Dashboard<i class="fa fa-angle-down "></i>
+            </a>
             <ul class="nav flex-column nav-second-level ">
-                <li class=" nav-item"><a href="index.html" class="nav-link "><i class="fa fa-globe"></i>
-                        Menufacturing</a></li>
-                <li class="nav-item"><a class="nav-link" href="networking.html"><i class="fa fa-dashboard"></i>
-                        Networking</a></li>
+                <li class=" nav-item">
+                    <a href="index.html" class="nav-link ">
+                        <i class="fa fa-globe"></i>Menufacturing
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="networking.html">
+                        <i class="fa fa-dashboard"></i>Networking
+                    </a>
+                </li>
             </ul>
             <!-- /.nav-second-level -->
         </li>
@@ -51,27 +59,21 @@
         </li>
         <li class="title-nav">icon + MENU</li>
         <li class="nav-item">
-            <a class="nav-link" href="tables.html"><i class="fa fa-file-o left-icon square"></i>Tables</a>
+            <a class="nav-link" href="forms.html">
+                <i class="fa fa-file-o left-icon circle"></i>Forms
+            </a>
         </li>
-        <li class="nav-item"><a class="nav-link" href="forms.html"><i
-                        class="fa fa-file-o left-icon circle"></i>Forms</a></li>
-        <li class="nav-item"><a href="javascript:void(0)" class="nav-link menudropdown"><i
-                        class="fa fa-tree left-icon"></i>Controls Library <span
-                        class="badge badge-danger ml-2">New</span> <i class="fa fa-angle-down "></i></a>
-            <ul class="nav flex-column nav-second-level">
-                <li class="nav-item"><a class="nav-link" href="wizards.html">Wizards</a></li>
-                <li class="nav-item"><a class="nav-link" href="timeline.html">Timeline</a></li>
-            </ul>
-            <!-- /.nav-second-level -->
-        </li>
-        <li class="nav-item"><a href="javascript:void(0)" class="nav-link menudropdown ">Multi-Level Dropdown<i
-                        class="fa fa-angle-down "></i></a>
+        <li class="nav-item">
+            <a href="javascript:void(0)" class="nav-link menudropdown ">
+                Multi-Level Dropdown<i class="fa fa-angle-down "></i>
+            </a>
             <ul class="nav flex-column nav-second-level">
                 <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Second Level Item</a></li>
                 <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Second Level Item</a></li>
                 <!-- .nav-third-level menudropdown2 -->
-                <li class="nav-item"><a href="javascript:void(0)" class="menudropdown nav-link">Third Level <i
-                                class="fa fa-angle-down "></i></a>
+                <li class="nav-item"><a href="javascript:void(0)" class="menudropdown nav-link">
+                        Third Level <i class="fa fa-angle-down "></i>
+                    </a>
                     <ul class="nav flex-column nav-third-level">
                         <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Third Level Item</a></li>
                         <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Third Level Item</a></li>
