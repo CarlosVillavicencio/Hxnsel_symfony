@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7dea7c9d-1c80-45e4-852c-3ea9e23f00c3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/typeahead/typeahead.zip" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/typeahead/typeahead.zip" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/Dashboard/Grupos/editar.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Dashboard/Grupos/editar.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/Dashboard/custom_js.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Dashboard/custom_js.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/tagsinput/tagsinput.js" afterPath="$PROJECT_DIR$/web/js/tagsinput/tagsinput.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/typeahead/typeahead.js" afterPath="$PROJECT_DIR$/web/js/typeahead/typeahead.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -469,7 +465,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="" />
-    <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/AppBundle/Entity/User.php_RE" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
@@ -526,7 +522,7 @@
       <workItem from="1525914428535" duration="623000" />
       <workItem from="1525987437948" duration="80250000" />
       <workItem from="1526358432765" duration="34817000" />
-      <workItem from="1526576815654" duration="84047000" />
+      <workItem from="1526576815654" duration="84184000" />
     </task>
     <task id="LOCAL-00001" summary="FOSUserBundle Login">
       <created>1522547798613</created>
@@ -710,11 +706,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526944555621</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="modificado codigo typeahead en archivo tagsinput.js para que no arroje error al seleccionar con mouse o enter una opcion cargada al input del tag">
+      <created>1526959910532</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1526959910532</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="458604000" />
+    <option name="totallyTimeSpent" value="458741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
@@ -766,7 +769,8 @@
     <MESSAGE value="crud usuarios(edit)" />
     <MESSAGE value="crud usuarios(edit grupos)" />
     <MESSAGE value="crud usuarios y grupos completo" />
-    <option name="LAST_COMMIT_MESSAGE" value="crud usuarios y grupos completo" />
+    <MESSAGE value="modificado codigo typeahead en archivo tagsinput.js para que no arroje error al seleccionar con mouse o enter una opcion cargada al input del tag" />
+    <option name="LAST_COMMIT_MESSAGE" value="modificado codigo typeahead en archivo tagsinput.js para que no arroje error al seleccionar con mouse o enter una opcion cargada al input del tag" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
