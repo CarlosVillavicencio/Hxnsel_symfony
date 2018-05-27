@@ -1,0 +1,152 @@
+{% set _route = app.request.attributes.get('_route') %}
+{% set _route_params = app.request.attributes.get('_route_params') %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{ app.request.getLocale() }}"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="{{ app.request.getLocale() }}"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="{{ app.request.getLocale() }}"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="{{ app.request.getLocale() }}"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>{{ "genericos.titulo_de_pagina"|trans }}</title>
+    <meta name="description" content="Gym"/>
+    <meta name="keywords" content="System Administration Gym"/>
+    <meta name="author" content="Carlos Villavicencio Vásquez"/>
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:card" content=""/>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    {#<link rel="shortcut icon" href="favicon.ico">#}
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('Portal/icon/apple-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('Portal/icon/apple-icon-60x60.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('Portal/icon/apple-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('Portal/icon/apple-icon-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('Portal/icon/apple-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('Portal/icon/apple-icon-120x120.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('Portal/icon/apple-icon-144x144.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('Portal/icon/apple-icon-152x152.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('Portal/icon/apple-icon-180x180.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('Portal/icon/android-icon-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('Portal/icon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('Portal/icon/favicon-96x96.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('Portal/icon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('Portal/icon/manifest.json') }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ asset('Portal/icon/ms-icon-144x144.png') }}">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="{{ asset('Portal/css/animate.css') }}">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="{{ asset('Portal/css/icomoon.css') }}">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="{{ asset('Portal/css/bootstrap.css') }}">
+    <!-- Superfish -->
+    <link rel="stylesheet" href="{{ asset('Portal/css/superfish.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('Portal/css/style.css') }}">
+
+
+    <!-- Modernizr JS -->
+    <script src="{{ asset('Portal/js/modernizr-2.6.2.min.js') }}"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="{{ asset('Portal/js/respond.min.js') }}"></script>
+    <![endif]-->
+
+    <!--tagsinput CSS-->
+    <link href="{{ asset('js/tagsinput/tagsinput.css') }}" rel="stylesheet">
+
+    <!-- toastr CSS -->
+    <link href="{{ asset('js/toastr/toastr.min.css') }}" rel="stylesheet" type="text/css">
+
+    <!-- ajax progress youtube CSS -->
+    <link href="{{ asset('js/ajax_progress_bar_youtube/ytLoad.jquery.css') }}" rel="stylesheet" type="text/css">
+
+    {#{{ include('Dashboard/custom_css.html.twig') }}#}
+    {% block stylesheets %}
+    {% endblock %}
+</head>
+<body>
+
+<div id="fh5co-wrapper">
+    <div id="fh5co-page">
+        {#header#}
+        {{ include('Portal/module/header.html.twig') }}
+        {#header#}
+        {% block body %}
+        {% endblock %}
+        {#footer#}
+        {{ include('Portal/module/footer.html.twig') }}
+        {#footer#}
+    </div>
+</div>
+{#navbar#}
+{#{{ include('Dashboard/module/navbar.html.twig') }}#}
+{#navbar#}
+{#<div class="wrapper-content">#}
+{#<div class="container">#}
+{#</div>#}
+{#<footer class="footer-content ">#}
+{#<div class="container ">#}
+{#<div class="row align-items-center justify-content-between">#}
+{#<div class="col-md-16 col-lg-8 col-xl-8">#}
+{#{{ "genericos.copyright_web"|trans|raw }}#}
+{#</div>#}
+{#</div>#}
+{#</div>#}
+{#</footer>#}
+{#</div>#}
+{#{% block modal %}#}
+{#{% endblock %}#}
+
+<!-- jQuery -->
+<script src="{{ asset('Portal/js/jquery.min.js') }}"></script>
+<!-- jQuery Easing -->
+<script src="{{ asset('Portal/js/jquery.easing.1.3.js') }}"></script>
+<!-- Bootstrap -->
+<script src="{{ asset('Portal/js/bootstrap.min.js') }}"></script>
+<!-- Waypoints -->
+<script src="{{ asset('Portal/js/jquery.waypoints.min.js') }}"></script>
+<!-- Stellar -->
+<script src="{{ asset('Portal/js/jquery.stellar.min.js') }}"></script>
+<!-- Superfish -->
+<script src="{{ asset('Portal/js/hoverIntent.js') }}"></script>
+<script src="{{ asset('Portal/js/superfish.js') }}"></script>
+
+<!-- Main JS (Do not remove) -->
+<script src="{{ asset('Portal/js/main.js') }}"></script>
+<!--tagsinput js-->
+<script src="{{ asset('js/tagsinput/tagsinput.js') }}"></script>
+<script src="{{ asset('js/typeahead/typeahead.js') }}"></script>
+
+<!--validate js-->
+<script type="text/javascript" src="{{ asset('js/jquery-validation/lib/jquery.form.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery-validation/dist/jquery.validate.js') }}"></script>
+
+<!-- toastr js -->
+<script type="text/javascript" src="{{ asset('js/toastr/toastr.min.js') }}"></script>
+
+<!-- ajax progress youtube js -->
+<script type="text/javascript" src="{{ asset('js/ajax_progress_bar_youtube/jquery.transit.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/ajax_progress_bar_youtube/ytLoad.jquery.js') }}"></script>
+
+{#{{ include('Dashboard/custom_js.html.twig') }}#}
+{% block scripts %}
+{% endblock %}
+</body>
+</html>

@@ -31,7 +31,7 @@ class DefaultController extends Common {
 //        print_r($ROLES);
 //        echo '</pre>';
 ////        echo $this->getUser()->getUsername();
-//        exit();
+        exit();
 //        $sql = "SELECT *
 //            FROM roles
 //            WHERE estado = ?";

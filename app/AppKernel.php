@@ -31,6 +31,7 @@ class AppKernel extends Kernel
             $bundles[] = new AppBundle\AppBundle();
             $bundles[] = new proyectos\ProyectosBundle\ProyectosBundle();
             $bundles[] = new desarrollo\DashboardBundle\DashboardBundle();
+            $bundles[] = new desarrollo\PortalBundle\PortalBundle();
 
             $bundles[] = new FOS\UserBundle\FOSUserBundle();
         }
@@ -46,6 +47,7 @@ class AppKernel extends Kernel
             $bundles[] = new AppBundle\AppBundle();
             $bundles[] = new proyectos\ProyectosBundle\ProyectosBundle();
             $bundles[] = new desarrollo\DashboardBundle\DashboardBundle();
+            $bundles[] = new desarrollo\PortalBundle\PortalBundle();
 
             $bundles[] = new FOS\UserBundle\FOSUserBundle();
         }

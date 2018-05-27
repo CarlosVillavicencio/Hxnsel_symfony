@@ -22,19 +22,12 @@ class DefaultController extends Controller
         if ($request->getHttpHost() == $dash . '.' . $domain) {
             $url = $this->generateUrl('dashboard_index');
         } elseif ($request->getHttpHost() == $portal . '.' . $domain) {
-            $url = '';
+            $url = $this->generateUrl('portal_index');
         } else {
-            $url = '';
-        }
-        if ($url == '') {
-            echo 'falta definir la url para la redireccion!!<br>';
-            echo 'revisar AppBundle DefaultController';
-            exit();
+//            redireccionar a la pagina web
+            $url = $this->generateUrl('portal_index');
         }
         return $this->redirect($url);
-//        $_locale = $this->get('translator')->getLocale();
-//        return $this->redirectToRoute('dashboard_index', array('_locale' => $_locale));
-
         // replace this example code with whatever you need
         return $this->render('default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir') . '/..') . DIRECTORY_SEPARATOR,

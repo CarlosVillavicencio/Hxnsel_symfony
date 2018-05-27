@@ -1,0 +1,4 @@
+portal_index:
+    path:     /
+    defaults: { _controller: PortalBundle:Index:index }
+    methods:  GET

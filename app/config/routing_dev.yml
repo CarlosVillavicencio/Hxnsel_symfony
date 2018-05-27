@@ -46,14 +46,9 @@ ProyectosBundle:
     type:     annotation
     prefix:   /proyectos
 
-#app:
-#    resource: "@AppBundle/Controller/"
-#    type:     annotation
-#    prefix:   /inicio
-#
 AppBundle:
     resource: "@AppBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /ab
 #    host:     "{subdomain}.%domain%"
 #    defaults:
 #            subdomain: "%subdomain.dash%"
@@ -68,3 +63,12 @@ DashboardBundle:
         subdomain: "%subdomain.dash%"
     requirements:
         subdomain: "%subdomain.dash%"
+
+PortalBundle:
+    resource: "@PortalBundle/Resources/Config/routing.yml"
+    prefix:   /
+    host:     "{subdomain}.%domain%"
+    defaults:
+        subdomain: "%subdomain.portal%"
+    requirements:
+        subdomain: "%subdomain.portal%"
