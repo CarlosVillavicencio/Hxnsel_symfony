@@ -38,10 +38,12 @@ class UsuariosController extends Controller
         }
         $grupos = $this->getDoctrine()->getRepository(FosGroup::class)->getGruposByUserId($id, false);
         $ubigeo = $this->getDoctrine()->getRepository(Ubigeo::class)->listar();
+        $ubigeo_ubivid = $this->getDoctrine()->getRepository(Ubigeo::class)->findOneBy(array('id' => $data['ubigeo_id']));
         return $this->render(':Dashboard/Usuarios:editar.html.twig', array(
             'id' => $id,
             'data' => $data,
             'ubigeo' => $ubigeo,
+            'ubivid' => $ubigeo_ubivid->getUbivid(),
             'grupos' => $grupos
         ));
     }
@@ -108,6 +110,9 @@ class UsuariosController extends Controller
                 $group = $this->getDoctrine()->getRepository(FosGroup::class)->find(intval($v));
                 $usuario->addGroup($group);
             }
+            $usuario->setDni($data['dni']);
+            $ubigeo = $em->getRepository(Ubigeo::class)->find($data['ubigeo_id']);
+            $usuario->setUbigeo($ubigeo);
             $usuario->setThemeDashboard($data['themeDashboard']);
             $usuario->setFirstName($data['firstName']);
             $usuario->setLastName($data['lastName']);
@@ -147,6 +152,9 @@ class UsuariosController extends Controller
                     return $tools->toastDanger($array['msg']);
                 }
             }
+            $usuario->setDni($data['dni']);
+            $ubigeo = $em->getRepository(Ubigeo::class)->find($data['ubigeo_id']);
+            $usuario->setUbigeo($ubigeo);
             $usuario->setUsername($data['username']);
             $usuario->setUsernameCanonical($data['username']);
             $usuario->setEmail($data['email']);

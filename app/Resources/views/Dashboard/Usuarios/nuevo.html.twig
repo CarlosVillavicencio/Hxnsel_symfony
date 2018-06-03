@@ -88,6 +88,7 @@
                                                 <option value="">{{ "genericos.btn.seleccione"|trans }}</option>
                                             </select>
                                         </div>
+                                        <input type="hidden" class="form-control" name="ubigeo_id">
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-lg-8">
@@ -179,6 +180,10 @@
                     $('select[name="' + name + '"]').parent('div').removeClass('hidden-xs-up');
                 });
             });
+            $('select[name="distrito"]').change(function () {
+                var id = $('select[name="distrito"] option:selected').attr('data-id');
+                $('input[name="ubigeo_id"]').val(id);
+            });
             $('form[name="frm_nuevo"]').validate({
                 submitHandler: function (form) {
                     $(form).ajaxSubmit({
@@ -220,7 +225,7 @@
                 success: function (data) {
                     var html = '<option value="">{{ "genericos.btn.seleccione"|trans }}</option>';
                     $.each(data.data, function (k, v) {
-                        html += '<option value=' + v.ubivid + '>' + v.ubivdescrip + '</option>';
+                        html += '<option value=' + v.ubivid + ' data-id=' + v.id + '>' + v.ubivdescrip + '</option>';
                     });
                     $('select[name="' + name + '"]').html(html);
                     if ($.isFunction(callback)) {
