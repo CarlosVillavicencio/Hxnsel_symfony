@@ -3,16 +3,22 @@ AppBundle\Entity\Ubigeo:
     table: ubigeo
     id:
         id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 'ID de Ubigeo'
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        ubivid:
             type: string
             nullable: false
             length: 6
             options:
                 fixed: true
                 comment: 'ID de Ubigeo'
-            id: true
-            generator:
-                strategy: IDENTITY
-    fields:
         ubivdescrip:
             type: string
             nullable: false
@@ -35,3 +41,4 @@ AppBundle\Entity\Ubigeo:
                 fixed: true
                 comment: 'Estado: (1): Activo,(0):Inactivo'
     lifecycleCallbacks: {  }
+    repositoryClass: AppBundle\Repository\UbigeoRepository

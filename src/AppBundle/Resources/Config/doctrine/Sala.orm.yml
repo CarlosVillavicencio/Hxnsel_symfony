@@ -1,0 +1,28 @@
+AppBundle\Entity\Sala:
+    type: entity
+    table: sala
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombre:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+                comment: 'Nombre de la sala del gimnasio'
+        descripcion:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+                comment: 'Descripcion de la sala del gimnasio'
+    lifecycleCallbacks: {  }

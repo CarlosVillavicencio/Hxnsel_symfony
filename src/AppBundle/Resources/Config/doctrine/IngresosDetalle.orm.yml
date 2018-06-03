@@ -1,0 +1,72 @@
+AppBundle\Entity\IngresosDetalle:
+    type: entity
+    table: ingresos_detalle
+    indexes:
+        fk_ingresos_detalle_producto1_idx:
+            columns:
+                - producto_id
+        fk_ingresos_detalle_membresia1_idx:
+            columns:
+                - membresia_id
+    id: {  }
+    fields:
+        precio:
+            type: decimal
+            nullable: false
+            precision: 6
+            scale: 2
+        cantidad:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        fechaInicio:
+            type: datetime
+            nullable: true
+            options:
+                comment: 'fecha de inicio de membresia'
+            column: fecha_inicio
+        fechaFin:
+            type: datetime
+            nullable: true
+            options:
+                comment: 'fecha de finde membresia'
+            column: fecha_fin
+        estado:
+            type: boolean
+            nullable: false
+            options:
+                comment: '1 pendiente, 2 confirmado , 3 anulado'
+    oneToOne:
+        ingresos:
+            targetEntity: Ingresos
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                ingresos_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    manyToOne:
+        membresia:
+            targetEntity: Membresia
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                membresia_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        producto:
+            targetEntity: Producto
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                producto_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

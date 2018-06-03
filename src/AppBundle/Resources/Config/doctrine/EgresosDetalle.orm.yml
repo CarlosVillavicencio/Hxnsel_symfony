@@ -1,0 +1,74 @@
+AppBundle\Entity\EgresosDetalle:
+    type: entity
+    table: egresos_detalle
+    indexes:
+        fk_egresos_detalle_proveedor1_idx:
+            columns:
+                - proveedor_id
+        fk_egresos_detalle_producto1_idx:
+            columns:
+                - producto_id
+        IDX_3A72D98AADE33223:
+            columns:
+                - egresos_id
+    id: {  }
+    fields:
+        precio:
+            type: decimal
+            nullable: false
+            precision: 6
+            scale: 2
+        cantidad:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        fechaInicio:
+            type: datetime
+            nullable: true
+            options:
+                comment: 'fecha de inicio de membresia'
+            column: fecha_inicio
+        fechaFin:
+            type: datetime
+            nullable: true
+            options:
+                comment: 'fecha de finde membresia'
+            column: fecha_fin
+        estado:
+            type: boolean
+            nullable: false
+            options:
+                comment: '1 pendiente, 2 confirmado , 3 anulado'
+    oneToOne:
+        egresos:
+            targetEntity: Egresos
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                egresos_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        producto:
+            targetEntity: Producto
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                producto_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        proveedor:
+            targetEntity: Proveedor
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                proveedor_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

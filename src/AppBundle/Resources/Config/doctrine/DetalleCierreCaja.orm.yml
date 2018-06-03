@@ -1,0 +1,58 @@
+AppBundle\Entity\DetalleCierreCaja:
+    type: entity
+    table: detalle_cierre_caja
+    indexes:
+        fk_detalle_cierre_caja_ingresos1_idx:
+            columns:
+                - ingresos_id
+        fk_detalle_cierre_caja_egresos1_idx:
+            columns:
+                - egresos_id
+        IDX_6771FDF2667EEAA2:
+            columns:
+                - cierre_caja_id
+    id: {  }
+    fields:
+        fechaRegistro:
+            type: datetime
+            nullable: false
+            options:
+                comment: 'fecha de registro de la operacion y/o peticion del cliente'
+            column: fecha_registro
+        total:
+            type: decimal
+            nullable: false
+            precision: 11
+            scale: 2
+    oneToOne:
+        cierreCaja:
+            targetEntity: CierreCaja
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                cierre_caja_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        egresos:
+            targetEntity: Egresos
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                egresos_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        ingresos:
+            targetEntity: Ingresos
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                ingresos_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

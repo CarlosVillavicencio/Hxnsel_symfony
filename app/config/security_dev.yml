@@ -31,6 +31,8 @@ security:
             anonymous:    true
     access_control:
         # require ROLE_ADMIN for /admin*
+#        - { path: ^(/[a-z]+)/, roles: IS_AUTHENTICATED_ANONYMOUSLY, host: www.hxnselsymfony.com }
+#        - { path: ^(/[a-z]+)/, roles: ROLE_USER, host: dash.hxnselsymfony.com }
         - { path: ^(/[a-z]+)?/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
 #        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^(/[a-z]+)?/register, role: ROLE_USER }

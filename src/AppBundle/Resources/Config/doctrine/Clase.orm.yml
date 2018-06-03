@@ -1,0 +1,79 @@
+AppBundle\Entity\Clase:
+    type: entity
+    table: clase
+    indexes:
+        fk_clase_profesor1_idx:
+            columns:
+                - profesor_id
+        fk_clase_actividad1_idx:
+            columns:
+                - actividad_id
+        fk_clase_sala1_idx:
+            columns:
+                - sala_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+    fields:
+        hora:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+        dia:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+        estado:
+            type: boolean
+            nullable: false
+        aforo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        descripcion:
+            type: string
+            nullable: true
+            length: 200
+            options:
+                fixed: false
+    oneToOne:
+        actividad:
+            targetEntity: Actividad
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                actividad_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        profesor:
+            targetEntity: Profesor
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                profesor_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        sala:
+            targetEntity: Sala
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                sala_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

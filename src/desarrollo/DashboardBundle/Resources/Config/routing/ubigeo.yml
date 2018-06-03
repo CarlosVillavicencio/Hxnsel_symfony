@@ -1,0 +1,5 @@
+#Consultas
+dashboard_usuarios_listar:
+    path:     /listar/{provin_p_distri_d}/{codigo_ubivid}
+    defaults: { _controller: DashboardBundle:Ubigeo:listar, provin_p_distri_d: null, codigo_ubivid: null}
+    methods:  POST

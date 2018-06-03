@@ -4,6 +4,7 @@ namespace desarrollo\DashboardBundle\Controller;
 
 use AppBundle\AppBundle;
 use AppBundle\Entity\FosGroup;
+use AppBundle\Entity\Ubigeo;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use AppBundle\Entity\FosUser;
@@ -21,7 +22,9 @@ class UsuariosController extends Controller
     public function addAction(Request $request)
     {
         $grupos = $this->getDoctrine()->getRepository(FosGroup::class)->getGruposByUserId(0, false);
+        $ubigeo = $this->getDoctrine()->getRepository(Ubigeo::class)->listar();
         return $this->render(':Dashboard/Usuarios:nuevo.html.twig', array(
+            'ubigeo' => $ubigeo,
             'grupos' => $grupos
         ));
     }
@@ -34,9 +37,11 @@ class UsuariosController extends Controller
             $data['roles'] = unserialize($data['roles']);
         }
         $grupos = $this->getDoctrine()->getRepository(FosGroup::class)->getGruposByUserId($id, false);
+        $ubigeo = $this->getDoctrine()->getRepository(Ubigeo::class)->listar();
         return $this->render(':Dashboard/Usuarios:editar.html.twig', array(
             'id' => $id,
             'data' => $data,
+            'ubigeo' => $ubigeo,
             'grupos' => $grupos
         ));
     }

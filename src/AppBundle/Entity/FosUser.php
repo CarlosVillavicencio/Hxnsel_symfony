@@ -68,6 +68,31 @@ class FosUser
     private $roles;
 
     /**
+     * @var string
+     */
+    private $firstName;
+
+    /**
+     * @var string
+     */
+    private $lastName;
+
+    /**
+     * @var string
+     */
+    private $dni;
+
+    /**
+     * @var string
+     */
+    private $themeDashboard;
+
+    /**
+     * @var \AppBundle\Entity\Ubigeo
+     */
+    private $ubigeo;
+
+    /**
      * @var \Doctrine\Common\Collections\Collection
      */
     private $group;
@@ -355,50 +380,6 @@ class FosUser
     }
 
     /**
-     * Add group
-     *
-     * @param \AppBundle\Entity\FosGroup $group
-     *
-     * @return FosUser
-     */
-    public function addGroup(\AppBundle\Entity\FosGroup $group)
-    {
-        $this->group[] = $group;
-
-        return $this;
-    }
-
-    /**
-     * Remove group
-     *
-     * @param \AppBundle\Entity\FosGroup $group
-     */
-    public function removeGroup(\AppBundle\Entity\FosGroup $group)
-    {
-        $this->group->removeElement($group);
-    }
-
-    /**
-     * Get group
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getGroup()
-    {
-        return $this->group;
-    }
-    /**
-     * @var string
-     */
-    private $firstName;
-
-    /**
-     * @var string
-     */
-    private $lastName;
-
-
-    /**
      * Set firstName
      *
      * @param string $firstName
@@ -445,11 +426,30 @@ class FosUser
     {
         return $this->lastName;
     }
-    /**
-     * @var string
-     */
-    private $themeDashboard;
 
+    /**
+     * Set dni
+     *
+     * @param string $dni
+     *
+     * @return FosUser
+     */
+    public function setDni($dni)
+    {
+        $this->dni = $dni;
+
+        return $this;
+    }
+
+    /**
+     * Get dni
+     *
+     * @return string
+     */
+    public function getDni()
+    {
+        return $this->dni;
+    }
 
     /**
      * Set themeDashboard
@@ -473,5 +473,63 @@ class FosUser
     public function getThemeDashboard()
     {
         return $this->themeDashboard;
+    }
+
+    /**
+     * Set ubigeo
+     *
+     * @param \AppBundle\Entity\Ubigeo $ubigeo
+     *
+     * @return FosUser
+     */
+    public function setUbigeo(\AppBundle\Entity\Ubigeo $ubigeo = null)
+    {
+        $this->ubigeo = $ubigeo;
+
+        return $this;
+    }
+
+    /**
+     * Get ubigeo
+     *
+     * @return \AppBundle\Entity\Ubigeo
+     */
+    public function getUbigeo()
+    {
+        return $this->ubigeo;
+    }
+
+    /**
+     * Add group
+     *
+     * @param \AppBundle\Entity\FosGroup $group
+     *
+     * @return FosUser
+     */
+    public function addGroup(\AppBundle\Entity\FosGroup $group)
+    {
+        $this->group[] = $group;
+
+        return $this;
+    }
+
+    /**
+     * Remove group
+     *
+     * @param \AppBundle\Entity\FosGroup $group
+     */
+    public function removeGroup(\AppBundle\Entity\FosGroup $group)
+    {
+        $this->group->removeElement($group);
+    }
+
+    /**
+     * Get group
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getGroup()
+    {
+        return $this->group;
     }
 }

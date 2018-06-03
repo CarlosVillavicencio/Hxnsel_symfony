@@ -85,6 +85,11 @@ form:
     usuarios:
         nombre: Name
         apellido: Last Name
+        departamento: Department
+        provincia: Province
+        distrito: District
+        ubigeo: Ubigeo
+        dni: DNI
         usuario: Username
         tema_dashboard: Dashboard theme
         correo: Email

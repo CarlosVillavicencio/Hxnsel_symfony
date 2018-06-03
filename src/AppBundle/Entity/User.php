@@ -16,10 +16,6 @@ class User extends BaseUser
 {
     /**
      * @var integer
-     *
-     * @ORM\Column(name="id", type="integer", precision=0, scale=0, nullable=false, unique=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     protected $id;
 
@@ -40,13 +36,21 @@ class User extends BaseUser
     /**
      * @var string
      */
-    private $firstName;
+    protected $firstName;
 
     /**
      * @var string
      */
-    private $lastName;
+    protected $lastName;
 
+    /**
+     * @var string
+     */
+    protected $themeDashboard;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
     protected $groups;
 
     /**
@@ -60,17 +64,26 @@ class User extends BaseUser
     }
 
     /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
      * Set firstName
      *
      * @param string $firstName
      *
      * @return User
      */
-
     public function setFirstName($firstName)
-
     {
         $this->firstName = $firstName;
+
         return $this;
     }
 
@@ -79,9 +92,7 @@ class User extends BaseUser
      *
      * @return string
      */
-
     public function getFirstName()
-
     {
         return $this->firstName;
     }
@@ -93,11 +104,10 @@ class User extends BaseUser
      *
      * @return User
      */
-
     public function setLastName($lastName)
-
     {
         $this->lastName = $lastName;
+
         return $this;
     }
 
@@ -106,25 +116,17 @@ class User extends BaseUser
      *
      * @return string
      */
-
     public function getLastName()
-
     {
         return $this->lastName;
     }
-
-    /**
-     * @var string
-     */
-    private $themeDashboard;
-
 
     /**
      * Set themeDashboard
      *
      * @param string $themeDashboard
      *
-     * @return FosUser
+     * @return User
      */
     public function setThemeDashboard($themeDashboard)
     {
@@ -141,5 +143,64 @@ class User extends BaseUser
     public function getThemeDashboard()
     {
         return $this->themeDashboard;
+    }
+
+    /**
+     * @var string
+     */
+    protected $dni;
+
+    /**
+     * @var \AppBundle\Entity\Ubigeo
+     */
+    protected $ubigeo;
+
+
+    /**
+     * Set dni
+     *
+     * @param string $dni
+     *
+     * @return User
+     */
+    public function setDni($dni)
+    {
+        $this->dni = $dni;
+
+        return $this;
+    }
+
+    /**
+     * Get dni
+     *
+     * @return string
+     */
+    public function getDni()
+    {
+        return $this->dni;
+    }
+
+    /**
+     * Set ubigeo
+     *
+     * @param \AppBundle\Entity\Ubigeo $ubigeo
+     *
+     * @return User
+     */
+    public function setUbigeo(\AppBundle\Entity\Ubigeo $ubigeo = null)
+    {
+        $this->ubigeo = $ubigeo;
+
+        return $this;
+    }
+
+    /**
+     * Get ubigeo
+     *
+     * @return \AppBundle\Entity\Ubigeo
+     */
+    public function getUbigeo()
+    {
+        return $this->ubigeo;
     }
 }

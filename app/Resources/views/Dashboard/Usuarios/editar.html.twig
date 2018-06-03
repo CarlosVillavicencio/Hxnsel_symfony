@@ -58,6 +58,28 @@
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-lg-8">
+                                            <label class="col-form-label">{{ "form.usuarios.dni"|trans }}:</label>
+                                            <input type="text" class="form-control" name="dni"
+                                                   placeholder="{{ "form.usuarios.dni"|trans }}"
+                                                   value="{{ data.dni }}" required>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <label class="col-form-label">{{ "form.usuarios.ubigeo"|trans }} {{ data.ubigeo_id  }}
+                                                :</label>
+                                            <select class="form-control" name="themeDashboard">
+                                                <option value="">{{ "genericos.btn.seleccione"|trans }}</option>
+                                                {% for k,v in ubigeo %}
+                                                    {% if v.id == data.ubigeo_id %}
+                                                        <option value="{{ v.id }}" selected>{{ v.ubivdescripcompleta }}</option>
+                                                    {% else %}
+                                                        <option value="{{ v.id }}">{{ v.ubivdescripcompleta }}</option>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-lg-8">
                                             <label class="col-form-label">{{ "form.usuarios.correo"|trans }}:</label>
                                             <input type="text" class="form-control" id="email" name="email"
                                                    placeholder="{{ "form.usuarios.correo"|trans }}"

@@ -10,3 +10,7 @@ dashboard_grupos:
 dashboard_usuarios:
     resource: "@DashboardBundle/Resources/Config/routing/usuarios.yml"
     prefix:   /usuarios
+
+dashboard_ubigeo:
+    resource: "@DashboardBundle/Resources/Config/routing/ubigeo.yml"
+    prefix:   /ubigeo

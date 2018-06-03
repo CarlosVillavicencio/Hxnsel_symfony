@@ -54,14 +54,52 @@
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-lg-8">
+                                            <label class="col-form-label">{{ "form.usuarios.dni"|trans }}:</label>
+                                            <input type="text" class="form-control" name="dni"
+                                                   placeholder="{{ "form.usuarios.dni"|trans }}"
+                                                   value="" required>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <label class="col-form-label">
+                                                {{ "form.usuarios.departamento"|trans }}:
+                                            </label>
+                                            <select class="form-control" name="departamento" required>
+                                                <option value="">{{ "genericos.btn.seleccione"|trans }}</option>
+                                                {% for k,v in ubigeo %}
+                                                    <option value="{{ v.ubivid }}">{{ v.ubivdescrip }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-lg-8 hidden-xs-up">
+                                            <label class="col-form-label">
+                                                {{ "form.usuarios.provincia"|trans }}:
+                                            </label>
+                                            <select class="form-control" name="provincia" required>
+                                                <option value="">{{ "genericos.btn.seleccione"|trans }}</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-8 hidden-xs-up">
+                                            <label class="col-form-label">
+                                                {{ "form.usuarios.distrito"|trans }}:
+                                            </label>
+                                            <select class="form-control" name="distrito" required>
+                                                <option value="">{{ "genericos.btn.seleccione"|trans }}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-lg-8">
                                             <label class="col-form-label">{{ "form.usuarios.correo"|trans }}:</label>
                                             <input type="text" class="form-control" id="email" name="email"
                                                    placeholder="{{ "form.usuarios.correo"|trans }}"
                                                    value="" required>
                                         </div>
                                         <div class="col-lg-8">
-                                            <label class="col-form-label">{{ "form.usuarios.confirmar_correo"|trans }}
-                                                :</label>
+                                            <label class="col-form-label">
+                                                {{ "form.usuarios.confirmar_correo"|trans }}:
+                                            </label>
                                             <input type="text" class="form-control" id="confirm_email"
                                                    name="confirm_email"
                                                    placeholder="{{ "form.usuarios.confirmar_correo"|trans }}"
@@ -70,15 +108,17 @@
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-lg-8">
-                                            <label class="col-form-label">{{ "form.usuarios.contrasena"|trans }}
-                                                :</label>
+                                            <label class="col-form-label">
+                                                {{ "form.usuarios.contrasena"|trans }}:
+                                            </label>
                                             <input type="password" class="form-control" id="password" name="password"
                                                    placeholder="{{ "form.usuarios.contrasena"|trans }}"
                                                    value="" required>
                                         </div>
                                         <div class="col-lg-8">
-                                            <label class="col-form-label">{{ "form.usuarios.confirmar_contrasena"|trans }}
-                                                :</label>
+                                            <label class="col-form-label">
+                                                {{ "form.usuarios.confirmar_contrasena"|trans }}:
+                                            </label>
                                             <input type="password" class="form-control" id="confirm_password"
                                                    name="confirm_password"
                                                    placeholder="{{ "form.usuarios.confirmar_contrasena"|trans }}"
@@ -87,8 +127,9 @@
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-lg-8">
-                                            <label class="col-form-label">{{ "form.usuarios.grupos_trabajo"|trans }}
-                                                :</label>
+                                            <label class="col-form-label">
+                                                {{ "form.usuarios.grupos_trabajo"|trans }}:
+                                            </label>
                                             <select multiple="multiple" name="user_group[]"
                                                     class="form-control multiselect" required>
                                                 {% for k,v in grupos %}
@@ -123,6 +164,21 @@
 {% block scripts %}
     <script type="text/javascript">
         $(document).ready(function () {
+            $('select[name="departamento"]').change(function () {
+                $('select[name="departamento"] option[value=""]').remove();
+                var ubivid = $(this).val();
+                getUbigeo('P', ubivid, 'provincia', function (name) {
+                    $('select[name="' + name + '"]').parent('div').removeClass('hidden-xs-up');
+                    $('select[name="distrito"]').parent('div').addClass('hidden-xs-up');
+                });
+            });
+            $('select[name="provincia"]').change(function () {
+                $('select[name="provincia"] option[value=""]').remove();
+                var ubivid = $(this).val();
+                getUbigeo('D', ubivid, 'distrito', function (name) {
+                    $('select[name="' + name + '"]').parent('div').removeClass('hidden-xs-up');
+                });
+            });
             $('form[name="frm_nuevo"]').validate({
                 submitHandler: function (form) {
                     $(form).ajaxSubmit({
@@ -146,5 +202,36 @@
                 }
             });
         });
+
+        function getUbigeo(provin_p_distri_d, codigo_ubivid, name, callback) {
+            var urlajax = "{{ path('dashboard_usuarios_listar',{'provin_p_distri_d':'provin_p_distri_d','codigo_ubivid':'codigo_ubivid'}) }}";
+            urlajax = urlajax.replace('provin_p_distri_d', provin_p_distri_d);
+            urlajax = urlajax.replace('codigo_ubivid', codigo_ubivid);
+            if (codigo_ubivid == '') {
+                toastr['warning']('{{ "jqueryvalidation_org.required"|trans }} ');
+                return false;
+            }
+            $.ajax({
+                type: 'POST',
+                url: urlajax,
+//                data: params,
+                beforeSend: function (data) {
+                },
+                success: function (data) {
+                    var html = '<option value="">{{ "genericos.btn.seleccione"|trans }}</option>';
+                    $.each(data.data, function (k, v) {
+                        html += '<option value=' + v.ubivid + '>' + v.ubivdescrip + '</option>';
+                    });
+                    $('select[name="' + name + '"]').html(html);
+                    if ($.isFunction(callback)) {
+                        callback(name);
+                    }
+                },
+                error: function (data) {
+                },
+                complete: function (data) {
+                }
+            });
+        }
     </script>
 {% endblock %}

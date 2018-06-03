@@ -1,0 +1,52 @@
+AppBundle\Entity\Producto:
+    type: entity
+    table: producto
+    indexes:
+        fk_producto_tipo_producto1_idx:
+            columns:
+                - tipo_producto_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+    fields:
+        descripcion:
+            type: string
+            nullable: false
+            length: 200
+            options:
+                fixed: false
+        stock:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        precioUnitVenta:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+            column: precio_unit_venta
+        estado:
+            type: boolean
+            nullable: false
+        fechaVencimiento:
+            type: datetime
+            nullable: false
+            column: fecha_vencimiento
+    oneToOne:
+        tipoProducto:
+            targetEntity: TipoProducto
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                tipo_producto_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

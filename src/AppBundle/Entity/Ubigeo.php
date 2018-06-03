@@ -8,9 +8,14 @@ namespace AppBundle\Entity;
 class Ubigeo
 {
     /**
-     * @var string
+     * @var integer
      */
     private $id;
+
+    /**
+     * @var string
+     */
+    private $ubivid;
 
     /**
      * @var string
@@ -31,11 +36,35 @@ class Ubigeo
     /**
      * Get id
      *
-     * @return string
+     * @return integer
      */
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set ubivid
+     *
+     * @param string $ubivid
+     *
+     * @return Ubigeo
+     */
+    public function setUbivid($ubivid)
+    {
+        $this->ubivid = $ubivid;
+
+        return $this;
+    }
+
+    /**
+     * Get ubivid
+     *
+     * @return string
+     */
+    public function getUbivid()
+    {
+        return $this->ubivid;
     }
 
     /**

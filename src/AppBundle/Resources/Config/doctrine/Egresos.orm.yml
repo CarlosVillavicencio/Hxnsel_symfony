@@ -1,0 +1,80 @@
+AppBundle\Entity\Egresos:
+    type: entity
+    table: egresos
+    indexes:
+        fk_egresos_tipo_ingreso_egreso1_idx:
+            columns:
+                - tipo_ingreso_egreso_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+    fields:
+        razonSocial:
+            type: string
+            nullable: true
+            length: 180
+            options:
+                fixed: false
+            column: razon_social
+        ruc:
+            type: string
+            nullable: true
+            length: 11
+            options:
+                fixed: false
+        precio:
+            type: decimal
+            nullable: false
+            precision: 6
+            scale: 2
+        fechaRegistro:
+            type: datetime
+            nullable: false
+            options:
+                comment: 'fecha de registro de la operacion y/o peticion del cliente'
+            column: fecha_registro
+        fechaModificacion:
+            type: datetime
+            nullable: true
+            options:
+                comment: 'fecha de registro de la operacion y/o peticion del cliente'
+            column: fecha_modificacion
+        fechaCaducidad:
+            type: datetime
+            nullable: true
+            options:
+                comment: 'Fecha de caducidad del producto, se agrega luego de recibir el producto'
+            column: fecha_caducidad
+        fechaRecepcion:
+            type: datetime
+            nullable: true
+            options:
+                comment: 'Fecha en la que se recibe el producto, no necesariamente es igual a la fecha de compra'
+            column: fecha_recepcion
+        estado:
+            type: boolean
+            nullable: false
+            options:
+                comment: '1 pendiente, 2 confirmado , 3 anulado'
+        descripcion:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+    oneToOne:
+        tipoIngresoEgreso:
+            targetEntity: TipoIngresoEgreso
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                tipo_ingreso_egreso_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

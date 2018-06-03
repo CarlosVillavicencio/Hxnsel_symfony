@@ -112,4 +112,34 @@ class User extends BaseUser
     {
         return $this->lastName;
     }
+
+    /**
+     * @var string
+     */
+    private $themeDashboard;
+
+
+    /**
+     * Set themeDashboard
+     *
+     * @param string $themeDashboard
+     *
+     * @return FosUser
+     */
+    public function setThemeDashboard($themeDashboard)
+    {
+        $this->themeDashboard = $themeDashboard;
+
+        return $this;
+    }
+
+    /**
+     * Get themeDashboard
+     *
+     * @return string
+     */
+    public function getThemeDashboard()
+    {
+        return $this->themeDashboard;
+    }
 }

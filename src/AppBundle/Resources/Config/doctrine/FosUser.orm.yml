@@ -1,6 +1,10 @@
 AppBundle\Entity\FosUser:
     type: entity
     table: fos_user
+    indexes:
+        fk_fos_user_ubigeo1_idx:
+            columns:
+                - ubigeo_id
     uniqueConstraints:
         UNIQ_957A647992FC23A8:
             columns:
@@ -89,6 +93,7 @@ AppBundle\Entity\FosUser:
             length: 180
             options:
                 fixed: false
+                comment: Nombre(s)
             column: first_name
         lastName:
             type: string
@@ -96,14 +101,32 @@ AppBundle\Entity\FosUser:
             length: 180
             options:
                 fixed: false
+                comment: Apellido(s)
             column: last_name
+        dni:
+            type: string
+            nullable: true
+            length: 7
+            options:
+                fixed: false
         themeDashboard:
             type: string
             nullable: true
             length: 45
             options:
                 fixed: false
+                comment: 'Tema del dashboard que se le mostrara al usuario'
             column: theme_dashboard
+    manyToOne:
+        ubigeo:
+            targetEntity: Ubigeo
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                ubigeo_id: { referencedColumnName: id }
+            orphanRemoval: false
     manyToMany:
         group:
             targetEntity: FosGroup
