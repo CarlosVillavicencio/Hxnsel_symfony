@@ -5,7 +5,7 @@ parameters:
     database_driver_DEV:   pdo_mysql
     database_host_DEV:     localhost
     database_port_DEV:     3306
-    database_name_DEV:     bbddprod_symfony
+    database_name_DEV:     BD_GYM
     database_user_DEV:     root
     database_password_DEV: null
     # You should uncomment this if you want use pdo_sqlite
