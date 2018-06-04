@@ -54,8 +54,8 @@ AppBundle:
 redirectToAppBundle:
     path: /
     defaults:
-        _controller: FrameworkBundle:Redirect:urlRedirect
-        path: AppBundle_homepage
+        _controller: FrameworkBundle:Redirect:redirect
+        route: AppBundle_homepage
         permanent: true
     host:     "{subdomain}.%domain%"
     defaults:
